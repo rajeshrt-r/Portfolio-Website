@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Skills | Rajesh R &mdash; AI &amp; Data Science Engineer</title>
+    <meta name="description"
+        content="Explore the technical skills, technologies and learning areas of Rajesh R across AI, machine learning, data science, programming, databases and software development." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            --bg-base: #010811;
+            --bg-surface: #031122;
+            --bg-card: #051426;
+            --bg-card-hover: #071C33;
+            --cyan: #0CF2FF;
+            --cyan-dim: rgba(12, 242, 255, 0.1);
+            --cyan-border: rgba(12, 242, 255, 0.3);
+            --text-primary: #FFFFFF;
+            --text-secondary: #94A3B8;
+            --border-subtle: rgba(255, 255, 255, 0.1);
+            --radius: 8px;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body.light-theme {
+            --bg-base: #F8FAFC;
+            --bg-surface: #EDF2F7;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F1F5F9;
+            --cyan: #0284C7;
+            --cyan-dim: rgba(2, 132, 199, 0.08);
+            --cyan-border: rgba(2, 132, 199, 0.28);
+            --cyan-glow: rgba(2, 132, 199, 0.25);
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --border-subtle: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(2, 132, 199, 0.45);
+        }
+
+        body.light-theme header {
+            background-color: rgba(248, 250, 252, 0.92);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--cyan);
+            border-color: var(--cyan-border);
+            transform: rotate(15deg);
+        }
+
+        .mobile-nav-panel a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 44px 0 28px;
+            background: var(--bg-base);
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-subtle);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .footer-brand-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .footer-brand-sub {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .footer-nav a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-nav a.active {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-scroll-top {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-scroll-top:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            transform: translateY(-2px);
+        }
+
+        /* NAVBAR */
+        header {
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 20px 0;
+            background: var(--bg-base);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.25rem;
+          letter-spacing: -0.02em;
+        }
+
+        .logo .r-icon {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 34px;
+              height: 34px;
+              border-radius: 8px;
+              background: var(--cyan-dim);
+              border: 1px solid var(--cyan-border);
+              color: var(--cyan);
+              font-weight: 900;
+              font-size: 1.25rem;
+            }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+
+        .nav-links a.active {
+            color: var(--cyan);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -28px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--cyan);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav-panel {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            display: none;
+            flex-direction: column;
+            padding: 10px 0;
+            z-index: 99;
+        }
+
+        .mobile-nav-panel.open {
+            display: flex;
+        }
+
+        .mobile-nav-panel a {
+            padding: 12px 40px;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+        }
+
+        .mobile-nav-panel a:last-child {
+            border-bottom: none;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding: 80px 0 60px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(12, 242, 255, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-left {
+            max-width: 600px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: var(--cyan);
+        }
+
+        .page-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .page-title .cyan {
+            color: var(--cyan);
+        }
+
+        .page-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .header-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .tech-visual {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            background: rgba(3, 17, 34, 0.6);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #8BAEC8;
+            backdrop-filter: blur(10px);
+        }
+
+        .tech-visual .keyword {
+            color: #569CD6;
+        }
+
+        .tech-visual .string {
+            color: #CE9178;
+        }
+
+        .tech-visual .comment {
+            color: #6A9955;
+        }
+
+        .tech-line {
+            width: 100%;
+            height: 2px;
+            background: var(--border-subtle);
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            margin-top: auto;
+        }
+
+        .tech-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background: var(--cyan);
+            animation: scan 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes scan {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 60%;
+            }
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-header .eyebrow {
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* OVERVIEW */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            border-color: var(--cyan-border);
+            transform: translateY(-3px);
+        }
+
+        .stat-count {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--cyan);
+            margin-bottom: 8px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* CATEGORIES */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .cat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .cat-card:hover {
+            border-color: var(--cyan-border);
+            background: var(--bg-card-hover);
+        }
+
+        .cat-num {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--cyan);
+            margin-bottom: 16px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .cat-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .web-tech-icons {
+            display: flex;
+            gap: 10px;
+            margin: -2px 0 20px;
+        }
+
+        .web-tech-icon {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.035);
+            font-size: 1.45rem;
+            transition: transform 180ms ease, border-color 180ms ease;
+        }
+
+        .web-tech-icon:hover {
+            transform: translateY(-2px);
+            border-color: var(--cyan-border);
+        }
+
+        .web-tech-icon.html { color: #E34F26; }
+        .web-tech-icon.css { color: #1572B6; }
+        .web-tech-icon.js { color: #F0DB4F; }
+        .web-tech-icon.react { color: #61DAFB; }
+
+        .cat-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .badge-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .badge-name {
+            font-weight: 500;
+        }
+
+        .badge-level {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .level-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--text-secondary);
+        }
+
+        .level-working .level-dot {
+            background: #10B981;
+        }
+
+        /* Green */
+        .level-learning .level-dot {
+            background: #3B82F6;
+        }
+
+        /* Blue */
+        .level-practicing .level-dot {
+            background: var(--cyan);
+        }
+
+        .level-exploring .level-dot {
+            background: #F59E0B;
+        }
+
+        /* Yellow */
+        .level-familiar .level-dot {
+            background: #8B5CF6;
+        }
+
+        /* Purple */
+
+        /* SKILLS IN ACTION */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .action-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 32px;
+        }
+
+        .action-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .action-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .action-tag {
+            padding: 6px 14px;
+            background: var(--bg-base);
+            border: 1px solid var(--cyan-border);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--cyan);
+            font-weight: 500;
+        }
+
+        /* CONNECTION MAP */
+        .tech-map-section {
+            background: var(--bg-surface);
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .map-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .map-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .map-node {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .map-node.core {
+            background: var(--cyan-dim);
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        /* CTA / FOOTER */
+        .cta-section {
+            position: relative;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-subtle);
+            overflow: hidden;
+        }
+
+        .cta-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.75) 100%), url('../assets/images/footer-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .cta-left h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 16px 0;
+        }
+
+        .cta-right {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: #000;
+            border: 1px solid var(--cyan);
+        }
+
+        .btn-primary:hover {
+            background: #fff;
+            border-color: #fff;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--cyan);
+            border: 1px solid var(--cyan);
+            border-radius: 30px;
+        }
+
+        .btn-outline:hover {
+            background: var(--cyan-dim);
+        }
+
+        /* MEDIA QUERIES */
+        @media (max-width: 1200px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 900px) {
+
+            .cta-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-right {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header .container {
+                flex-direction: column;
+                text-align: left;
+                gap: 40px;
+            }
+
+            .header-right {
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .map-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+
+            .page-title {
+                font-size: 3rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="home.html" class="logo" id="nav-logo">
+                <span class="r-icon">R</span> Rajesh
+            </a>
+            <nav class="nav-links" id="desktop-nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html" class="active" aria-current="page">Skills</a>
+                <a href="experience.html">Experience</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme"
+                    title="Toggle theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle-btn" aria-label="Open mobile navigation menu"
+                    aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-panel" id="mobile-nav">
+            <a href="home.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="about.html">About <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="skills.html" class="active" aria-current="page">Skills <i
+                    class="fa-solid fa-chevron-right"></i></a>
+            <a href="experience.html">Experience <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="certifications.html">Certifications <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="resume.html">Resume <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="header-bg"></div>
+        <div class="container">
+            <div class="header-left">
+                <div class="eyebrow">TECHNICAL TOOLKIT</div>
+                <h1 class="page-title">Skills That Build<br><span class="cyan">Better Solutions.</span></h1>
+                <p class="page-desc">A growing collection of programming languages, technologies, tools, and technical
+                    concepts I'm learning and applying through projects and practical work.</p>
+            </div>
+            <div class="header-right">
+                <div class="tech-visual">
+                    <div><span class="keyword">interface</span> <span class="string">SkillSet</span> {</div>
+                    <div>&nbsp;&nbsp;focus: <span class="string">'AI &amp; Data'</span>;</div>
+                    <div>&nbsp;&nbsp;learning: <span class="keyword">true</span>;</div>
+                    <div>}</div>
+                    <div class="comment">// Analyzing patterns...</div>
+                    <div class="tech-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 40px; border-bottom: none;">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="stat-box">
+                    <div class="stat-count">3</div>
+                    <div class="stat-name">Programming</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-count">4</div>
+                    <div class="stat-name">AI / ML Areas</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-count">4</div>
+                    <div class="stat-name">Databases</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-count">4</div>
+                    <div class="stat-name">Tools & Platforms</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="categories-grid">
+
+                <!-- Category 1 -->
+                <div class="cat-card">
+                    <div class="cat-num">01 //</div>
+                    <h3 class="cat-title">Programming</h3>
+                    <p class="cat-desc">Building programming fundamentals and application development skills across
+                        multiple languages.</p>
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <span class="badge-name">Python</span>
+                            <span class="badge-level level-working"><span class="level-dot"></span> Working
+                                Knowledge</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Java</span>
+                            <span class="badge-level level-familiar"><span class="level-dot"></span> Familiar</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">C</span>
+                            <span class="badge-level level-familiar"><span class="level-dot"></span> Familiar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="cat-card">
+                    <div class="cat-num">02 //</div>
+                    <h3 class="cat-title">AI & Machine Learning</h3>
+                    <p class="cat-desc">Exploring intelligent systems, machine learning concepts and practical AI
+                        applications.</p>
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <span class="badge-name">Machine Learning</span>
+                            <span class="badge-level level-learning"><span class="level-dot"></span> Learning</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Deep Learning</span>
+                            <span class="badge-level level-exploring"><span class="level-dot"></span> Exploring</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">NLP</span>
+                            <span class="badge-level level-learning"><span class="level-dot"></span> Learning</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Artificial Intelligence</span>
+                            <span class="badge-level level-learning"><span class="level-dot"></span> Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="cat-card">
+                    <div class="cat-num">03 //</div>
+                    <h3 class="cat-title">Data Science</h3>
+                    <p class="cat-desc">Learning how to transform data into useful insights and practical solutions.</p>
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <span class="badge-name">Data Analysis</span>
+                            <span class="badge-level level-practicing"><span class="level-dot"></span> Practicing</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Data Visualization</span>
+                            <span class="badge-level level-working"><span class="level-dot"></span> Working
+                                Knowledge</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Statistics</span>
+                            <span class="badge-level level-familiar"><span class="level-dot"></span> Familiar</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Data Processing</span>
+                            <span class="badge-level level-practicing"><span class="level-dot"></span> Practicing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="cat-card">
+                    <div class="cat-num">04 //</div>
+                    <h3 class="cat-title">Web Development</h3>
+                    <div class="web-tech-icons" role="group" aria-label="Web development technologies">
+                        <span class="web-tech-icon html" role="img" aria-label="HTML5" title="HTML5"><i class="fa-brands fa-html5" aria-hidden="true"></i></span>
+                        <span class="web-tech-icon css" role="img" aria-label="CSS3" title="CSS3"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span>
+                        <span class="web-tech-icon js" role="img" aria-label="JavaScript" title="JavaScript"><i class="fa-brands fa-js" aria-hidden="true"></i></span>
+                        <span class="web-tech-icon react" role="img" aria-label="React" title="React"><i class="fa-brands fa-react" aria-hidden="true"></i></span>
+                    </div>
+                    <p class="cat-desc">Building responsive interfaces and exploring modern web application development.
+                    </p>
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <span class="badge-name">HTML</span>
+                            <span class="badge-level level-working"><span class="level-dot"></span> Working
+                                Knowledge</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">CSS</span>
+                            <span class="badge-level level-working"><span class="level-dot"></span> Working
+                                Knowledge</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">JavaScript</span>
+                            <span class="badge-level level-practicing"><span class="level-dot"></span> Practicing</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">React</span>
+                            <span class="badge-level level-learning"><span class="level-dot"></span> Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="cat-card">
+                    <div class="cat-num">05 //</div>
+                    <h3 class="cat-title">Databases & Data</h3>
+                    <p class="cat-desc">Working with structured, document-based and AI-oriented data technologies.</p>
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <span class="badge-name">MongoDB</span>
+                            <span class="badge-level level-practicing"><span class="level-dot"></span> Practicing</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">MySQL</span>
+                            <span class="badge-level level-familiar"><span class="level-dot"></span> Familiar</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">PostgreSQL</span>
+                            <span class="badge-level level-learning"><span class="level-dot"></span> Learning</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Vector Search</span>
+                            <span class="badge-level level-exploring"><span class="level-dot"></span> Exploring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="cat-card">
+                    <div class="cat-num">06 //</div>
+                    <h3 class="cat-title">Tools & Development</h3>
+                    <p class="cat-desc">Using modern development tools to build, manage and experiment with software
+                        projects.</p>
+                    <div class="badge-list">
+                        <div class="badge-item">
+                            <span class="badge-name">Git & GitHub</span>
+                            <span class="badge-level level-working"><span class="level-dot"></span> Working
+                                Knowledge</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">VS Code</span>
+                            <span class="badge-level level-working"><span class="level-dot"></span> Working
+                                Knowledge</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Linux</span>
+                            <span class="badge-level level-familiar"><span class="level-dot"></span> Familiar</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-name">Docker</span>
+                            <span class="badge-level level-learning"><span class="level-dot"></span> Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">APPLICATION</div>
+                <div class="section-title">
+                    <h2>Skills in Action</h2>
+                </div>
+                <p style="color:var(--text-secondary); max-width:600px; margin: 16px auto 0;">I focus on learning
+                    technologies by applying them to projects, experiments, and practical problems.</p>
+            </div>
+
+            <div class="action-grid">
+                <div class="action-card">
+                    <h3>AI Development</h3>
+                    <div class="action-tags">
+                        <span class="action-tag">Python</span>
+                        <span class="action-tag">Machine Learning</span>
+                        <span class="action-tag">NLP</span>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <h3>Data Analysis</h3>
+                    <div class="action-tags">
+                        <span class="action-tag">Python</span>
+                        <span class="action-tag">Data Processing</span>
+                        <span class="action-tag">Visualization</span>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <h3>Modern Data Applications</h3>
+                    <div class="action-tags">
+                        <span class="action-tag">MongoDB</span>
+                        <span class="action-tag">Vector Search</span>
+                        <span class="action-tag">RAG</span>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <h3>Software Development</h3>
+                    <div class="action-tags">
+                        <span class="action-tag">Java</span>
+                        <span class="action-tag">JavaScript</span>
+                        <span class="action-tag">Git</span>
+                        <span class="action-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-map-section">
+        <div class="container">
+            <div class="eyebrow" style="justify-content:center;">ECOSYSTEM</div>
+            <h2 style="font-size:2rem; font-weight:700; margin-bottom:10px;">Technology Connection</h2>
+            <p style="color:var(--text-secondary); margin-bottom:40px;">How the skills I'm learning relate to one
+                another.</p>
+
+            <div class="map-container">
+                <div class="map-row">
+                    <div class="map-node core">AI &amp; Data Science</div>
+                </div>
+                <div style="height:30px; width:2px; background:var(--cyan); opacity:0.5; margin:-30px 0 -10px;"></div>
+                <div class="map-row">
+                    <div class="map-node">Python</div>
+                    <div class="map-node">Machine Learning</div>
+                    <div class="map-node">NLP</div>
+                </div>
+                <div style="height:30px; width:2px; background:var(--border-subtle); margin:-10px 0 -10px;"></div>
+                <div class="map-row">
+                    <div class="map-node core">Data Applications</div>
+                </div>
+                <div style="height:30px; width:2px; background:var(--border-subtle); margin:-10px 0 -10px;"></div>
+                <div class="map-row">
+                    <div class="map-node">MongoDB Vector Search</div>
+                    <div class="map-node">Data Visualization</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="cta-bg"></div>
+        <div class="cta-container">
+            <div class="cta-left">
+                <div class="eyebrow">Want to See These Skills in Action?</div>
+                <h2>Explore the projects and practical work behind the technologies I'm learning.</h2>
+            </div>
+            <div class="cta-right">
+                <a href="projects.html" class="btn btn-primary">View Projects <i
+                        class="fa-solid fa-arrow-right"></i></a>
+                <a href="certifications.html" class="btn btn-outline">View Certifications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-brand-title">RAJESH R</div>
+                    <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html" class="active">Skills</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="certifications.html">Certifications</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Rajesh R. All rights reserved.
+                </div>
+                <div class="footer-bottom-right">
+                    <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
+                    <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top"
+                        title="Back to top">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const menuToggleBtn = document.getElementById('menu-toggle-btn') || document.querySelector('.menu-toggle');
+        const mobilePanel = document.getElementById('mobile-nav');
+        const menuIcon = menuToggleBtn ? menuToggleBtn.querySelector('i') : null;
+
+        if (menuToggleBtn && mobilePanel) {
+            menuToggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = mobilePanel.classList.toggle('open');
+                menuToggleBtn.setAttribute('aria-expanded', isOpen);
+                if (menuIcon) {
+                    if (isOpen) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-xmark');
+                    } else {
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!mobilePanel.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+                    mobilePanel.classList.remove('open');
+                    menuToggleBtn.setAttribute('aria-expanded', 'false');
+                    if (menuIcon) {
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+        }
+
+        // Theme toggle with localStorage persistence
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+        const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-theme');
+            if (themeIcon) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-theme');
+                const isLight = document.body.classList.contains('light-theme');
+                if (isLight) {
+                    if (themeIcon) {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    }
+                    localStorage.setItem('portfolio-theme', 'light');
+                } else {
+                    if (themeIcon) {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                    localStorage.setItem('portfolio-theme', 'dark');
+                }
+            });
+        }
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+
+</html>

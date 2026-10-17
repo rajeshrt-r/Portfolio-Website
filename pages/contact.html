@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Rajesh R — AI &amp; Data Science Engineer</title>
+    <meta name="description"
+        content="Get in touch with Rajesh R for internships, technical projects, collaborations, and professional opportunities in AI and Data Science." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --bg-base: #010811;
+            --bg-surface: #031122;
+            --bg-card: #051426;
+            --bg-card-hover: #071C33;
+            --cyan: #0CF2FF;
+            --cyan-dim: rgba(12, 242, 255, 0.1);
+            --cyan-border: rgba(12, 242, 255, 0.28);
+            --cyan-glow: rgba(12, 242, 255, 0.35);
+            --text-primary: #FFFFFF;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(12, 242, 255, 0.45);
+            --radius-sm: 6px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-script: 'Caveat', cursive;
+            --font-mono: 'JetBrains Mono', monospace;
+            --input-bg: #030e1d;
+            --input-border: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Light Theme Support */
+        body.light-theme {
+            --bg-base: #F8FAFC;
+            --bg-surface: #EDF2F7;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F1F5F9;
+            --cyan: #0284C7;
+            --cyan-dim: rgba(2, 132, 199, 0.08);
+            --cyan-border: rgba(2, 132, 199, 0.28);
+            --cyan-glow: rgba(2, 132, 199, 0.25);
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --border-subtle: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(2, 132, 199, 0.45);
+            --input-bg: #F8FAFC;
+            --input-border: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* NAVBAR */
+        header {
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 18px 0;
+            background: var(--bg-base);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            background-color: rgba(1, 8, 17, 0.92);
+        }
+
+        body.light-theme header {
+            background-color: rgba(248, 250, 252, 0.92);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo .r-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--cyan-dim);
+            border: 1px solid var(--cyan-border);
+            color: var(--cyan);
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            position: relative;
+            padding: 6px 0;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+
+        .nav-links a.active {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -19px;
+            left: 0;
+            width: 100%;
+            height: 2.5px;
+            background: var(--cyan);
+            box-shadow: 0 0 12px var(--cyan-glow);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--cyan);
+            border-color: var(--cyan-border);
+            transform: rotate(15deg);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .mobile-nav-panel {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            display: none;
+            flex-direction: column;
+            padding: 12px 0;
+            z-index: 99;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .mobile-nav-panel.open {
+            display: flex;
+        }
+
+        .mobile-nav-panel a {
+            padding: 14px 40px;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-nav-panel a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-panel a.active {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        /* COMMON UTILS */
+        .cyan {
+            color: var(--cyan);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--cyan);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .eyebrow-bar {
+            width: 24px;
+            height: 3px;
+            background: var(--cyan);
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            padding: 64px 0 48px;
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 85% 20%, rgba(12, 242, 255, 0.06) 0%, transparent 60%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 2.85rem;
+            font-weight: 800;
+            line-height: 1.18;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            max-width: 580px;
+        }
+
+        .hero-right {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-features-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 16px 14px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-color: var(--cyan-border);
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
+        }
+
+        .feature-icon-wrap {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--cyan-dim);
+            color: var(--cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+
+        .feature-text {
+            font-size: 0.76rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        .hero-quote-box {
+            background: linear-gradient(135deg, rgba(5, 20, 38, 0.7), rgba(3, 17, 34, 0.95));
+            border: 1px solid var(--cyan-border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: relative;
+        }
+
+        .hero-quote-text {
+            font-family: var(--font-script);
+            font-size: 1.45rem;
+            color: var(--cyan);
+            line-height: 1.3;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-quote-author {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* MAIN 3-PANEL CONTACT WORKSPACE */
+        .workspace-section {
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .workspace-grid {
+            display: grid;
+            grid-template-columns: 320px 1.25fr 330px;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        /* PANEL 1: CONTACT INFO */
+        .info-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: var(--transition);
+        }
+
+        .info-panel:hover {
+            border-color: rgba(12, 242, 255, 0.2);
+        }
+
+        .panel-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .panel-heading-icon {
+            color: var(--cyan);
+            font-size: 1.15rem;
+        }
+
+        .contact-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-item-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: var(--transition);
+        }
+
+        .contact-item-card:hover {
+            border-color: var(--cyan-border);
+            background: var(--bg-card-hover);
+        }
+
+        .item-main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .item-icon-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--cyan-dim);
+            border: 1px solid var(--cyan-border);
+            color: var(--cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .item-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+        }
+
+        .item-value {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .item-action-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 4px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-action-btn:hover {
+            color: var(--cyan);
+            background: var(--cyan-dim);
+        }
+
+        .connect-subheading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 6px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .connect-subheading i {
+            color: var(--cyan);
+        }
+
+        .social-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .social-btn-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .social-btn-card:hover {
+            border-color: var(--cyan-border);
+            color: var(--cyan);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .social-btn-card i {
+            font-size: 1.1rem;
+            color: var(--cyan);
+        }
+
+        .philosophy-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 16px;
+            margin-top: auto;
+            position: relative;
+        }
+
+        .philosophy-quote-icon {
+            font-size: 1.4rem;
+            color: var(--cyan);
+            opacity: 0.8;
+            margin-bottom: 6px;
+        }
+
+        .philosophy-quote-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .philosophy-author {
+            font-size: 0.76rem;
+            color: var(--cyan);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* PANEL 2: CONTACT FORM */
+        .form-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 32px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .form-panel:hover {
+            border-color: rgba(12, 242, 255, 0.25);
+        }
+
+        .form-header-box {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .form-heading i {
+            color: var(--cyan);
+            font-size: 1.25rem;
+        }
+
+        .form-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Quick Topics / What can we talk about */
+        .topics-helper-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px 14px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+        }
+
+        .topics-label {
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+        }
+
+        .topics-pills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topic-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            font-size: 0.78rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .topic-pill:hover,
+        .topic-pill.active {
+            background: var(--cyan-dim);
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        /* FORM INPUTS */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: relative;
+        }
+
+        .form-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .form-label .req {
+            color: var(--cyan);
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 14px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .input-control {
+            width: 100%;
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: var(--radius);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 0.92rem;
+            padding: 12px 14px 12px 40px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .input-control::placeholder {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .input-control:focus {
+            border-color: var(--cyan);
+            box-shadow: 0 0 0 3px var(--cyan-dim);
+        }
+
+        .input-wrapper:focus-within .input-icon {
+            color: var(--cyan);
+        }
+
+        /* Custom Select */
+        select.input-control {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .select-chevron {
+            position: absolute;
+            right: 14px;
+            color: var(--text-muted);
+            pointer-events: none;
+            font-size: 0.85rem;
+        }
+
+        /* Textarea */
+        textarea.input-control {
+            padding: 12px 14px 12px 40px;
+            min-height: 140px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .textarea-icon {
+            top: 14px;
+        }
+
+        .field-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.74rem;
+            min-height: 18px;
+        }
+
+        .error-msg {
+            color: #F87171;
+            font-size: 0.75rem;
+            display: none;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .error-msg.visible {
+            display: flex;
+        }
+
+        .char-counter {
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        /* Form Action Buttons */
+        .form-actions-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .btn-submit {
+            background: var(--cyan);
+            color: #010811;
+            border: 1px solid var(--cyan);
+            border-radius: 30px;
+            padding: 14px 28px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px var(--cyan-glow);
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #FFFFFF;
+            border-color: #FFFFFF;
+            color: #010811;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .privacy-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+
+        .privacy-note i {
+            color: var(--cyan);
+        }
+
+        /* Form Feedback Modal/Alert */
+        .form-feedback-card {
+            display: none;
+            background: var(--bg-surface);
+            border: 1px solid var(--cyan-border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-top: 10px;
+            flex-direction: column;
+            gap: 12px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .form-feedback-card.visible {
+            display: flex;
+        }
+
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--cyan);
+        }
+
+        .feedback-text {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .feedback-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-feedback-action {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .btn-feedback-action:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        /* PANEL 3: VISUAL SHOWCASE CARD */
+        .showcase-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 580px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+            transition: var(--transition);
+        }
+
+        .showcase-panel:hover {
+            border-color: var(--cyan-border);
+        }
+
+        .showcase-bg-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.78) contrast(1.08);
+            z-index: 0;
+            transition: transform 0.6s ease;
+        }
+
+        .showcase-panel:hover .showcase-bg-img {
+            transform: scale(1.03);
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(3, 17, 34, 0.65) 0%,
+                    rgba(1, 8, 17, 0.2) 40%,
+                    rgba(1, 8, 17, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .showcase-top {
+            position: relative;
+            z-index: 2;
+            padding: 28px 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .showcase-script-title {
+            font-family: var(--font-script);
+            font-size: 2.85rem;
+            color: var(--cyan);
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            text-shadow: 0 2px 14px rgba(12, 242, 255, 0.45);
+        }
+
+        .showcase-badges-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .showcase-badge-item {
+            background: rgba(3, 17, 34, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(12, 242, 255, 0.25);
+            padding: 7px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            transition: var(--transition);
+        }
+
+        .showcase-badge-item i {
+            color: var(--cyan);
+            font-size: 0.85rem;
+        }
+
+        .showcase-badge-item:hover {
+            border-color: var(--cyan);
+            background: rgba(12, 242, 255, 0.15);
+            transform: translateX(4px);
+        }
+
+        .showcase-bottom {
+            position: relative;
+            z-index: 2;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .showcase-signature {
+            font-family: var(--font-script);
+            font-size: 2.2rem;
+            color: #FFFFFF;
+            letter-spacing: 0.04em;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            border-bottom: 2px solid var(--cyan);
+            display: inline-block;
+            margin: 0 auto;
+            padding-bottom: 2px;
+        }
+
+        .showcase-subtext {
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        /* HOW IT WORKS SECTION */
+        .process-section {
+            padding: 70px 0;
+            border-top: 1px solid var(--border-subtle);
+            background: var(--bg-surface);
+        }
+
+        .section-header-center {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 48px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .process-card:hover {
+            border-color: var(--cyan-border);
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+        }
+
+        .process-step-num {
+            font-family: var(--font-mono);
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 14px;
+            display: inline-block;
+            letter-spacing: 0.05em;
+        }
+
+        .process-step-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .process-step-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* CURRENTLY OPEN TO SECTION */
+        .open-to-section {
+            padding: 60px 0 70px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .open-to-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .open-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius);
+            padding: 20px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+        }
+
+        .open-card:hover {
+            border-color: var(--cyan-border);
+            transform: translateY(-3px);
+            background: var(--bg-card-hover);
+        }
+
+        .open-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--cyan-dim);
+            color: var(--cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .open-card-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.35;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            position: relative;
+            padding: 70px 0;
+            border-top: 1px solid var(--border-subtle);
+            overflow: hidden;
+        }
+
+        .cta-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.8) 100%),
+                url('../assets/images/footer-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .cta-left h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 12px 0 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-left p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-right {
+            display: flex;
+            gap: 18px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: #010811;
+            border: 1px solid var(--cyan);
+        }
+
+        .btn-primary:hover {
+            background: #FFFFFF;
+            border-color: #FFFFFF;
+            color: #010811;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--cyan);
+            border: 1px solid var(--cyan);
+            border-radius: 30px;
+        }
+
+        .btn-outline:hover {
+            background: var(--cyan-dim);
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 44px 0 28px;
+            background: var(--bg-base);
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-subtle);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .footer-brand-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .footer-brand-sub {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .footer-nav a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-nav a.active {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-scroll-top {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-scroll-top:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            transform: translateY(-2px);
+        }
+
+        /* TOAST NOTIFICATION */
+        .toast-notify {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #031122;
+            border: 1px solid var(--cyan);
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .toast-notify.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast-notify i {
+            color: var(--cyan);
+        }
+
+        /* RESPONSIVE BREAKPOINTS */
+        @media (max-width: 1260px) {
+            .workspace-grid {
+                grid-template-columns: 290px 1fr 300px;
+                gap: 20px;
+            }
+
+            .open-to-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1080px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .hero-right {
+                max-width: 650px;
+            }
+
+            .workspace-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .showcase-panel {
+                grid-column: 1 / -1;
+                min-height: 440px;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .workspace-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .open-to-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 28px;
+            }
+
+            .cta-right {
+                justify-content: center;
+            }
+
+            .hero-features-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .form-grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .open-to-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header>
+        <div class="container nav-inner">
+            <a href="home.html" class="logo" id="nav-logo">
+                <span class="r-icon">R</span> Rajesh
+            </a>
+
+            <nav class="nav-links" id="desktop-nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="experience.html">Experience</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme"
+                    title="Toggle theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle-btn" aria-label="Open mobile navigation menu"
+                    aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-nav-panel" id="mobile-nav">
+            <a href="home.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="about.html">About <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="skills.html">Skills <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="experience.html">Experience <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="certifications.html">Certifications <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="resume.html">Resume <i class="fa-solid fa-chevron-right"></i></a>
+            <a href="contact.html" class="active" aria-current="page">Contact <i
+                    class="fa-solid fa-chevron-right"></i></a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-left">
+                        <div class="eyebrow">
+                            <span class="eyebrow-bar"></span>
+                            <span>GET IN TOUCH</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Let's Connect &amp;<br />
+                            <span class="cyan">Build Something Great.</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Whether you're interested in an internship, collaboration, technical project, or simply want
+                            to connect, I'd be happy to hear from you.
+                        </p>
+                    </div>
+
+                    <div class="hero-right">
+                        <div class="hero-features-row">
+                            <div class="feature-card">
+                                <div class="feature-icon-wrap">
+                                    <i class="fa-regular fa-lightbulb"></i>
+                                </div>
+                                <h3 class="feature-title">Open for</h3>
+                                <p class="feature-text">Internships, technical roles, &amp; practical projects</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon-wrap">
+                                    <i class="fa-regular fa-handshake"></i>
+                                </div>
+                                <h3 class="feature-title">Let's Collaborate</h3>
+                                <p class="feature-text">On exciting ideas, AI systems, or data solutions</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon-wrap">
+                                    <i class="fa-regular fa-comments"></i>
+                                </div>
+                                <h3 class="feature-title">Direct Reach</h3>
+                                <p class="feature-text">Feel free to reach out with any idea or opportunity</p>
+                            </div>
+                        </div>
+
+                        <div class="hero-quote-box">
+                            <div class="hero-quote-text">
+                                “Great opportunities start with a simple message.”
+                            </div>
+                            <div class="hero-quote-author">— Rajesh R</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN 3-PANEL CONTACT WORKSPACE -->
+        <section class="workspace-section" id="contact-workspace">
+            <div class="container">
+                <div class="workspace-grid">
+
+                    <!-- PANEL 1: CONTACT INFORMATION -->
+                    <aside class="info-panel" aria-label="Contact Information Panel">
+                        <h2 class="panel-heading">
+                            <i class="fa-solid fa-address-card panel-heading-icon"></i>
+                            <span>Contact Information</span>
+                        </h2>
+
+                        <div class="contact-items-list">
+                            <!-- Email Item -->
+                            <div class="contact-item-card">
+                                <div class="item-main">
+                                    <div class="item-icon-circle">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <div class="item-details">
+                                        <span class="item-label">Email</span>
+                                        <a href="mailto:rajeshrt905@gmail.com" class="item-value"
+                                            title="Send email to Rajesh">rajeshrt905@gmail.com</a>
+                                    </div>
+                                </div>
+                                <button type="button" class="item-action-btn copy-btn" data-copy="rajeshrt905@gmail.com"
+                                    title="Copy email address" aria-label="Copy email address to clipboard">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <!-- Location Item -->
+                            <div class="contact-item-card">
+                                <div class="item-main">
+                                    <div class="item-icon-circle">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="item-details">
+                                        <span class="item-label">Location</span>
+                                        <span class="item-value">Tamil Nadu, India</span>
+                                    </div>
+                                </div>
+                                <button type="button" class="item-action-btn copy-btn" data-copy="Tamil Nadu, India"
+                                    title="Copy location" aria-label="Copy location to clipboard">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Professional Social Links -->
+                        <div class="connect-subheading">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Connect with me</span>
+                        </div>
+
+                        <div class="social-cards-grid">
+                            <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer"
+                                class="social-btn-card" title="Rajesh's GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rajesh-r-50ab65355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank" rel="noopener noreferrer" class="social-btn-card"
+                                title="Rajesh's LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://x.com/Rajeshrtrj" target="_blank" rel="noopener noreferrer"
+                                class="social-btn-card" title="Rajesh's X (Twitter) Profile">
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <span>Twitter / X</span>
+                            </a>
+                            <a href="https://www.instagram.com/rajesh_the_don_r?igsh=bWkzY3lidzY1OGd3&utm_source=ig_contact_invite"
+                                target="_blank" rel="noopener noreferrer" class="social-btn-card"
+                                title="Rajesh's Instagram Profile">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+
+                        <!-- Technical Philosophy Card -->
+                        <div class="philosophy-card">
+                            <div class="philosophy-quote-icon">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="philosophy-quote-text">
+                                “Technology is not just about building systems, it's about creating a better future.”
+                            </p>
+                            <div class="philosophy-author">— Rajesh R</div>
+                        </div>
+                    </aside>
+
+                    <!-- PANEL 2: CONTACT FORM -->
+                    <section class="form-panel" aria-label="Contact Form Panel">
+                        <div class="form-header-box">
+                            <h2 class="form-heading">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <span>Send Me a Message</span>
+                            </h2>
+                            <p class="form-subtitle">
+                                Have a question, project idea, or just want to say hello? Fill out the form below and
+                                I'll get back to you as soon as possible.
+                            </p>
+                        </div>
+
+                        <!-- What can we talk about / Quick Topic Tags -->
+                        <div class="topics-helper-box">
+                            <span class="topics-label">What can we talk about? (Click to pick topic)</span>
+                            <div class="topics-pills-row" id="topic-pills-container">
+                                <button type="button" class="topic-pill" data-subject="Internship Opportunities">
+                                    <i class="fa-solid fa-graduation-cap"></i> Internship Opportunities
+                                </button>
+                                <button type="button" class="topic-pill" data-subject="Technical Projects">
+                                    <i class="fa-solid fa-laptop-code"></i> Technical Projects
+                                </button>
+                                <button type="button" class="topic-pill" data-subject="Collaboration">
+                                    <i class="fa-solid fa-handshake"></i> Collaboration
+                                </button>
+                                <button type="button" class="topic-pill" data-subject="Technology & Ideas">
+                                    <i class="fa-solid fa-lightbulb"></i> Technology &amp; Ideas
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Main Contact Form -->
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <!-- Anti-spam Honeypot (hidden from humans) -->
+                            <div style="display:none;" aria-hidden="true">
+                                <label for="form_honeypot_bot">Do not fill this field</label>
+                                <input type="text" id="form_honeypot_bot" name="bot_check" tabindex="-1"
+                                    autocomplete="off" />
+                            </div>
+
+                            <!-- Name and Email Row -->
+                            <div class="form-grid-2">
+                                <div class="form-field">
+                                    <label for="user_name" class="form-label">
+                                        Your Name <span class="req">*</span>
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-user input-icon"></i>
+                                        <input type="text" id="user_name" name="name" class="input-control"
+                                            placeholder="Rajesh Kumar" required aria-required="true"
+                                            autocomplete="name" />
+                                    </div>
+                                    <div class="field-footer">
+                                        <span class="error-msg" id="name-error">
+                                            <i class="fa-solid fa-circle-exclamation"></i> Please enter your name.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="user_email" class="form-label">
+                                        Your Email <span class="req">*</span>
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-envelope input-icon"></i>
+                                        <input type="email" id="user_email" name="email" class="input-control"
+                                            placeholder="name@example.com" required aria-required="true"
+                                            autocomplete="email" />
+                                    </div>
+                                    <div class="field-footer">
+                                        <span class="error-msg" id="email-error">
+                                            <i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Subject Row -->
+                            <div class="form-field">
+                                <label for="user_subject" class="form-label">
+                                    Subject <span class="req">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-folder-open input-icon"></i>
+                                    <input type="text" id="user_subject" name="subject" class="input-control"
+                                        placeholder="e.g. Internship Opportunity / Technical Collaboration" required
+                                        aria-required="true" />
+                                </div>
+                                <div class="field-footer">
+                                    <span class="error-msg" id="subject-error">
+                                        <i class="fa-solid fa-circle-exclamation"></i> Please enter a subject.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Message Row -->
+                            <div class="form-field">
+                                <label for="user_message" class="form-label">
+                                    Your Message <span class="req">*</span>
+                                </label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
+                                    <textarea id="user_message" name="message" class="input-control"
+                                        placeholder="Tell me about your project, opportunity or just say hi..." rows="5"
+                                        required aria-required="true" maxlength="1500"></textarea>
+                                </div>
+                                <div class="field-footer">
+                                    <span class="error-msg" id="message-error">
+                                        <i class="fa-solid fa-circle-exclamation"></i> Message should be at least 10
+                                        characters.
+                                    </span>
+                                    <span class="char-counter" id="char-counter">0 / 1500</span>
+                                </div>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="form-actions-box">
+                                <button type="submit" class="btn-submit" id="submit-btn">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Send Message</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <div class="privacy-note">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>Your information is safe with me. I respect your privacy.</span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Feedback & Direct Preparation Card -->
+                        <div class="form-feedback-card" id="form-feedback-card" role="alert">
+                            <div class="feedback-header">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Message Prepared &amp; Email Client Opening</span>
+                            </div>
+                            <p class="feedback-text" id="feedback-text">
+                                Your message has been prepared for <strong>rajeshrt905@gmail.com</strong>. Your default
+                                email client is opening with all details filled in. If your client didn't open
+                                automatically, you can copy the full text below or send directly via webmail.
+                            </p>
+                            <div class="feedback-actions">
+                                <button type="button" class="btn-feedback-action" id="copy-message-btn">
+                                    <i class="fa-regular fa-copy"></i> Copy Prepared Message
+                                </button>
+                                <a href="mailto:rajeshrt905@gmail.com" class="btn-feedback-action" id="open-mailto-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Mail App
+                                </a>
+                                <button type="button" class="btn-feedback-action" id="reset-form-btn">
+                                    <i class="fa-solid fa-rotate-left"></i> Send Another Message
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- PANEL 3: VISUAL SHOWCASE CARD -->
+                    <aside class="showcase-panel" aria-label="Portfolio Inspiration Visual">
+                        <img src="../assets/images/contact_showcase.png"
+                            alt="Rajesh R coding with laptop under the mountain night sky" class="showcase-bg-img"
+                            loading="lazy" />
+                        <div class="showcase-overlay"></div>
+
+                        <div class="showcase-top">
+                            <div class="showcase-script-title">
+                                Let's Work<br />Together
+                            </div>
+                            <div class="showcase-badges-list">
+                                <div class="showcase-badge-item">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                    <span>Build Projects</span>
+                                </div>
+                                <div class="showcase-badge-item">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                    <span>Share Ideas</span>
+                                </div>
+                                <div class="showcase-badge-item">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <span>Create Impact</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="showcase-bottom">
+                            <div class="showcase-signature">Rajesh R</div>
+                            <div class="showcase-subtext">Developer &nbsp;|&nbsp; AI Enthusiast &nbsp;|&nbsp; Lifelong
+                                Learner</div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="process-section" id="how-it-works">
+            <div class="container">
+                <div class="section-header-center">
+                    <div class="eyebrow">
+                        <span class="eyebrow-bar"></span>
+                        <span>HOW IT WORKS</span>
+                    </div>
+                    <h2 class="section-title">From First Contact to Reality</h2>
+                    <p class="section-desc">
+                        A transparent, straightforward collaboration process designed for meaningful engineering
+                        results.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-card">
+                        <div class="process-step-num">01 — REACH OUT</div>
+                        <h3 class="process-step-title">Reach Out</h3>
+                        <p class="process-step-desc">
+                            Send a message with your idea, internship proposal, technical question, or project scope.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-step-num">02 — CONNECT</div>
+                        <h3 class="process-step-title">Connect</h3>
+                        <p class="process-step-desc">
+                            We'll discuss the requirements, architectural possibilities, technical tools, and timelines.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-step-num">03 — BUILD</div>
+                        <h3 class="process-step-title">Build</h3>
+                        <p class="process-step-desc">
+                            Turn the right ideas into practical, well-tested AI solutions, web apps, and clean code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURRENTLY OPEN TO SECTION -->
+        <section class="open-to-section" id="open-to">
+            <div class="container">
+                <div class="section-header-center">
+                    <div class="eyebrow">
+                        <span class="eyebrow-bar"></span>
+                        <span>AREAS OF INTEREST</span>
+                    </div>
+                    <h2 class="section-title">Currently Open To</h2>
+                    <p class="section-desc">
+                        I am eager to contribute, learn, and build with teams and creators across diverse domains.
+                    </p>
+                </div>
+
+                <div class="open-to-grid">
+                    <div class="open-card">
+                        <div class="open-card-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="open-card-title">Internship Opportunities</div>
+                    </div>
+                    <div class="open-card">
+                        <div class="open-card-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="open-card-title">Entry-Level Roles</div>
+                    </div>
+                    <div class="open-card">
+                        <div class="open-card-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="open-card-title">AI &amp; Data Projects</div>
+                    </div>
+                    <div class="open-card">
+                        <div class="open-card-icon">
+                            <i class="fa-solid fa-code-fork"></i>
+                        </div>
+                        <div class="open-card-title">Collaborations</div>
+                    </div>
+                    <div class="open-card">
+                        <div class="open-card-icon">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <div class="open-card-title">Learning Opportunities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION -->
+        <section class="cta-section" id="cta">
+            <div class="cta-bg"></div>
+            <div class="cta-container">
+                <div class="cta-left">
+                    <div class="eyebrow">
+                        <span class="eyebrow-bar"></span>
+                        <span>HAVE AN IDEA OR OPPORTUNITY?</span>
+                    </div>
+                    <h2>Let's connect and explore what we can build together.</h2>
+                    <p>Take a look at my past projects and technical background before we connect.</p>
+                </div>
+                <div class="cta-right">
+                    <a href="projects.html" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="resume.html" class="btn btn-outline">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>Explore Resume</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-brand-title">RAJESH R</div>
+                    <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="certifications.html">Certifications</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Rajesh R. All rights reserved.
+                </div>
+                <div class="footer-bottom-right">
+                    <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
+                    <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top"
+                        title="Back to top">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Element -->
+    <div class="toast-notify" id="toast-notify" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Centralized Verified Site Configuration (Data Architecture)
+        const siteConfig = {
+            name: "Rajesh R",
+            title: "AI & Data Science Engineering Student",
+            email: "rajeshrt905@gmail.com",
+            location: "Tamil Nadu, India",
+            social: {
+                github: "https://github.com/rajeshrt-r",
+                linkedin: "https://www.linkedin.com/in/rajesh-r-50ab65355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                twitter: "https://x.com/Rajeshrtrj",
+                instagram: "https://www.instagram.com/rajesh_the_don_r?igsh=bWkzY3lidzY1OGd3&utm_source=ig_contact_invite"
+            }
+        };
+
+        // DOM Elements
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        const toastEl = document.getElementById('toast-notify');
+        const toastMsg = document.getElementById('toast-msg');
+
+        // Contact Form Elements
+        const contactForm = document.getElementById('contact-form');
+        const nameInput = document.getElementById('user_name');
+        const emailInput = document.getElementById('user_email');
+        const subjectInput = document.getElementById('user_subject');
+        const messageInput = document.getElementById('user_message');
+        const charCounter = document.getElementById('char-counter');
+        const submitBtn = document.getElementById('submit-btn');
+        const honeypotInput = document.getElementById('form_honeypot_bot');
+
+        // Error message elements
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const subjectError = document.getElementById('subject-error');
+        const messageError = document.getElementById('message-error');
+
+        // Feedback Card Elements
+        const feedbackCard = document.getElementById('form-feedback-card');
+        const copyMessageBtn = document.getElementById('copy-message-btn');
+        const openMailtoBtn = document.getElementById('open-mailto-btn');
+        const resetFormBtn = document.getElementById('reset-form-btn');
+        let preparedEmailBody = "";
+
+        // 1. Mobile Navigation Toggle
+        if (menuToggleBtn && mobileNav) {
+            menuToggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = mobileNav.classList.toggle('open');
+                menuToggleBtn.setAttribute('aria-expanded', isOpen);
+                const icon = menuToggleBtn.querySelector('i');
+                if (isOpen) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!mobileNav.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+                    mobileNav.classList.remove('open');
+                    menuToggleBtn.setAttribute('aria-expanded', 'false');
+                    const icon = menuToggleBtn.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // 2. Theme Toggle (Persisted in localStorage)
+        const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-theme');
+                const isLight = document.body.classList.contains('light-theme');
+                if (isLight) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('portfolio-theme', 'light');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('portfolio-theme', 'dark');
+                }
+            });
+        }
+
+        // 3. Scroll to Top
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // 4. Toast Notification Utility
+        let toastTimeout;
+        function showToast(message) {
+            clearTimeout(toastTimeout);
+            toastMsg.textContent = message;
+            toastEl.classList.add('show');
+            toastTimeout = setTimeout(() => {
+                toastEl.classList.remove('show');
+            }, 3000);
+        }
+
+        // 5. Copy Buttons (Email & Location)
+        const copyButtons = document.querySelectorAll('.copy-btn');
+        copyButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const textToCopy = btn.getAttribute('data-copy');
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        showToast(`Copied "${textToCopy}" to clipboard!`);
+                    }).catch(() => {
+                        fallbackCopy(textToCopy);
+                    });
+                } else {
+                    fallbackCopy(textToCopy);
+                }
+            });
+        });
+
+        function fallbackCopy(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            tempInput.style.position = 'fixed';
+            tempInput.style.left = '-9999px';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast(`Copied "${text}" to clipboard!`);
+            } catch (err) {
+                showToast("Failed to copy. Please select and copy manually.");
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // 6. Topic Pills quick-select
+        const topicPills = document.querySelectorAll('.topic-pill');
+        topicPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                const subject = pill.getAttribute('data-subject');
+                subjectInput.value = subject;
+                validateSubject();
+                topicPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                subjectInput.focus();
+            });
+        });
+
+        // 7. Message Textarea Character Counter
+        if (messageInput && charCounter) {
+            messageInput.addEventListener('input', () => {
+                const count = messageInput.value.length;
+                charCounter.textContent = `${count} / 1500`;
+                validateMessage();
+            });
+        }
+
+        // 8. Form Validation Functions
+        function validateName() {
+            const val = nameInput.value.trim();
+            if (val.length < 2) {
+                nameError.classList.add('visible');
+                nameInput.style.borderColor = '#F87171';
+                return false;
+            } else {
+                nameError.classList.remove('visible');
+                nameInput.style.borderColor = '';
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const val = emailInput.value.trim();
+            // Sensible RFC 5322 compatible email format regex
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            if (!val || !emailPattern.test(val)) {
+                emailError.classList.add('visible');
+                emailInput.style.borderColor = '#F87171';
+                return false;
+            } else {
+                emailError.classList.remove('visible');
+                emailInput.style.borderColor = '';
+                return true;
+            }
+        }
+
+        function validateSubject() {
+            const val = subjectInput.value.trim();
+            if (val.length < 2) {
+                subjectError.classList.add('visible');
+                subjectInput.style.borderColor = '#F87171';
+                return false;
+            } else {
+                subjectError.classList.remove('visible');
+                subjectInput.style.borderColor = '';
+                return true;
+            }
+        }
+
+        function validateMessage() {
+            const val = messageInput.value.trim();
+            if (val.length < 10) {
+                messageError.classList.add('visible');
+                messageInput.style.borderColor = '#F87171';
+                return false;
+            } else {
+                messageError.classList.remove('visible');
+                messageInput.style.borderColor = '';
+                return true;
+            }
+        }
+
+        nameInput.addEventListener('blur', validateName);
+        emailInput.addEventListener('blur', validateEmail);
+        subjectInput.addEventListener('blur', validateSubject);
+        messageInput.addEventListener('blur', validateMessage);
+
+        // 9. Form Submission Handling (Mailto construction & Transparent Recruiter UX)
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Bot check (honeypot)
+            if (honeypotInput.value !== '') {
+                console.warn('Bot detected via honeypot.');
+                return;
+            }
+
+            const isNameValid = validateName();
+            const isEmailValid = validateEmail();
+            const isSubjectValid = validateSubject();
+            const isMessageValid = validateMessage();
+
+            if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+                showToast("Please fix the errors in the form.");
+                return;
+            }
+
+            // Disable submit button temporarily
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Preparing Email...</span>';
+
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const subject = subjectInput.value.trim();
+            const message = messageInput.value.trim();
+
+            preparedEmailBody = `Hello Rajesh,\n\n${message}\n\n---\nFrom: ${name}\nEmail: ${email}`;
+
+            // Build mailto URL
+            const mailtoUrl = `mailto:${encodeURIComponent(siteConfig.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(preparedEmailBody)}`;
+
+            // Update Open Mail App href
+            if (openMailtoBtn) {
+                openMailtoBtn.href = mailtoUrl;
+            }
+
+            // Reveal feedback card
+            setTimeout(() => {
+                feedbackCard.classList.add('visible');
+                feedbackCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>Send Message</span> <i class="fa-solid fa-arrow-right"></i>';
+
+                showToast("Opening your email client...");
+
+                // Trigger mailto in client
+                try {
+                    window.location.href = mailtoUrl;
+                } catch (err) {
+                    console.log("Mailto triggered", err);
+                }
+            }, 600);
+        });
+
+        // 10. Copy Prepared Message button
+        if (copyMessageBtn) {
+            copyMessageBtn.addEventListener('click', () => {
+                if (preparedEmailBody) {
+                    fallbackCopy(preparedEmailBody);
+                } else {
+                    showToast("No prepared message found yet.");
+                }
+            });
+        }
+
+        // 11. Send Another Message Reset
+        if (resetFormBtn) {
+            resetFormBtn.addEventListener('click', () => {
+                contactForm.reset();
+                charCounter.textContent = '0 / 1500';
+                feedbackCard.classList.remove('visible');
+                topicPills.forEach(p => p.classList.remove('active'));
+                nameInput.style.borderColor = '';
+                emailInput.style.borderColor = '';
+                subjectInput.style.borderColor = '';
+                messageInput.style.borderColor = '';
+                showToast("Form cleared.");
+                nameInput.focus();
+            });
+        }
+    </script>
+</body>
+
+</html>

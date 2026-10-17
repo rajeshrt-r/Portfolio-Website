@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Rajesh R | AI &amp; Data Science Engineer</title>
+  <meta name="description"
+    content="Learn more about Rajesh R, an AI &amp; Data Science engineering student focused on artificial intelligence, data science, software development and continuous technical growth." />
+
+  <!-- Google Fonts: Inter, JetBrains Mono, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & THEME TOKENS (Strictly identical to Home, Skills & Contact)
+       ========================================================================== */
+    :root {
+      --bg-base: #010811;
+      --bg-surface: #031122;
+      --bg-card: #051426;
+      --bg-card-hover: #071C33;
+      --cyan: #0CF2FF;
+      --cyan-dim: rgba(12, 242, 255, 0.1);
+      --cyan-border: rgba(12, 242, 255, 0.28);
+      --cyan-glow: rgba(12, 242, 255, 0.35);
+      --text-primary: #FFFFFF;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(12, 242, 255, 0.45);
+      --radius-sm: 6px;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-base: #F8FAFC;
+      --bg-surface: #EDF2F7;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F1F5F9;
+      --cyan: #0284C7;
+      --cyan-dim: rgba(2, 132, 199, 0.08);
+      --cyan-border: rgba(2, 132, 199, 0.28);
+      --cyan-glow: rgba(2, 132, 199, 0.25);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(2, 132, 199, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .cyan {
+      color: var(--cyan);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-bar {
+      width: 24px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       GLOBAL NAVBAR (Synced across all 8 pages)
+       ========================================================================== */
+    header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 18px 0;
+      background: var(--bg-base);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: rgba(1, 8, 17, 0.92);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body.light-theme header {
+      background-color: rgba(248, 250, 252, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo .r-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-links a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .theme-toggle-btn:hover {
+      color: var(--cyan);
+      border-color: var(--cyan-border);
+      transform: rotate(15deg);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .mobile-nav-panel {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      display: none;
+      flex-direction: column;
+      padding: 12px 0;
+      z-index: 99;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-nav-panel.open {
+      display: flex;
+    }
+
+    .mobile-nav-panel a {
+      padding: 14px 40px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-nav-panel a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav-panel a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SECTION 1: HERO / ABOUT ME (Exact Reference Layout: 3 Columns)
+       ========================================================================== */
+    .about-hero {
+      padding: 56px 0 64px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at 50% 15%, rgba(12, 242, 255, 0.05) 0%, transparent 65%);
+    }
+
+    .hero-3col-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* Left Column: Intro Details */
+    .hero-intro-col {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .hero-name {
+      font-size: 3.8rem;
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-role {
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-top: -6px;
+    }
+
+    .hero-bio {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 530px;
+    }
+
+    /* Pill Badges */
+    .hero-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 13px;
+      background: var(--bg-surface);
+      border: 1px solid var(--cyan-border);
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .hero-badge i {
+      color: var(--cyan);
+      font-size: 0.82rem;
+    }
+
+    .hero-badge:hover {
+      background: var(--cyan-dim);
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Actions */
+    .hero-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-download-resume {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 26px;
+      background: var(--cyan);
+      color: #010811;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 18px var(--cyan-glow);
+    }
+
+    .btn-download-resume:hover {
+      background: #3bf6ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--cyan-glow);
+    }
+
+    .hero-social-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-social-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      transition: var(--transition);
+    }
+
+    .hero-social-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Center Column: Portrait Visual with Brackets */
+    .hero-portrait-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .portrait-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 370px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Cyan Technical Bracket Accents */
+    .bracket-corner-tl {
+      position: absolute;
+      top: -12px;
+      left: 10px;
+      width: 48px;
+      height: 48px;
+      border-top: 3px solid var(--cyan);
+      border-left: 3px solid var(--cyan);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .bracket-corner-br {
+      position: absolute;
+      bottom: -12px;
+      right: 10px;
+      width: 48px;
+      height: 48px;
+      border-bottom: 3px solid var(--cyan);
+      border-right: 3px solid var(--cyan);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .portrait-image-container {
+      position: relative;
+      width: 100%;
+      height: 430px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+    }
+
+    .portrait-wrapper:hover .portrait-img {
+      transform: scale(1.03);
+    }
+
+    /* Ambient rim glow */
+    .portrait-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(12, 242, 255, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Handwriting overlay text: Better Ideas Bigger Impact */
+    .script-badge {
+      position: absolute;
+      top: 28px;
+      right: -24px;
+      font-family: var(--font-script);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1.05;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 16px var(--cyan-glow);
+      z-index: 4;
+      pointer-events: none;
+      transform: rotate(4deg);
+    }
+
+    /* Right Column: Quick Info Card */
+    .hero-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .hero-info-card:hover {
+      border-color: var(--cyan-border);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .info-card-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .info-card-item:hover .info-card-icon {
+      background: var(--cyan);
+      color: #010811;
+      transform: scale(1.06);
+    }
+
+    .info-card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .info-card-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .info-card-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       SECTION 2: THREE COLUMNS (Education Timeline, My Journey, Interests)
+       ========================================================================== */
+    .about-pillars-section {
+      padding: 64px 0 72px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+    .pillar-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .pillar-header {
+      margin-bottom: 4px;
+    }
+
+    /* Academic achievements timeline with left visual track */
+    .edu-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .edu-timeline::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      left: 7px;
+      width: 2px;
+      background: var(--cyan);
+      box-shadow: 0 0 8px var(--cyan-glow);
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -28px;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-base);
+      border: 3px solid var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
+      z-index: 2;
+    }
+
+    .edu-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .edu-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .edu-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .edu-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .edu-card-sub {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+
+    .edu-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+
+    .edu-card-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+    }
+
+    .edu-card.achievement-card {
+      align-items: flex-start;
+    }
+
+    .achievement-card .edu-card-badge {
+      position: static;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    .edu-card-badge.completed {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    /* Column 2: My Journey */
+    .journey-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .journey-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      transition: var(--transition);
+    }
+
+    .journey-item:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .journey-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .journey-item:hover .journey-icon {
+      background: var(--cyan);
+      color: #010811;
+    }
+
+    .journey-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .journey-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .journey-desc {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* Column 3: Interests Grid */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .interest-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .interest-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+
+    .interest-icon-wrap {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .interest-card:hover .interest-icon-wrap {
+      background: var(--cyan);
+      color: #010811;
+    }
+
+    .interest-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       SECTION 3: PANORAMIC "MY VISION" BANNER (Matching Reference Image)
+       ========================================================================== */
+    .vision-banner-section {
+      position: relative;
+      padding: 64px 0;
+      background-image: linear-gradient(180deg, rgba(1, 8, 17, 0.92) 0%, rgba(1, 8, 17, 0.75) 50%, rgba(1, 8, 17, 0.95) 100%),
+        url('../assets/images/footer-bg.png');
+      background-size: cover;
+      background-position: center bottom;
+      border-bottom: 1px solid var(--border-subtle);
+      overflow: hidden;
+    }
+
+    body.light-theme .vision-banner-section {
+      background-image: linear-gradient(180deg, rgba(248, 250, 252, 0.92) 0%, rgba(248, 250, 252, 0.75) 50%, rgba(248, 250, 252, 0.95) 100%),
+        url('../assets/images/footer-bg.png');
+    }
+
+    .vision-banner-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .vision-left {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .vision-heading {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .vision-quote-box {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding-left: 20px;
+      border-left: 2px solid var(--cyan-border);
+    }
+
+    .vision-quote-icon {
+      font-size: 1.6rem;
+      color: var(--cyan);
+      line-height: 1;
+      margin-top: -2px;
+    }
+
+    .vision-quote-body {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .vision-quote-text {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .vision-quote-author {
+      font-size: 0.85rem;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .vision-signature-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      padding-right: 20px;
+    }
+
+    .vision-accent-line {
+      width: 140px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan));
+      margin-bottom: 8px;
+    }
+
+    .vision-signature {
+      font-family: var(--font-script);
+      font-size: 3rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    body.light-theme .vision-signature {
+      color: #0F172A;
+    }
+
+    /* ==========================================================================
+       SECTION 4: LEARNING BEYOND THE CLASSROOM (Section 8 of Master Prompt)
+       ========================================================================== */
+    .about-learning-section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at 80% 50%, rgba(12, 242, 255, 0.04) 0%, transparent 60%);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-header-center h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .section-header-center p {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .learning-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .learning-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .learning-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--cyan);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .learning-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .learning-card:hover::before {
+      opacity: 1;
+    }
+
+    .learning-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      transition: var(--transition);
+    }
+
+    .learning-card:hover .learning-card-icon {
+      background: var(--cyan);
+      color: #010811;
+      transform: scale(1.05);
+    }
+
+    .learning-card-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .learning-card-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .learning-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .tech-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* ==========================================================================
+       SECTION 5: PHILOSOPHY & CAREER DIRECTION (Sections 10, 11 & 12)
+       ========================================================================== */
+    .about-direction-section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .direction-container-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    /* Left: Philosophy & Focus */
+    .philosophy-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
+    .philosophy-statement {
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .philosophy-desc {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .focus-items-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .focus-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: var(--transition);
+    }
+
+    .focus-item:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+    }
+
+    .focus-num {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--cyan);
+    }
+
+    .focus-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .focus-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+
+    /* Right: Where I'm Heading */
+    .direction-box {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .direction-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .direction-p {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .direction-cards-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .dir-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: var(--transition);
+    }
+
+    .dir-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateX(4px);
+    }
+
+    .dir-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .dir-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dir-card-heading {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .dir-card-desc {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+
+    .dir-card-arrow {
+      color: var(--cyan);
+      font-size: 0.9rem;
+      opacity: 0.7;
+      transition: var(--transition);
+    }
+
+    .dir-card:hover .dir-card-arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       SECTION 6: CTA BANNER (Section 13 of Master Prompt)
+       ========================================================================== */
+    .about-cta-section {
+      padding: 68px 0;
+      position: relative;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .about-cta-card {
+      background: var(--bg-card);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(12, 242, 255, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .about-cta-left {
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .about-cta-left h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .about-cta-left p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .about-cta-buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 28px;
+      background: var(--cyan);
+      color: #010811;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: 30px;
+      transition: var(--transition);
+      box-shadow: 0 4px 18px var(--cyan-glow);
+    }
+
+    .btn-primary:hover {
+      background: #3bf6ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--cyan-glow);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border-radius: 30px;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       SECTION 7: GLOBAL FOOTER (100% Synced)
+       ========================================================================== */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 44px 0 28px;
+      background: var(--bg-base);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-nav a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-scroll-top {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-scroll-top:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1200px) {
+      .hero-3col-grid {
+        grid-template-columns: 1.1fr 1fr 0.9fr;
+        gap: 30px;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .learning-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .vision-banner-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .vision-signature-box {
+        grid-column: 1 / -1;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-3col-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-portrait-col {
+        order: -1;
+      }
+
+      .direction-container-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .about-cta-card {
+        padding: 32px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero-name {
+        font-size: 2.8rem;
+      }
+
+      .hero-role {
+        font-size: 1.2rem;
+      }
+
+      .interests-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .learning-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vision-banner-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .focus-items-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .about-cta-buttons a {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Accessibility: Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- GLOBAL NAVBAR -->
+  <header>
+    <div class="container nav-inner">
+      <a href="home.html" class="logo" id="nav-logo">
+        <span class="r-icon">R</span> Rajesh
+      </a>
+
+      <nav class="nav-links" id="desktop-nav">
+        <a href="home.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme"
+          title="Toggle theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle-btn" aria-label="Open mobile navigation menu"
+          aria-expanded="false" aria-controls="mobile-nav">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-panel" id="mobile-nav">
+      <a href="home.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html" class="active" aria-current="page">About <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="skills.html">Skills <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="experience.html">Experience <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="certifications.html">Certifications <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="resume.html">Resume <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO (Matches 2 About page reference.png 3-Column Top Section)
+         ========================================================================== -->
+    <section class="about-hero" id="about-hero">
+      <div class="container">
+        <div class="hero-3col-grid">
+
+          <!-- Left Column: Biography & Badges -->
+          <div class="hero-intro-col">
+            <div class="eyebrow">
+              <span class="eyebrow-bar"></span>
+              <span>ABOUT ME</span>
+            </div>
+
+            <h1 class="hero-name">
+              I'm <span class="cyan">Rajesh R</span>
+            </h1>
+
+            <div class="hero-role">
+              AI &amp; Data Science Engineer
+            </div>
+
+            <p class="hero-bio">
+              I'm an AI &amp; Data Science engineering student with a growing interest in artificial intelligence, machine learning, data analysis, software development, and emerging technologies. I enjoy solving real-world problems with technology, especially in AI, Data Science and system design, while constantly exploring new tools and ideas.
+            </p>
+
+            <!-- Topic Pills -->
+            <div class="hero-badges-row">
+              <span class="hero-badge"><i class="fa-solid fa-microchip"></i> AI</span>
+              <span class="hero-badge"><i class="fa-solid fa-chart-line"></i> Data Science</span>
+              <span class="hero-badge"><i class="fa-solid fa-code"></i> Technology</span>
+              <span class="hero-badge"><i class="fa-solid fa-dna"></i> Genetics</span>
+              <span class="hero-badge"><i class="fa-solid fa-chart-pie"></i> Economics</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions-row">
+              <a href="resume.html" class="btn-download-resume" id="hero-resume-btn">
+                <i class="fa-solid fa-download"></i> Download Resume
+              </a>
+
+              <div class="hero-social-icons">
+                <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer"
+                  class="hero-social-btn" aria-label="Rajesh R GitHub Profile" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rajesh-r-50ab65355?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank" rel="noopener noreferrer" class="hero-social-btn"
+                  aria-label="Rajesh R LinkedIn Profile" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:rajeshrt905@gmail.com" class="hero-social-btn" aria-label="Email Rajesh R"
+                  title="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Column: Portrait Visual with Cyan Brackets & Script Text -->
+          <div class="hero-portrait-col">
+            <div class="portrait-wrapper">
+              <div class="bracket-corner-tl" aria-hidden="true"></div>
+              <div class="bracket-corner-br" aria-hidden="true"></div>
+
+              <div class="portrait-image-container">
+                <img src="../assets/images/rajesh-image.png" alt="Rajesh R — AI &amp; Data Science Engineer"
+                  class="portrait-img" loading="eager" />
+                <div class="portrait-glow" aria-hidden="true"></div>
+              </div>
+
+              <!-- Cursive script overlay from reference image -->
+              <div class="script-badge" aria-hidden="true">
+                Better<br />Ideas<br />Bigger<br />Impact
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Quick Snapshot Card -->
+          <div class="hero-info-card">
+            <!-- 01 Education -->
+            <div class="info-card-item">
+              <div class="info-card-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-label">Education</span>
+                <span class="info-card-value">B.E. AI &amp; Data Science (Pursuing)</span>
+              </div>
+            </div>
+
+            <!-- 02 Location -->
+            <div class="info-card-item">
+              <div class="info-card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-label">Location</span>
+                <span class="info-card-value">Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <!-- 03 Date of Birth -->
+            <div class="info-card-item">
+              <div class="info-card-icon">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-label">Date of Birth</span>
+                <span class="info-card-value">16 April 2006</span>
+              </div>
+            </div>
+
+            <!-- 04 Career Goal -->
+            <div class="info-card-item">
+              <div class="info-card-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-label">Career Goal</span>
+                <span class="info-card-value">Become a skilled AI/ML Engineer and build impactful solutions.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: THREE COLUMNS (Education Timeline, My Journey, Interests)
+         ========================================================================== -->
+    <section class="about-pillars-section" id="about-pillars">
+      <div class="container">
+        <div class="pillars-grid">
+
+          <!-- Pillar 1: Academic Achievements -->
+          <div class="pillar-col">
+            <div class="pillar-header">
+              <div class="eyebrow">
+                <span class="eyebrow-bar"></span>
+                <span>ACADEMIC ACHIEVEMENTS</span>
+              </div>
+            </div>
+
+            <div class="edu-timeline">
+              <!-- Item 1: Current B.Tech studies -->
+              <div class="edu-card achievement-card">
+                <div class="edu-card-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="edu-card-body">
+                  <div class="edu-card-title">B.Tech AI &amp; Data Science</div>
+                  <div class="edu-card-sub">DMI Engineering College, Aravallimozhi</div>
+                  <div class="edu-card-desc">Year: 2024–2028</div>
+                </div>
+                <span class="edu-card-badge">Pursuing</span>
+              </div>
+
+              <!-- Item 2: Higher Secondary -->
+              <div class="edu-card achievement-card">
+                <div class="edu-card-icon">
+                  <i class="fa-solid fa-medal"></i>
+                </div>
+                <div class="edu-card-body">
+                  <div class="edu-card-title">Higher Secondary (12th)</div>
+                  <div class="edu-card-sub">Tamil Nadu State Board</div>
+                  <div class="edu-card-desc">Year: 2023–2024 &bull; Mark Percentage: <strong class="cyan">87.40%</strong></div>
+                </div>
+                <span class="edu-card-badge completed">Completed</span>
+              </div>
+
+              <!-- Item 3: Secondary -->
+              <div class="edu-card achievement-card">
+                <div class="edu-card-icon">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div class="edu-card-body">
+                  <div class="edu-card-title">Secondary (10th)</div>
+                  <div class="edu-card-sub">Tamil Nadu State Board</div>
+                  <div class="edu-card-desc">Year: 2021–2022 &bull; Mark Percentage: <strong class="cyan">72.33%</strong></div>
+                </div>
+                <span class="edu-card-badge completed">Completed</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Pillar 2: My Journey -->
+          <div class="pillar-col">
+            <div class="pillar-header">
+              <div class="eyebrow">
+                <span class="eyebrow-bar"></span>
+                <span>MY JOURNEY</span>
+              </div>
+            </div>
+
+            <div class="journey-list">
+              <!-- Step 1: Learner -->
+              <div class="journey-item">
+                <div class="journey-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="journey-content">
+                  <div class="journey-title">Learner</div>
+                  <div class="journey-desc">Always curious, always learning. I believe in continuous growth through practical experimentation.</div>
+                </div>
+              </div>
+
+              <!-- Step 2: Problem Solver -->
+              <div class="journey-item">
+                <div class="journey-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="journey-content">
+                  <div class="journey-title">Problem Solver</div>
+                  <div class="journey-desc">I love breaking down complex problems and building practical, modular software solutions.</div>
+                </div>
+              </div>
+
+              <!-- Step 3: Tech Enthusiast -->
+              <div class="journey-item">
+                <div class="journey-icon">
+                  <i class="fa-regular fa-lightbulb"></i>
+                </div>
+                <div class="journey-content">
+                  <div class="journey-title">Tech Enthusiast</div>
+                  <div class="journey-desc">Exploring AI, Data Science, Web Technologies, Genetics, and intelligent autonomous agents.</div>
+                </div>
+              </div>
+
+              <!-- Step 4: Future Goal -->
+              <div class="journey-item">
+                <div class="journey-icon">
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <div class="journey-content">
+                  <div class="journey-title">Future Goal</div>
+                  <div class="journey-desc">To work on real-world engineering projects, contribute to innovative products and make a positive impact.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Interests Grid -->
+          <div class="pillar-col">
+            <div class="pillar-header">
+              <div class="eyebrow">
+                <span class="eyebrow-bar"></span>
+                <span>INTERESTS</span>
+              </div>
+            </div>
+
+            <div class="interests-grid">
+              <!-- Interest 1 -->
+              <div class="interest-card">
+                <div class="interest-icon-wrap">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="interest-label">AI &amp; Machine Learning</span>
+              </div>
+
+              <!-- Interest 2 -->
+              <div class="interest-card">
+                <div class="interest-icon-wrap">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="interest-label">Data Science &amp; Analytics</span>
+              </div>
+
+              <!-- Interest 3 -->
+              <div class="interest-card">
+                <div class="interest-icon-wrap">
+                  <i class="fa-solid fa-dna"></i>
+                </div>
+                <span class="interest-label">Genetics &amp; Biotechnology</span>
+              </div>
+
+              <!-- Interest 4 -->
+              <div class="interest-card">
+                <div class="interest-icon-wrap">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <span class="interest-label">Economics &amp; Global Trends</span>
+              </div>
+
+              <!-- Interest 5 -->
+              <div class="interest-card">
+                <div class="interest-icon-wrap">
+                  <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <span class="interest-label">Technology &amp; Gadgets</span>
+              </div>
+
+              <!-- Interest 6 -->
+              <div class="interest-card">
+                <div class="interest-icon-wrap">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+                <span class="interest-label">Fantasy Art &amp; Storytelling</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: PANORAMIC "MY VISION" BANNER (Matching Reference Image)
+         ========================================================================== -->
+    <section class="vision-banner-section" id="my-vision">
+      <div class="container">
+        <div class="vision-banner-grid">
+
+          <!-- Left: Vision Statement -->
+          <div class="vision-left">
+            <div class="eyebrow">
+              <span class="eyebrow-bar"></span>
+              <span>MY VISION</span>
+            </div>
+            <h2 class="vision-heading">
+              Building intelligent solutions for a <span class="cyan">better tomorrow.</span>
+            </h2>
+          </div>
+
+          <!-- Center: Steve Jobs Quote -->
+          <div class="vision-quote-box">
+            <div class="vision-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <div class="vision-quote-body">
+              <p class="vision-quote-text">
+                "The only way to do great work is to love what you do."
+              </p>
+              <span class="vision-quote-author">&mdash; Steve Jobs</span>
+            </div>
+          </div>
+
+          <!-- Right: Accent Line & Handwritten Signature -->
+          <div class="vision-signature-box">
+            <div class="vision-accent-line" aria-hidden="true"></div>
+            <div class="vision-signature" aria-label="Signature: Rajesh R">Rajesh R</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: LEARNING BEYOND THE CLASSROOM (Section 8 of Master Prompt)
+         ========================================================================== */ -->
+    <section class="about-learning-section" id="learning-development">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="eyebrow">
+            <span class="eyebrow-bar"></span>
+            <span>CONTINUOUS GROWTH</span>
+          </div>
+          <h2>Learning Beyond the Classroom</h2>
+          <p>
+            Supplementing academic engineering with specialized certifications, industry internships, hands-on experimentation, and emerging AI technologies.
+          </p>
+        </div>
+
+        <div class="learning-cards-grid">
+          <!-- Card 1: AI & ML -->
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="learning-card-title">AI &amp; Machine Learning</h3>
+            <p class="learning-card-desc">
+              Completed practical AI/ML training and internships, exploring intelligent models, neural structures, and applied inference.
+            </p>
+            <div class="learning-card-tags">
+              <span class="tech-pill">AI/ML Internship</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Scikit-Learn</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Modern Data Technologies -->
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="learning-card-title">Modern Data &amp; RAG</h3>
+            <p class="learning-card-desc">
+              Gaining practical knowledge in MongoDB, Vector Search, Retrieval-Augmented Generation (RAG), and data-driven systems.
+            </p>
+            <div class="learning-card-tags">
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">Vector Search</span>
+              <span class="tech-pill">RAG</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Cybersecurity -->
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="learning-card-title">Cybersecurity Foundations</h3>
+            <p class="learning-card-desc">
+              Developing foundational understanding of security principles, ethical hacking concepts, and digital resilience.
+            </p>
+            <div class="learning-card-tags">
+              <span class="tech-pill">Ethical Hacking</span>
+              <span class="tech-pill">Network Security</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Programming Fundamentals -->
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="learning-card-title">Software Fundamentals</h3>
+            <p class="learning-card-desc">
+              Strengthening core computer science pillars through Java fundamentals, object-oriented architecture, and data structures.
+            </p>
+            <div class="learning-card-tags">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">OOP</span>
+              <span class="tech-pill">DSA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: PHILOSOPHY & CAREER DIRECTION (Sections 10, 11 & 12)
+         ========================================================================== -->
+    <section class="about-direction-section" id="career-direction">
+      <div class="container">
+        <div class="direction-container-grid">
+
+          <!-- Left Box: Philosophy & Focus -->
+          <div class="philosophy-box">
+            <div class="eyebrow">
+              <span class="eyebrow-bar"></span>
+              <span>MY APPROACH</span>
+            </div>
+            <blockquote class="philosophy-statement">
+              "Learn continuously. Build practically. Improve constantly."
+            </blockquote>
+            <p class="philosophy-desc">
+              I believe meaningful technical growth comes from combining active learning with real experimentation, accepting mistakes, and continuously refining solutions through hands-on code.
+            </p>
+
+            <div class="focus-items-grid">
+              <div class="focus-item">
+                <span class="focus-num">01</span>
+                <span class="focus-title">AI &amp; ML</span>
+                <span class="focus-sub">Foundations in intelligent systems</span>
+              </div>
+              <div class="focus-item">
+                <span class="focus-num">02</span>
+                <span class="focus-title">Data Science</span>
+                <span class="focus-sub">Analysis &amp; real problem solving</span>
+              </div>
+              <div class="focus-item">
+                <span class="focus-num">03</span>
+                <span class="focus-title">Software Dev</span>
+                <span class="focus-sub">Clean coding &amp; app design</span>
+              </div>
+              <div class="focus-item">
+                <span class="focus-num">04</span>
+                <span class="focus-title">Practical Projects</span>
+                <span class="focus-sub">Turning concepts into code</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Box: Where I'm Heading -->
+          <div class="direction-box">
+            <div class="eyebrow">
+              <span class="eyebrow-bar"></span>
+              <span>WHERE I'M HEADING</span>
+            </div>
+            <h2 class="direction-title">
+              Aspiring AI &amp; Data Science Professional
+            </h2>
+            <p class="direction-p">
+              My goal is to grow into a strong engineer by combining rigorous engineering fundamentals, data-driven analytical thinking, and practical modern AI development.
+            </p>
+
+            <div class="direction-cards-col">
+              <!-- Direction 1 -->
+              <div class="dir-card">
+                <div class="dir-card-icon">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="dir-card-body">
+                  <div class="dir-card-heading">AI Engineering</div>
+                  <div class="dir-card-desc">Building and deploying practical machine learning models and intelligent pipelines.</div>
+                </div>
+                <i class="fa-solid fa-arrow-right dir-card-arrow"></i>
+              </div>
+
+              <!-- Direction 2 -->
+              <div class="dir-card">
+                <div class="dir-card-icon">
+                  <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div class="dir-card-body">
+                  <div class="dir-card-heading">Data Science</div>
+                  <div class="dir-card-desc">Deriving actionable insights and predictive signals from structured and unstructured data.</div>
+                </div>
+                <i class="fa-solid fa-arrow-right dir-card-arrow"></i>
+              </div>
+
+              <!-- Direction 3 -->
+              <div class="dir-card">
+                <div class="dir-card-icon">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="dir-card-body">
+                  <div class="dir-card-heading">Intelligent Applications</div>
+                  <div class="dir-card-desc">Architecting robust full-stack applications powered by agents, vector search, and AI.</div>
+                </div>
+                <i class="fa-solid fa-arrow-right dir-card-arrow"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 7: GLOBAL FOOTER (100% Synced across Home, Skills, Contact, About)
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">RAJESH R</div>
+          <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="home.html">Home</a>
+          <a href="about.html" class="active" aria-current="page">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html">Experience</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 Rajesh R. All rights reserved.
+        </div>
+        <div class="footer-bottom-right">
+          <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
+          <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script>
+    // 1. Mobile navigation toggle
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggleBtn && mobileNav) {
+      menuToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = mobileNav.classList.toggle('open');
+        menuToggleBtn.setAttribute('aria-expanded', isOpen);
+        const icon = menuToggleBtn.querySelector('i');
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+          mobileNav.classList.remove('open');
+          menuToggleBtn.setAttribute('aria-expanded', 'false');
+          const icon = menuToggleBtn.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // 2. Theme toggle with localStorage persistence
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-theme');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        if (isLight) {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+          }
+          localStorage.setItem('portfolio-theme', 'light');
+        } else {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+          }
+          localStorage.setItem('portfolio-theme', 'dark');
+        }
+      });
+    }
+
+    // 3. Scroll to top button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+
+</html>

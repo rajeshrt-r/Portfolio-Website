@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Rajesh R — AI &amp; Data Science Engineer</title>
+  <meta name="description"
+    content="Explore the internship, practical learning, academic achievements and professional development journey of Rajesh R — AI &amp; Data Science Engineer." />
+
+  <!-- Google Fonts: Inter, JetBrains Mono, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & THEME TOKENS (Strictly identical across all 8 pages)
+       ========================================================================== */
+    :root {
+      --bg-base: #010811;
+      --bg-surface: #031122;
+      --bg-card: #051426;
+      --bg-card-hover: #071C33;
+      --cyan: #0CF2FF;
+      --cyan-dim: rgba(12, 242, 255, 0.1);
+      --cyan-border: rgba(12, 242, 255, 0.28);
+      --cyan-glow: rgba(12, 242, 255, 0.35);
+      --text-primary: #FFFFFF;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(12, 242, 255, 0.45);
+      --radius-sm: 6px;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-base: #F8FAFC;
+      --bg-surface: #EDF2F7;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F1F5F9;
+      --cyan: #0284C7;
+      --cyan-dim: rgba(2, 132, 199, 0.08);
+      --cyan-border: rgba(2, 132, 199, 0.28);
+      --cyan-glow: rgba(2, 132, 199, 0.25);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(2, 132, 199, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .cyan {
+      color: var(--cyan);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-bar {
+      width: 24px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       GLOBAL NAVBAR (Synced across all 8 pages)
+       ========================================================================== */
+    header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 18px 0;
+      background: var(--bg-base);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: rgba(1, 8, 17, 0.92);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body.light-theme header {
+      background-color: rgba(248, 250, 252, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo .r-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-links a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .theme-toggle-btn:hover {
+      color: var(--cyan);
+      border-color: var(--cyan-border);
+      transform: rotate(15deg);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .mobile-nav-panel {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      display: none;
+      flex-direction: column;
+      padding: 12px 0;
+      z-index: 99;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-nav-panel.open {
+      display: flex;
+    }
+
+    .mobile-nav-panel a {
+      padding: 14px 40px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-nav-panel a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav-panel a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SECTION 1: PAGE HERO (Panoramic Sunset Mountain Landscape)
+       ========================================================================== */
+    .experience-hero {
+      position: relative;
+      padding: 64px 0 68px;
+      border-bottom: 1px solid var(--border-subtle);
+      background-image: linear-gradient(180deg, rgba(1, 8, 17, 0.92) 0%, rgba(1, 8, 17, 0.72) 50%, rgba(1, 8, 17, 0.96) 100%),
+        url('../assets/images/footer-bg.png');
+      background-size: cover;
+      background-position: center 70%;
+      overflow: hidden;
+    }
+
+    body.light-theme .experience-hero {
+      background-image: linear-gradient(180deg, rgba(248, 250, 252, 0.92) 0%, rgba(248, 250, 252, 0.72) 50%, rgba(248, 250, 252, 0.96) 100%),
+        url('../assets/images/footer-bg.png');
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.68;
+      max-width: 580px;
+    }
+
+    /* Right Cursive Callout */
+    .hero-right-callout {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+
+    .script-opportunity-tag {
+      font-family: var(--font-script);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.1;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9), 0 0 20px var(--cyan-glow);
+      text-align: right;
+      transform: rotate(5deg);
+      pointer-events: none;
+    }
+
+    body.light-theme .script-opportunity-tag {
+      color: #0F172A;
+      text-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+    }
+
+    /* ==========================================================================
+       SECTION 2: MAIN TWO-COLUMN CONTENT GRID (Left 70% + Right Sidebar 30%)
+       ========================================================================== */
+    .experience-main-section {
+      padding: 56px 0 72px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .exp-two-col-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .exp-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .exp-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Section Subheadings */
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .section-title-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-icon-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .section-heading-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .section-view-all-link {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--cyan);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .section-view-all-link:hover {
+      text-shadow: 0 0 10px var(--cyan-glow);
+      transform: translateX(3px);
+    }
+
+    /* --------------------------------------------------------------------------
+       BLOCK A: Professional Experience (Large Featured Internship Card)
+       -------------------------------------------------------------------------- */
+    .experience-timeline-card-wrap {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .experience-timeline-card-wrap::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      left: 7px;
+      width: 2px;
+      background: var(--cyan);
+      box-shadow: 0 0 8px var(--cyan-glow);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 50%;
+      left: -28px;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-base);
+      border: 3px solid var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
+      z-index: 2;
+    }
+
+    .internship-featured-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.05fr 1.3fr;
+      gap: 32px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .internship-featured-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(12, 242, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* Left side of Internship Card */
+    .internship-left-block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-right: 1px solid var(--border-subtle);
+      padding-right: 28px;
+    }
+
+    .company-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .company-logo-square {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #072a4d 0%, #031426 100%);
+      border: 1px solid var(--cyan-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .company-brand-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .company-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .company-name-sub {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      line-height: 1.2;
+    }
+
+    .internship-role-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+
+    .internship-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+
+    .internship-meta-row i {
+      color: var(--cyan);
+    }
+
+    .internship-tags-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .internship-tag-pill {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+    }
+
+    /* Right side of Internship Card */
+    .internship-right-block {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .resp-heading {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .resp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resp-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .resp-item-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      margin-top: 7px;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--cyan-glow);
+    }
+
+    /* --------------------------------------------------------------------------
+       BLOCK B: Certifications & Credentials Grid (4 Cards Row)
+       -------------------------------------------------------------------------- */
+    .credentials-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .cred-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .cred-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Certificate Graphic Mockup */
+    .cred-thumb-wrap {
+      width: 100%;
+      height: 105px;
+      border-radius: var(--radius-sm);
+      background: #020b18;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cred-thumb-wrap svg,
+    .cred-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .cred-card:hover .cred-thumb-wrap svg,
+    .cred-card:hover .cred-thumb-wrap img {
+      transform: scale(1.04);
+    }
+
+    .cred-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      min-height: 38px;
+    }
+
+    .cred-card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+
+    .cred-issuer {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .cred-badge-row {
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .cred-category-pill {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+    }
+
+    .cred-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: none;
+      color: var(--cyan);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 4px;
+      padding: 2px 0;
+      transition: var(--transition);
+      text-align: left;
+    }
+
+    .cred-action-btn:hover {
+      text-shadow: 0 0 10px var(--cyan-glow);
+      transform: translateX(3px);
+    }
+
+    /* --------------------------------------------------------------------------
+       BLOCK C: Academic Achievements Grid (4 Cards Row)
+       -------------------------------------------------------------------------- */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .achievement-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .achievement-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+
+    .achievement-icon-wrap {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: var(--transition);
+    }
+
+    .achievement-card:hover .achievement-icon-wrap {
+      background: var(--cyan);
+      color: #010811;
+      transform: scale(1.06);
+    }
+
+    .achievement-icon-gold {
+      background: rgba(250, 204, 21, 0.12);
+      border-color: rgba(250, 204, 21, 0.4);
+      color: #FACC15;
+    }
+
+    .achievement-card:hover .achievement-icon-gold {
+      background: #FACC15;
+      color: #010811;
+    }
+
+    .achievement-title {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .achievement-sub {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .achievement-year-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--cyan);
+      margin-top: auto;
+    }
+
+    /* --------------------------------------------------------------------------
+       RIGHT SIDEBAR: Cards & Metrics
+       -------------------------------------------------------------------------- */
+    .sidebar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transition: var(--transition);
+    }
+
+    .sidebar-card:hover {
+      border-color: var(--cyan-border);
+    }
+
+    .sidebar-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-card-header i {
+      color: var(--cyan);
+      font-size: 1.1rem;
+    }
+
+    .sidebar-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    /* Quick Overview Rows */
+    .overview-rows-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .overview-row-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .overview-circle-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .overview-info-block {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+    }
+
+    .overview-stat-number {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .overview-label-text {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* What I've Learned Checklist */
+    .learned-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .learned-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .learned-check-item i {
+      color: var(--cyan);
+      font-size: 0.95rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* Quote Card with Cyber Wave Accent */
+    .quote-sidebar-card {
+      background: linear-gradient(135deg, #051a33 0%, #031122 100%);
+      border: 1px solid var(--cyan-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-sidebar-card::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(12, 242, 255, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .quote-icon-top {
+      font-size: 1.4rem;
+      color: var(--cyan);
+    }
+
+    .quote-body-text {
+      font-size: 0.94rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    .quote-author-name {
+      font-size: 0.82rem;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    /* CTA Sidebar Card */
+    .cta-sidebar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      align-items: flex-start;
+    }
+
+    .btn-cta-projects {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: var(--cyan);
+      color: #010811;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border-radius: 30px;
+      transition: var(--transition);
+      box-shadow: 0 4px 18px var(--cyan-glow);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .btn-cta-projects:hover {
+      background: #3bf6ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--cyan-glow);
+    }
+
+    /* ==========================================================================
+       SECTION 3: CAREER PROGRESSION RIBBON (Master Prompt Section 14)
+       ========================================================================== */
+    .progression-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at 50% 50%, rgba(12, 242, 255, 0.04) 0%, transparent 70%);
+    }
+
+    .progression-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+
+    .progression-header h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .progression-header p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .progression-steps-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .prog-step-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+
+    .prog-step-item:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    .prog-arrow {
+      color: var(--cyan);
+      font-size: 1.1rem;
+    }
+
+    /* ==========================================================================
+       SECTION 4: CERTIFICATE VERIFICATION MODAL
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(1, 8, 17, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-container {
+      background: var(--bg-card);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 650px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(12, 242, 255, 0.15);
+      transform: scale(0.94) translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-backdrop.open .modal-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-header {
+      padding: 22px 28px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .modal-header-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .modal-close-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .modal-close-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .modal-cert-preview-box {
+      width: 100%;
+      height: 200px;
+      border-radius: var(--radius);
+      background: #020b18;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .modal-cert-preview-box svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal-cred-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .modal-cred-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .modal-cred-label {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .modal-cred-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      word-break: break-all;
+    }
+
+    .modal-footer {
+      padding: 18px 28px 22px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       SECTION 5: GLOBAL FOOTER (100% Synced)
+       ========================================================================== */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 44px 0 28px;
+      background: var(--bg-base);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-nav a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-scroll-top {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-scroll-top:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1200px) {
+      .exp-two-col-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .credentials-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right-callout {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .internship-featured-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .internship-left-block {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-right: 0;
+        padding-bottom: 24px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .credentials-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-cred-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR
+       ========================================================================== -->
+  <header>
+    <div class="container nav-inner">
+      <a href="home.html" class="logo" id="nav-logo">
+        <span class="r-icon">R</span> Rajesh
+      </a>
+
+      <nav class="nav-links" id="desktop-nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html" class="active" aria-current="page">Experience</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme"
+          title="Toggle theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle-btn" aria-label="Open mobile navigation menu"
+          aria-expanded="false" aria-controls="mobile-nav">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-panel" id="mobile-nav">
+      <a href="home.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="about.html">About <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="skills.html">Skills <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="experience.html" class="active" aria-current="page">Experience <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="certifications.html">Certifications <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="resume.html">Resume <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         SECTION 1: PAGE HERO
+         ========================================================================== -->
+    <section class="experience-hero" id="experience-hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left Info -->
+          <div class="hero-left">
+            <div class="eyebrow">
+              <span class="eyebrow-bar"></span>
+              <span>EXPERIENCE &amp; ACHIEVEMENTS</span>
+            </div>
+
+            <h1 class="hero-title">
+              My Journey &amp;<br />
+              <span class="cyan">Key Milestones</span>
+            </h1>
+
+            <p class="hero-desc">
+              From learning to building, every step has been a step towards a bigger goal. Here's a glimpse of my certifications and achievements.
+            </p>
+          </div>
+
+          <!-- Right Callout (Cursive Script) -->
+          <div class="hero-right-callout">
+            <div class="script-opportunity-tag" aria-hidden="true">
+              Progress<br />Builds<br />Better<br />Opportunities
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 2: MAIN TWO-COLUMN CONTENT GRID
+       ========================================================================== -->
+    <section class="experience-main-section" id="experience-content">
+      <div class="container">
+        <div class="exp-two-col-layout">
+
+          <!-- LEFT COLUMN: Certifications & Achievements -->
+          <div class="exp-left-col">
+
+            <!-- BLOCK B: Certifications & Credentials -->
+            <div class="exp-block">
+              <div class="section-title-wrap">
+                <div class="section-title-left">
+                  <div class="section-icon-badge">
+                    <i class="fa-solid fa-certificate"></i>
+                  </div>
+                  <h2 class="section-heading-text">Certifications &amp; Credentials</h2>
+                </div>
+                <a href="certifications.html" class="section-view-all-link">
+                  <span>View All Certificates</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="credentials-cards-grid">
+                <!-- Credential 1: Cybersecurity -->
+                <article class="cred-card">
+                  <div class="cred-thumb-wrap" aria-hidden="true">
+                    <img src="../assets/images/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h3 class="cred-card-title">Cybersecurity &amp; Ethical Hacking</h3>
+                  <div class="cred-card-meta">
+                    <span class="cred-issuer">Cappriciosec University</span>
+                    <span>18 Jan 2026</span>
+                  </div>
+                  <div class="cred-badge-row">
+                    <span class="cred-category-pill">Cybersecurity</span>
+                  </div>
+                  <button type="button" class="cred-action-btn" onclick="openCertModal('cyber')">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate &rarr;
+                  </button>
+                </article>
+
+                <!-- Credential 2: Java Fundamentals -->
+                <article class="cred-card">
+                  <div class="cred-thumb-wrap" aria-hidden="true">
+                    <img src="../assets/images/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h3 class="cred-card-title">Java Fundamentals</h3>
+                  <div class="cred-card-meta">
+                    <span class="cred-issuer">Uniq Technologies</span>
+                    <span>Jan 2026</span>
+                  </div>
+                  <div class="cred-badge-row">
+                    <span class="cred-category-pill">Programming</span>
+                  </div>
+                  <button type="button" class="cred-action-btn" onclick="openCertModal('java')">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate &rarr;
+                  </button>
+                </article>
+<!-- Credential 3: UI & UX Design Internship -->
+                <article class="cred-card">
+                  <div class="cred-thumb-wrap" aria-hidden="true">
+                    <img src="../assets/images/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h3 class="cred-card-title">UI &amp; UX Design Internship</h3>
+                  <div class="cred-card-meta">
+                    <span class="cred-issuer">JCS Infotech</span>
+                    <span>03 Jun 2026 – 30 Jun 2026</span>
+                  </div>
+                  <div class="cred-badge-row">
+                    <span class="cred-category-pill">Internship</span>
+                  </div>
+                  <button type="button" class="cred-action-btn" onclick="openCertModal('uiux')">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate &rarr;
+                  </button>
+                </article>
+
+                <!-- Credential 4: AI & ML Internship -->
+                <article class="cred-card">
+                  <div class="cred-thumb-wrap" aria-hidden="true">
+                    <img src="../assets/images/img-20260808-144310.jpg" alt="AI &amp; ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h3 class="cred-card-title">AI &amp; ML Internship</h3>
+                  <div class="cred-card-meta">
+                    <span class="cred-issuer">MATT Engineering Solutions</span>
+                    <span>12 Jan 2026 – 19 Jan 2026</span>
+                  </div>
+                  <div class="cred-badge-row">
+                    <span class="cred-category-pill">Internship</span>
+                  </div>
+                  <button type="button" class="cred-action-btn" onclick="openCertModal('aiml')">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate &rarr;
+                  </button>
+                </article>
+
+                <!-- Credential 5: Diploma in Computer Application -->
+                <article class="cred-card">
+                  <div class="cred-thumb-wrap" aria-hidden="true">
+                    <img src="../assets/images/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h3 class="cred-card-title">Diploma in Computer Application</h3>
+                  <div class="cred-card-meta">
+                    <span class="cred-issuer">Metro Soft Computers</span>
+                    <span>12 Dec 2020 – 06 Mar 2021</span>
+                  </div>
+                  <div class="cred-badge-row">
+                    <span class="cred-category-pill">Computer Applications</span>
+                  </div>
+                  <button type="button" class="cred-action-btn" onclick="openCertModal('dca')">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate &rarr;
+                  </button>
+                </article>
+              </div>
+            </div>
+
+            <!-- BLOCK C: Academic Achievements -->
+            <div class="exp-block">
+              <div class="section-title-wrap">
+                <div class="section-title-left">
+                  <div class="section-icon-badge">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                  <h2 class="section-heading-text">Academic Achievements</h2>
+                </div>
+              </div>
+
+              <div class="achievements-grid">
+                <!-- Achievement 1: 10th -->
+                <div class="achievement-card">
+                  <div class="achievement-icon-wrap">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <h3 class="achievement-title">Secondary (10th)</h3>
+                  <span class="achievement-sub">Tamil Nadu State Board,<br>Mark Percentage - <strong class="cyan">72.33%</strong></span>
+                  <span class="achievement-year-badge">Year: 2021-2022</span>
+                </div>
+
+                <!-- Achievement 2: 12th-->
+                <div class="achievement-card">
+                  <div class="achievement-icon-wrap achievement-icon-gold">
+                    <i class="fa-solid fa-medal"></i>
+                  </div>
+                  <h3 class="achievement-title">Higher Secondary (12th)</h3>
+                  <span class="achievement-sub">Tamil Nadu State Board,<br>Mark Percentage - <strong class="cyan">87.40 %</strong></span>
+                  <span class="achievement-year-badge" style="color: #FACC15;">Year: 2023-2024</span>
+                </div>
+
+                <!-- Achievement 3: First Year -->
+                <div class="achievement-card">
+                  <div class="achievement-icon-wrap achievement-icon-gold">
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                  <h3 class="achievement-title">Third Year (B.Tech)</h3>
+                  <span class="achievement-sub">DMI Engineering College,<br> Aralvaimozhi</span>
+                  <span class="achievement-year-badge" style="color: #FACC15;">Year: 2024-2028</span>
+                </div>
+
+                <!-- Achievement 4: Internship Completed -->
+                <div class="achievement-card">
+                  <div class="achievement-icon-wrap">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                  </div>
+                  <h3 class="achievement-title">Internship</h3>
+                  <span class="achievement-sub">UI &amp; UX Internship, JCLICKSOLUTIONS</span>
+                  <span class="achievement-year-badge">Year: 2026</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDEBAR: Overview, Learnings, Quote, CTA -->
+          <aside class="exp-right-col">
+
+            <!-- Card 1: Quick Overview -->
+            <div class="sidebar-card">
+              <div class="sidebar-card-header">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3 class="sidebar-card-title">Quick Overview</h3>
+              </div>
+
+              <div class="overview-rows-list">
+                <div class="overview-row-item">
+                  <div class="overview-circle-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <div class="overview-info-block">
+                    <span class="overview-stat-number">1</span>
+                    <span class="overview-label-text">Internship</span>
+                  </div>
+                </div>
+
+                <div class="overview-row-item">
+                  <div class="overview-circle-icon">
+                    <i class="fa-solid fa-certificate"></i>
+                  </div>
+                  <div class="overview-info-block">
+                    <span class="overview-stat-number">6+</span>
+                    <span class="overview-label-text">Certifications</span>
+                  </div>
+                </div>
+
+                <div class="overview-row-item">
+                  <div class="overview-circle-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </div>
+                  <div class="overview-info-block">
+                    <span class="overview-stat-number">4</span>
+                    <span class="overview-label-text">Major Projects</span>
+                  </div>
+                </div>
+
+                <div class="overview-row-item">
+                  <div class="overview-circle-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                  <div class="overview-info-block">
+                    <span class="overview-stat-number">3+</span>
+                    <span class="overview-label-text">Academic Achievements</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: What I've Learned -->
+            <div class="sidebar-card">
+              <div class="sidebar-card-header">
+                <i class="fa-regular fa-lightbulb"></i>
+                <h3 class="sidebar-card-title">What I've Learned</h3>
+              </div>
+
+              <div class="learned-checklist">
+                <div class="learned-check-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Real-world problem solving</span>
+                </div>
+                <div class="learned-check-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Team collaboration</span>
+                </div>
+                <div class="learned-check-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Building scalable solutions</span>
+                </div>
+                <div class="learned-check-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Industry tools &amp; best practices</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Quotation Card -->
+            <div class="sidebar-card quote-sidebar-card">
+              <div class="quote-icon-top">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <p class="quote-body-text">
+                "Every certificate is a step, every project is a lesson, and every experience brings me closer to my goal."
+              </p>
+              <span class="quote-author-name">&mdash; Rajesh R</span>
+            </div>
+
+            <!-- Card 4: Let's Build the Future CTA -->
+            <div class="sidebar-card cta-sidebar-card">
+              <div class="sidebar-card-header">
+                <i class="fa-solid fa-rocket"></i>
+                <h3 class="sidebar-card-title">Let's Build the Future</h3>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+                Through knowledge, experience and continuous learning.
+              </p>
+              <a href="projects.html" class="btn-cta-projects">
+                <span>View My Projects</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: CAREER DEVELOPMENT PROGRESSION RIBBON
+         ========================================================================== -->
+    <section class="progression-section" id="career-progression">
+      <div class="container">
+        <div class="progression-header">
+          <div class="eyebrow">
+            <span class="eyebrow-bar"></span>
+            <span>GROWTH FRAMEWORK</span>
+          </div>
+          <h2>Growing From Student to Professional</h2>
+          <p>
+            My goal is to turn academic knowledge and continuous learning into practical engineering ability, while developing the skills needed to contribute meaningfully to real-world technology projects.
+          </p>
+        </div>
+
+        <div class="progression-steps-row">
+          <div class="prog-step-item">
+            <i class="fa-solid fa-book-open cyan"></i>
+            <span>LEARN</span>
+          </div>
+          <span class="prog-arrow">&rarr;</span>
+
+          <div class="prog-step-item">
+            <i class="fa-solid fa-laptop-code cyan"></i>
+            <span>PRACTICE</span>
+          </div>
+          <span class="prog-arrow">&rarr;</span>
+
+          <div class="prog-step-item">
+            <i class="fa-solid fa-gears cyan"></i>
+            <span>BUILD</span>
+          </div>
+          <span class="prog-arrow">&rarr;</span>
+
+          <div class="prog-step-item">
+            <i class="fa-solid fa-chart-line cyan"></i>
+            <span>IMPROVE</span>
+          </div>
+          <span class="prog-arrow">&rarr;</span>
+
+          <div class="prog-step-item" style="border-color: var(--cyan); background: var(--cyan-dim);">
+            <i class="fa-solid fa-rocket cyan"></i>
+            <span>CONTRIBUTE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 4: CERTIFICATE VERIFICATION MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="cert-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container" id="cert-modal-container">
+      <div class="modal-header">
+        <h3 class="modal-header-title" id="modal-cert-title">Verified Credential</h3>
+        <button class="modal-close-btn" id="modal-cert-close-btn" aria-label="Close credential modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-cert-preview-box" id="modal-cert-svg-box">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="modal-cred-grid">
+          <div class="modal-cred-item">
+            <span class="modal-cred-label">Issuing Organization</span>
+            <span class="modal-cred-value" id="modal-cert-issuer">Organization Name</span>
+          </div>
+          <div class="modal-cred-item">
+            <span class="modal-cred-label">Issue Date</span>
+            <span class="modal-cred-value" id="modal-cert-date">Date</span>
+          </div>
+          <div class="modal-cred-item">
+            <span class="modal-cred-label">Credential ID</span>
+            <span class="modal-cred-value" id="modal-cert-id">ID</span>
+          </div>
+          <div class="modal-cred-item">
+            <span class="modal-cred-label">Verification Status</span>
+            <span class="modal-cred-value" style="color: #22c55e;"><i class="fa-solid fa-circle-check"></i> Verified</span>
+          </div>
+        </div>
+
+        <div class="modal-cred-item">
+          <span class="modal-cred-label">Skills &amp; Topics Validated</span>
+          <span class="modal-cred-value" id="modal-cert-skills">Skills list</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span style="font-size: 0.82rem; color: var(--text-secondary);">Verified Portfolio Evidence &bull; Rajesh R</span>
+        <a href="certifications.html" class="btn-cta-projects" style="width: auto; padding: 8px 20px; font-size: 0.82rem;">
+          View in Certifications &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 5: GLOBAL FOOTER (100% Synced across Home, About, Projects, Skills)
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">RAJESH R</div>
+          <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html" class="active" aria-current="page">Experience</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 Rajesh R. All rights reserved.
+        </div>
+        <div class="footer-bottom-right">
+          <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
+          <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script>
+    // 1. Certificate Data for Verified Credential Modal
+    const certDetailsData = {
+      cyber: {
+        title: "Cybersecurity & Ethical Hacking",
+        issuer: "Cappriciosec University",
+        date: "18 Jan 2026",
+        id: "8b319c5aaa096add1365",
+        skills: "Linux, Go, Python, Social Engineering, Wi-Fi Hacking, Web/API Pentesting, Active Directory Pentesting, Hardware & IoT Hacking",
+        svg: `<img src="../assets/images/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+      },
+      java: {
+        title: "Java Fundamentals",
+        issuer: "Uniq Technologies",
+        date: "Jan 2026",
+        id: "Reg. No.: UQ25-0379",
+        skills: "Core Java, OOP Architecture, Data Structures, Exception Handling, Collections",
+        svg: `<img src="../assets/images/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+      },
+      uiux: {
+        title: "UI & UX Design Internship",
+        issuer: "JCS Infotech",
+        date: "03 Jun 2026 – 30 Jun 2026",
+        id: "Internship Certificate • JCS Infotech",
+        skills: "UI Design, UX Design",
+        svg: `<img src="../assets/images/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+      },
+      aiml: {
+        title: "AI & ML Internship",
+        issuer: "MATT Engineering Solutions",
+        date: "12 Jan 2026 – 19 Jan 2026",
+        id: "Internship Certificate • Issued by K. Ragunathan",
+        skills: "Artificial Intelligence, Machine Learning, Data Analysis, Python, Applied ML Workflows",
+        svg: `<img src="../assets/images/img-20260808-144310.jpg" alt="AI & ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+      },
+      dca: {
+        title: "Diploma in Computer Application",
+        issuer: "Metro Soft Computers",
+        date: "12 Dec 2020 – 06 Mar 2021 (Issued: 25 Mar 2021)",
+        id: "Reg. No.: 006312 • Grade: Excellent",
+        skills: "Computer Applications, MS Office, Programming Fundamentals, Operating Systems, Office Productivity",
+        svg: `<img src="../assets/images/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+      }
+    };
+
+    // 2. Modal Controller
+    const certModalBackdrop = document.getElementById('cert-modal-backdrop');
+    const certModalCloseBtn = document.getElementById('modal-cert-close-btn');
+    const modalCertTitle = document.getElementById('modal-cert-title');
+    const modalCertIssuer = document.getElementById('modal-cert-issuer');
+    const modalCertDate = document.getElementById('modal-cert-date');
+    const modalCertId = document.getElementById('modal-cert-id');
+    const modalCertSkills = document.getElementById('modal-cert-skills');
+    const modalCertSvgBox = document.getElementById('modal-cert-svg-box');
+
+    function openCertModal(key) {
+      const data = certDetailsData[key];
+      if (!data) return;
+
+      modalCertTitle.textContent = data.title;
+      modalCertIssuer.textContent = data.issuer;
+      modalCertDate.textContent = data.date;
+      modalCertId.textContent = data.id;
+      modalCertSkills.textContent = data.skills;
+      modalCertSvgBox.innerHTML = data.svg;
+
+      certModalBackdrop.classList.add('open');
+      certModalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCertModal() {
+      certModalBackdrop.classList.remove('open');
+      certModalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    if (certModalCloseBtn) {
+      certModalCloseBtn.addEventListener('click', closeCertModal);
+    }
+
+    certModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === certModalBackdrop) {
+        closeCertModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && certModalBackdrop.classList.contains('open')) {
+        closeCertModal();
+      }
+    });
+
+    // 3. Mobile Navigation Drawer
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggleBtn && mobileNav) {
+      menuToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = mobileNav.classList.toggle('open');
+        menuToggleBtn.setAttribute('aria-expanded', isOpen);
+        const icon = menuToggleBtn.querySelector('i');
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+          mobileNav.classList.remove('open');
+          menuToggleBtn.setAttribute('aria-expanded', 'false');
+          const icon = menuToggleBtn.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // 4. Theme Toggle with LocalStorage Persistence
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-theme');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        if (isLight) {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+          }
+          localStorage.setItem('portfolio-theme', 'light');
+        } else {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+          }
+          localStorage.setItem('portfolio-theme', 'dark');
+        }
+      });
+    }
+
+    // 5. Scroll to top button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+
+</html>

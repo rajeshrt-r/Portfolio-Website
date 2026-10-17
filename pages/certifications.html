@@ -1,0 +1,2723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications &amp; Credentials | Rajesh R â€” AI &amp; Data Science Engineer</title>
+  <meta name="description"
+    content="Explore Rajesh R's certifications, technical training, and credentials across AI, data science, databases, programming, and cybersecurity." />
+
+  <!-- Google Fonts: Inter, JetBrains Mono, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & THEME TOKENS (Identical across Pages 01â€“05)
+       ========================================================================== */
+    :root {
+      --bg-base: #010811;
+      --bg-surface: #031122;
+      --bg-card: #051426;
+      --bg-card-hover: #071C33;
+      --cyan: #0CF2FF;
+      --cyan-dim: rgba(12, 242, 255, 0.1);
+      --cyan-border: rgba(12, 242, 255, 0.28);
+      --cyan-glow: rgba(12, 242, 255, 0.35);
+      --text-primary: #FFFFFF;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(12, 242, 255, 0.45);
+      --radius-sm: 6px;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-base: #F8FAFC;
+      --bg-surface: #EDF2F7;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F1F5F9;
+      --cyan: #0284C7;
+      --cyan-dim: rgba(2, 132, 199, 0.08);
+      --cyan-border: rgba(2, 132, 199, 0.28);
+      --cyan-glow: rgba(2, 132, 199, 0.25);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(2, 132, 199, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .cyan {
+      color: var(--cyan);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-bar {
+      width: 24px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       GLOBAL NAVBAR (Strictly Synced across Pages 01â€“08)
+       ========================================================================== */
+    header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 18px 0;
+      background: var(--bg-base);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: rgba(1, 8, 17, 0.92);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body.light-theme header {
+      background-color: rgba(248, 250, 252, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo .r-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-links a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .mobile-nav {
+      display: none;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 20px;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 12px 0;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-nav a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       PAGE HERO (Exact match to 6 Certificate page reference.png)
+       ========================================================================== */
+    .hero-section {
+      padding: 56px 0 40px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-text-col .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .hero-heading {
+      font-size: 3.25rem;
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtext {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 530px;
+    }
+
+    /* Hero Middle Stats Column */
+    .hero-stats-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .hero-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-stat-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(12, 242, 255, 0.08);
+    }
+
+    .hero-stat-card .stat-icon {
+      font-size: 1.25rem;
+      color: var(--cyan);
+      margin-bottom: 2px;
+    }
+
+    .hero-stat-card .stat-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .hero-stat-card .stat-label {
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: 1.85rem;
+      color: var(--cyan);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow: 0 0 16px rgba(12, 242, 255, 0.4);
+      user-select: none;
+    }
+
+    /* Hero Right Visual Column: Glowing Parchment & Medal */
+    .hero-visual-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    .hero-scroll-frame {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      height: 240px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at center, rgba(12, 242, 255, 0.12) 0%, rgba(5, 20, 38, 0.6) 70%, transparent 100%);
+      border: 1px solid rgba(12, 242, 255, 0.35);
+      box-shadow: 0 0 35px rgba(12, 242, 255, 0.15), inset 0 0 25px rgba(12, 242, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-scroll-frame svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .hero-quote-callout {
+      position: absolute;
+      right: -10px;
+      top: 25px;
+      max-width: 220px;
+      font-family: var(--font-script);
+      font-size: 1.35rem;
+      color: var(--cyan);
+      line-height: 1.25;
+      text-shadow: 0 0 12px rgba(12, 242, 255, 0.4);
+      user-select: none;
+      text-align: right;
+      z-index: 2;
+    }
+
+    .hero-quote-author {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       FILTER CONTROLS & SEARCH BAR
+       ========================================================================== */
+    .filter-search-section {
+      padding: 24px 0 36px;
+      position: sticky;
+      top: 73px;
+      z-index: 40;
+      background: rgba(1, 8, 17, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background-color 0.3s ease;
+    }
+
+    body.light-theme .filter-search-section {
+      background: rgba(248, 250, 252, 0.94);
+    }
+
+    .filter-search-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tabs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .filter-btn i {
+      font-size: 0.85rem;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--cyan-border);
+      color: var(--text-primary);
+      background: var(--bg-card);
+    }
+
+    .filter-btn.active {
+      background: var(--cyan);
+      color: #010811;
+      border-color: var(--cyan);
+      box-shadow: 0 0 18px var(--cyan-glow);
+      font-weight: 700;
+    }
+
+    .search-wrapper {
+      position: relative;
+      min-width: 280px;
+      flex: 0 1 340px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 10px 40px 10px 42px;
+      font-size: 0.88rem;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan-glow);
+      background: var(--bg-card);
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: none;
+    }
+
+    .search-clear-btn:hover {
+      color: var(--cyan);
+    }
+
+    /* ==========================================================================
+       FEATURED CREDENTIAL SECTION (Prompt Section 15)
+       ========================================================================== */
+    .featured-credential-section {
+      padding: 30px 0 20px;
+    }
+
+    .featured-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .featured-card {
+      background: linear-gradient(135deg, rgba(8, 24, 39, 0.95) 0%, rgba(5, 20, 38, 0.9) 100%);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(12, 242, 255, 0.05);
+      transition: var(--transition);
+    }
+
+    .featured-card:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 16px 44px rgba(12, 242, 255, 0.15);
+    }
+
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan);
+    }
+
+    .featured-preview-box {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(12, 242, 255, 0.25);
+      background: #021118;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .featured-preview-box svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .featured-content {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .featured-category-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      width: fit-content;
+    }
+
+    .featured-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+
+    .featured-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .featured-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .featured-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .tech-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      padding: 3px 10px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    .featured-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      background: var(--cyan);
+      color: #010811;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--cyan);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 0 14px var(--cyan-glow);
+    }
+
+    .btn-cyan:hover {
+      background: #3bf6ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--cyan-glow);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cyan-border);
+      color: var(--cyan);
+      background: var(--bg-card);
+    }
+
+    /* ==========================================================================
+       CERTIFICATE GRID (Matching 6 Certificate page reference.png)
+       ========================================================================== */
+    .cert-section {
+      padding: 36px 0 60px;
+    }
+
+    /* Grid Layout: Row 1 = 3 cols, Row 2 = 4 cols, Row 3 = 2 cols + banner */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .cert-grid.four-cols {
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 24px;
+    }
+
+    .cert-grid.bottom-row {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 24px;
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .cert-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4), 0 0 18px rgba(12, 242, 255, 0.08);
+    }
+
+    .cert-card-media {
+      width: 100%;
+      aspect-ratio: 16 / 9.5;
+      background: #020b16;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-card-media svg,
+    .cert-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .cert-card:hover .cert-card-media svg,
+    .cert-card:hover .cert-card-media img {
+      transform: scale(1.025);
+    }
+
+    .cert-card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 12px;
+    }
+
+    .cert-category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      width: fit-content;
+      background: rgba(12, 242, 255, 0.08);
+      border: 1px solid rgba(12, 242, 255, 0.25);
+      color: var(--cyan);
+    }
+
+    .cert-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+    }
+
+    .cert-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+
+    .cert-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .cert-desc {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .cert-credential-id {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--cyan);
+      background: rgba(12, 242, 255, 0.05);
+      border: 1px dashed rgba(12, 242, 255, 0.25);
+      padding: 4px 8px;
+      border-radius: 4px;
+      word-break: break-all;
+    }
+
+    .cert-card-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .cert-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      width: 100%;
+    }
+
+    .cert-btn-view {
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+    }
+
+    .cert-btn-view:hover {
+      background: var(--cyan);
+      color: #010811;
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    /* All Certificates Verified Card (matching right bottom of reference) */
+    .verified-banner-card {
+      background: linear-gradient(135deg, rgba(3, 17, 34, 0.95) 0%, rgba(5, 20, 38, 0.98) 100%);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+
+    .verified-banner-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, rgba(12, 242, 255, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .verified-banner-header {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .verified-shield-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 16px rgba(12, 242, 255, 0.2);
+    }
+
+    .verified-banner-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.015em;
+    }
+
+    .verified-banner-desc {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .verified-banner-footer {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn-verify-all {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: var(--transition);
+      width: fit-content;
+    }
+
+    .btn-verify-all:hover {
+      background: var(--cyan);
+      color: #010811;
+      box-shadow: 0 0 16px var(--cyan-glow);
+    }
+
+    .verified-script-note {
+      font-family: var(--font-script);
+      font-size: 1.35rem;
+      color: var(--cyan);
+      text-align: right;
+      line-height: 1.2;
+      user-select: none;
+      text-shadow: 0 0 10px rgba(12, 242, 255, 0.35);
+    }
+
+    /* Empty state */
+    .empty-state {
+      display: none;
+      padding: 60px 20px;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px dashed var(--border-subtle);
+      border-radius: var(--radius-xl);
+      margin: 20px 0;
+    }
+
+    .empty-state.visible {
+      display: block;
+    }
+
+    .empty-state-icon {
+      font-size: 2.5rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .empty-state-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .empty-state-sub {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    /* ==========================================================================
+       AREAS OF CONTINUOUS LEARNING (Prompt Section 16)
+       ========================================================================== */
+    .learning-areas-section {
+      padding: 60px 0 40px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .section-header-centered {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+
+    .section-subtext {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .learning-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+    }
+
+    .learning-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .learning-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .learning-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .learning-card-desc {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .learning-card-status {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--cyan);
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ==========================================================================
+       CERTIFICATION â†’ SKILL CONNECTION ROADMAP (Prompt Section 17)
+       ========================================================================== */
+    .connection-section {
+      padding: 50px 0 60px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .progression-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      padding: 16px 24px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .progression-step {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.08em;
+    }
+
+    .progression-step.highlight {
+      color: var(--cyan);
+    }
+
+    .progression-arrow {
+      color: var(--cyan);
+      font-size: 0.8rem;
+    }
+
+    .connection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .connection-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .connection-card:hover {
+      border-color: var(--cyan-border);
+      transform: translateY(-3px);
+    }
+
+    .connection-card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--cyan);
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 10px;
+    }
+
+    .connection-flow-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+
+    .connection-flow-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .connection-flow-item i {
+      color: var(--cyan);
+      font-size: 0.75rem;
+      margin-top: 4px;
+    }
+
+    .connection-outcome {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-subtle);
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       GLOBAL FOOTER (Strictly Synced across Pages 01â€“08)
+       ========================================================================== */
+    footer {
+      border-top: none;
+      padding: 60px 0 30px;
+      background: var(--bg-base);
+      background-image: url('../assets/images/footer-bg.png');
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(1, 8, 17, 0.85);
+      z-index: 1;
+    }
+
+    body.light-theme footer::before {
+      background: rgba(248, 250, 252, 0.88);
+    }
+
+    footer .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 14px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .social-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+      transform: translateY(-2px);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a.active {
+      color: var(--cyan);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 30px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-scroll-top {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-scroll-top:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
+    }
+
+    /* ==========================================================================
+       HIGH-FIDELITY CERTIFICATE MODAL / LIGHTBOX (Prompt Section 12)
+       ========================================================================== */
+    .cert-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(1, 8, 17, 0.88);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .cert-modal-backdrop.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .cert-modal {
+      background: var(--bg-card);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-xl);
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(12, 242, 255, 0.15);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-modal-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cert-modal-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cert-modal-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .cert-modal-close-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .cert-modal-close-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .cert-modal-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cert-modal-preview-box {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-subtle);
+      background: #020b16;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-modal-preview-box svg,
+    .cert-modal-preview-box img {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cert-modal-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+    }
+
+    .modal-detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .modal-detail-label {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .modal-detail-val {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .cert-modal-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .cert-modal-skills-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cert-modal-skills-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cert-modal-skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cert-modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS (360px, 768px, 1024px, 1280px, 1440px)
+       ========================================================================== */
+    @media (max-width: 1240px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-visual-col {
+        grid-column: span 2;
+        align-items: center;
+      }
+
+      .hero-quote-callout {
+        right: 10px;
+      }
+
+      .cert-grid.four-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .learning-grid,
+      .connection-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-visual-col {
+        grid-column: span 1;
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-grid,
+      .cert-grid.bottom-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero-heading {
+        font-size: 2.35rem;
+      }
+
+      .hero-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+      }
+
+      .cert-grid,
+      .cert-grid.four-cols,
+      .cert-grid.bottom-row,
+      .learning-grid,
+      .connection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-search-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+
+      .search-wrapper {
+        min-width: unset;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .search-input {
+        padding-right: 48px;
+      }
+
+      .filter-tabs {
+        overflow-x: auto;
+        padding-bottom: 6px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .cert-modal-details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .progression-banner {
+        border-radius: var(--radius);
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .progression-arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .filter-search-section {
+        padding: 12px 0 14px;
+      }
+
+      .filter-search-inner {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 8px;
+      }
+
+      .filter-tabs {
+        flex: 0 0 auto;
+        overflow: visible;
+        padding-bottom: 0;
+      }
+
+      .filter-btn {
+        padding: 8px 12px;
+      }
+
+      .search-wrapper {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: auto;
+        max-width: none;
+      }
+
+      .search-input {
+        padding: 9px 40px 9px 36px;
+      }
+
+      .cert-section {
+        padding-top: 18px;
+      }
+    }
+
+    /* Accessibility: Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Synced across Pages 01â€“08)
+       ========================================================================== -->
+  <header>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="home.html" class="logo" aria-label="Rajesh R Portfolio Homepage">
+          <span class="r-icon">R</span>
+          Rajesh
+        </a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html">Experience</a>
+          <a href="certifications.html" class="active" aria-current="page">Certifications</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark and light theme" title="Toggle theme">
+            <i class="fa-regular fa-moon" id="theme-icon"></i>
+          </button>
+          <button class="mobile-menu-btn" id="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="certifications.html" class="active">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         PAGE HERO (Exact match to 6 Certificate page reference.png)
+         ========================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left Column: Eyebrow, Main Title & Description -->
+          <div class="hero-text-col">
+            <div class="eyebrow-badge">
+              <span>&#171;&middot;</span> CERTIFICATIONS &amp; CREDENTIALS
+            </div>
+            <h1 class="hero-heading" id="hero-title">
+              My Certifications<br>
+              <span class="cyan">&amp; Credentials</span>
+            </h1>
+            <p class="hero-subtext">
+              I believe in continuous learning. These certifications and credentials represent my commitment to building in-demand skills and staying updated with the latest technologies in AI, Data Science, Development and Cybersecurity.
+            </p>
+          </div>
+
+          <!-- Middle Column: Dynamic Counter Badges & Handwritten Script -->
+          <div class="hero-stats-col">
+            <div class="hero-stats-grid">
+              <div class="hero-stat-card">
+                <i class="fa-solid fa-award stat-icon"></i>
+                <span class="stat-num" id="stat-total-certs">9+</span>
+                <span class="stat-label">Certificates</span>
+              </div>
+              <div class="hero-stat-card">
+                <i class="fa-solid fa-shield-halved stat-icon"></i>
+                <span class="stat-num" id="stat-verified-certs">7+</span>
+                <span class="stat-label">Verified Credentials</span>
+              </div>
+              <div class="hero-stat-card">
+                <i class="fa-solid fa-graduation-cap stat-icon"></i>
+                <span class="stat-num" id="stat-platforms">4+</span>
+                <span class="stat-label">Platforms</span>
+              </div>
+              <div class="hero-stat-card">
+                <i class="fa-solid fa-star stat-icon"></i>
+                <span class="stat-num" id="stat-internship">1+</span>
+                <span class="stat-label">Internship</span>
+              </div>
+            </div>
+            <div class="hero-script-tag">
+              Learn &rarr; Build &rarr; Grow
+            </div>
+          </div>
+
+          <!-- Right Column: Glowing Holographic Scroll & Medal with Quote -->
+          <div class="hero-visual-col">
+            <div class="hero-scroll-frame" aria-hidden="true">
+              <svg viewBox="0 0 380 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Cyan Cyber Particles -->
+                <circle cx="50" cy="40" r="1.5" fill="#0CF2FF" opacity="0.6"/>
+                <circle cx="90" cy="200" r="2" fill="#0CF2FF" opacity="0.4"/>
+                <circle cx="320" cy="50" r="1.5" fill="#0CF2FF" opacity="0.5"/>
+                <circle cx="340" cy="180" r="2" fill="#0CF2FF" opacity="0.7"/>
+
+                <!-- Hologram Diploma Scroll Outline -->
+                <path d="M70 45 C110 38, 270 38, 310 45 C325 48, 330 65, 325 80 L315 180 C310 195, 290 200, 260 196 C220 192, 100 192, 70 198 C55 200, 48 185, 52 170 L62 70 C65 55, 60 48, 70 45 Z" 
+                      stroke="#0CF2FF" stroke-width="2" fill="rgba(12, 242, 255, 0.04)" stroke-dasharray="4 2"/>
+
+                <path d="M85 62 L295 62" stroke="#0CF2FF" stroke-width="1" opacity="0.3"/>
+                <path d="M85 78 L295 78" stroke="#0CF2FF" stroke-width="0.8" opacity="0.2"/>
+                <path d="M85 160 L295 160" stroke="#0CF2FF" stroke-width="0.8" opacity="0.2"/>
+
+                <!-- Center Glowing Holographic Ribbon Medal -->
+                <circle cx="190" cy="118" r="48" fill="url(#medalGlow)" opacity="0.8"/>
+                <circle cx="190" cy="118" r="34" stroke="#0CF2FF" stroke-width="2.5" fill="#021422"/>
+                <circle cx="190" cy="118" r="28" stroke="#0CF2FF" stroke-width="1" stroke-dasharray="3 3"/>
+                
+                <!-- Ribbon Tails -->
+                <path d="M178 148 L170 178 L185 170 L200 178 L192 148 Z" fill="#0284c7" stroke="#0CF2FF" stroke-width="1.5"/>
+
+                <!-- Star in Center -->
+                <polygon points="190,102 194,112 205,113 197,120 199,131 190,125 181,131 183,120 175,113 186,112" fill="#0CF2FF"/>
+
+                <!-- Radial Light Rays -->
+                <line x1="190" y1="65" x2="190" y2="78" stroke="#0CF2FF" stroke-width="2" stroke-linecap="round"/>
+                <line x1="190" y1="158" x2="190" y2="171" stroke="#0CF2FF" stroke-width="2" stroke-linecap="round"/>
+                <line x1="137" y1="118" x2="150" y2="118" stroke="#0CF2FF" stroke-width="2" stroke-linecap="round"/>
+                <line x1="230" y1="118" x2="243" y2="118" stroke="#0CF2FF" stroke-width="2" stroke-linecap="round"/>
+
+                <defs>
+                  <radialGradient id="medalGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(190 118) scale(48)">
+                    <stop stop-color="#0CF2FF" stop-opacity="0.45"/>
+                    <stop offset="1" stop-color="#0CF2FF" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div class="hero-quote-callout">
+              &ldquo;Certifications are not just papers, they are proof of progress.&rdquo;
+              <span class="hero-quote-author">&mdash; Rajesh R</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FILTER TABS & SEARCH BAR (Sticky navigation for seamless UX)
+         ========================================================================== -->
+    <section class="filter-search-section" aria-label="Certificate Filters">
+      <div class="container">
+        <div class="filter-search-inner">
+
+          <!-- Filter Pills -->
+          <div class="filter-tabs" role="tablist" aria-label="Certificate category filters">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+              <i class="fa-solid fa-border-all"></i> All
+            </button>
+          </div>
+
+          <!-- Dynamic Search Input -->
+          <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+            <input type="text" id="cert-search-input" class="search-input" placeholder="Search certificates..." aria-label="Search certifications by title, issuer, or keyword" />
+            <button id="search-clear-btn" class="search-clear-btn" aria-label="Clear search text">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED CREDENTIAL SPOTLIGHT (Prompt Section 15)
+         ========================================================================== -->
+    
+
+    <!-- ==========================================================================
+         CERTIFICATES GRID CONTAINER (Data-Driven Dynamic Rendering)
+         ========================================================================== -->
+    <section class="cert-section" aria-label="All Certifications and Credentials">
+      <div class="container">
+
+        <!-- Dynamic Container for Active Certificates -->
+        <div id="certifications-container">
+          <!-- Populated dynamically by certifications.js script below -->
+        </div>
+
+        <!-- Empty Search Result State -->
+        <div class="empty-state" id="empty-state" role="status" aria-live="polite">
+          <i class="fa-solid fa-magnifying-glass-chart empty-state-icon"></i>
+          <h3 class="empty-state-title">No certifications found.</h3>
+          <p class="empty-state-sub">Try another keyword or category filter.</p>
+          <button class="btn-cyan" id="clear-filters-btn">
+            <i class="fa-solid fa-rotate-left"></i> Clear Filters
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         AREAS OF CONTINUOUS LEARNING (Prompt Section 16)
+         ========================================================================== -->
+    <section class="learning-areas-section" aria-labelledby="learning-areas-title">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="eyebrow">
+            <span class="eyebrow-bar"></span> TECHNICAL HORIZONS
+          </div>
+          <h2 class="section-title" id="learning-areas-title">
+            Areas of Continuous Learning
+          </h2>
+          <p class="section-subtext">
+            Reflecting active exploration, conceptual understanding, and hands-on experimentation across modern engineering domains.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="learning-card-title">Artificial Intelligence</h3>
+            <p class="learning-card-desc">
+              Exploring agentic workflows, model reasoning, and intelligent system integration for real-world tasks.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Exploring &bull; Developing</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="learning-card-title">Machine Learning</h3>
+            <p class="learning-card-desc">
+              Studying supervised algorithms, feature engineering, classification models, and predictive pipelines.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Applied Practice</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="learning-card-title">Databases &amp; NoSQL</h3>
+            <p class="learning-card-desc">
+              Document modeling, aggregation pipelines, and high-performance querying using MongoDB Atlas.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Active Foundation</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="learning-card-title">Vector Search</h3>
+            <p class="learning-card-desc">
+              Semantic retrieval, vector embeddings, high-dimensional indexing, and approximate nearest neighbor search.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Certified &bull; Practicing</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="learning-card-title">RAG Architecture</h3>
+            <p class="learning-card-desc">
+              Designing Retrieval-Augmented Generation workflows to ground LLMs in verified contextual databases.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Project Integration</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3 class="learning-card-title">AI Agents</h3>
+            <p class="learning-card-desc">
+              Building autonomous decision-making agents equipped with tool-calling capabilities and database access.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Active Exploration</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="learning-card-title">Programming</h3>
+            <p class="learning-card-desc">
+              Solidifying computer science fundamentals through Java, Python, object-oriented design, and clean algorithms.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Core Discipline</span>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-card-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="learning-card-title">Cybersecurity</h3>
+            <p class="learning-card-desc">
+              Understanding network defenses, ethical penetration testing concepts, and defensive security architectures.
+            </p>
+            <span class="learning-card-status"><i class="fa-solid fa-circle-dot"></i> Certified Foundation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CERTIFICATION â†’ SKILL CONNECTION ROADMAP (Prompt Section 17)
+         ========================================================================== -->
+    <section class="connection-section" aria-labelledby="connection-title">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="eyebrow">
+            <span class="eyebrow-bar"></span> GROWTH ROADMAP
+          </div>
+          <h2 class="section-title" id="connection-title">
+            From Learning to Practical Engineering
+          </h2>
+          <p class="section-subtext">
+            How structured technical coursework directly powers practical code, projects, and engineering capability.
+          </p>
+        </div>
+
+        <!-- Visual progression pipeline -->
+        <div class="progression-banner" aria-label="Learning progression stages">
+          <span class="progression-step highlight">CERTIFICATIONS</span>
+          <i class="fa-solid fa-arrow-right progression-arrow"></i>
+          <span class="progression-step">TECHNICAL LEARNING</span>
+          <i class="fa-solid fa-arrow-right progression-arrow"></i>
+          <span class="progression-step">PRACTICAL PROJECTS</span>
+          <i class="fa-solid fa-arrow-right progression-arrow"></i>
+          <span class="progression-step highlight">ENGINEERING GROWTH</span>
+        </div>
+
+        <div class="connection-grid">
+          <div class="connection-card">
+            <div class="connection-card-head">
+              <i class="fa-solid fa-database"></i> MongoDB Suite
+            </div>
+            <div class="connection-flow-list">
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Document Database Fundamentals</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Atlas Vector Search &amp; Indexing</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>RAG &amp; LLM Context Retrieval</span>
+              </div>
+            </div>
+            <div class="connection-outcome">
+              &rarr; Applied in semantic search apps &amp; conversational chatbots.
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <div class="connection-card-head">
+              <i class="fa-solid fa-code"></i> Java Fundamentals
+            </div>
+            <div class="connection-flow-list">
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Object-Oriented Programming (OOP)</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Collections &amp; Data Structures</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Exception Handling &amp; Robust Logic</span>
+              </div>
+            </div>
+            <div class="connection-outcome">
+              &rarr; Strengthened algorithmic thinking &amp; clean software design.
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <div class="connection-card-head">
+              <i class="fa-solid fa-shield-halved"></i> Cybersecurity
+            </div>
+            <div class="connection-flow-list">
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Network Security Fundamentals</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Ethical Hacking Methodologies</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Vulnerability &amp; Threat Awareness</span>
+              </div>
+            </div>
+            <div class="connection-outcome">
+              &rarr; Drives secure development practices &amp; defensive coding.
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <div class="connection-card-head">
+              <i class="fa-solid fa-briefcase"></i> AI &amp; ML Internship
+            </div>
+            <div class="connection-flow-list">
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Real-world Model Exploration</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Practical Data Analysis Pipelines</span>
+              </div>
+              <div class="connection-flow-item">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Collaborative Problem Solving</span>
+              </div>
+            </div>
+            <div class="connection-outcome">
+              &rarr; Bridged academic theory into actual engineering execution.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Strictly Synced across Pages 01â€“08)
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">RAJESH R</div>
+          <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/rajesh-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:rajeshrt.work@gmail.com" class="social-btn" aria-label="Send Email" title="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="certifications.html" class="active" aria-current="page">Certifications</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 Rajesh R. All rights reserved.
+        </div>
+        <div class="footer-bottom-right">
+          <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
+          <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       HIGH-FIDELITY CERTIFICATE MODAL / LIGHTBOX (Prompt Section 12)
+       ========================================================================== -->
+  <div class="cert-modal-backdrop" id="cert-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-cert-title">
+    <div class="cert-modal" id="cert-modal">
+      <div class="cert-modal-header">
+        <div class="cert-modal-header-left">
+          <span class="cert-category-badge" id="modal-cert-badge">Verified Credential</span>
+          <h3 class="cert-modal-title" id="modal-cert-title">Certificate Title</h3>
+        </div>
+        <button class="cert-modal-close-btn" id="modal-cert-close-btn" aria-label="Close certificate modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-modal-preview-box" id="modal-cert-svg-box">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="cert-modal-details-grid">
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Issuing Organization</span>
+            <span class="modal-detail-val" id="modal-cert-issuer">Organization Name</span>
+          </div>
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Issue Date</span>
+            <span class="modal-detail-val" id="modal-cert-date">Date</span>
+          </div>
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Credential Verification ID</span>
+            <span class="modal-detail-val" id="modal-cert-id" style="font-family: var(--font-mono); color: var(--cyan);">ID</span>
+          </div>
+          <div class="modal-detail-item">
+            <span class="modal-detail-label">Verification Status</span>
+            <span class="modal-detail-val" style="color: #10B981;"><i class="fa-solid fa-circle-check"></i> Officially Verified</span>
+          </div>
+        </div>
+
+        <p class="cert-modal-desc" id="modal-cert-desc">
+          Certificate description and verified competencies.
+        </p>
+
+        <div class="cert-modal-skills-box">
+          <span class="cert-modal-skills-label">Verified Competencies &amp; Technologies:</span>
+          <div class="cert-modal-skills-list" id="modal-cert-skills">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-modal-footer">
+        <span style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
+          <i class="fa-solid fa-lock"></i> Digital Credential Hash Verified
+        </span>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-outline" onclick="closeCertModal()">Close</button>
+          <a href="#" id="modal-verify-link" target="_blank" rel="noopener noreferrer" class="btn-cyan">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Official Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DATASET & JAVASCRIPT ENGINE (Data-driven, searchable, filterable)
+       ========================================================================== -->
+  <script>
+    // 1. Full Verified Dataset of 9 Certificates + 1 Verified Banner Card
+    const certificates = [
+      {
+        id: "cybersecurity-ethical-hacking",
+        title: "Cybersecurity & Ethical Hacking",
+        issuer: "Cappriciosec University",
+        category: "Cybersecurity",
+        filterCategory: "cybersecurity",
+        date: "18 Jan 2026",
+        credentialId: "8b319c5aaa096add1365",
+        badgeLabel: "Cybersecurity",
+        badgeColor: "#10B981",
+        badgeIcon: "fa-shield-halved",
+        image: "../assets/images/cyber-security-and-ethical-hacking-certificate.jpg",
+        description: "Completed 42 hours of advanced training in Linux, Go, Python, Wi-Fi hacking, Web/API/Mobile pentesting, Active Directory pentesting, and IoT hacking.",
+        technologies: ["Cybersecurity", "Ethical Hacking", "Web/API Pentesting", "Active Directory", "Linux & Python", "IoT & Hardware Hacking"],
+        verificationUrl: "https://university.cappriciosec.com/verify/8b319c5aaa096add1365",
+        rowGroup: 1,
+        svg: `<img src="../assets/images/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: 100%; object-fit: cover;">`
+      },
+      {
+        id: "java-fundamentals",
+        title: "Java Fundamentals",
+        issuer: "Uniq Technologies",
+        category: "Programming",
+        filterCategory: "programming",
+        date: "Jan 2026",
+        credentialId: "UQ25-0379",
+        badgeLabel: "Programming",
+        badgeColor: "#6366F1",
+        badgeIcon: "fa-code",
+        image: "../assets/images/java-certificate.jpg",
+        description: "Learned core Java concepts including OOP, collections, exception handling and problem solving.",
+        technologies: ["Java", "OOP", "Data Structures", "Collections", "Exception Handling"],
+        verificationUrl: "https://www.uniqtechnologies.co.in",
+        rowGroup: 1,
+        svg: `<img src="../assets/images/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: 100%; object-fit: cover;">`
+      },
+      {
+        id: "ui-ux-design-internship",
+        title: "UI & UX Design Internship",
+        issuer: "JCS Infotech",
+        category: "Internship",
+        filterCategory: "internship",
+        date: "03 Jun 2026 â€“ 30 Jun 2026",
+        badgeLabel: "Design",
+        badgeColor: "#A855F7",
+        badgeIcon: "fa-pen-ruler",
+        image: "../assets/images/img-20260808-151740.jpg",
+        description: "Completed a UI & UX Design internship at JCS Infotech with an Excellent performance evaluation.",
+        technologies: ["UI Design", "UX Design"],
+        rowGroup: 1,
+        svg: `<img src="../assets/images/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: 100%; object-fit: cover;">`
+      },
+      {
+        id: "ai-ml-internship",
+        title: "AI & ML Internship",
+        issuer: "MATT Engineering Solutions",
+        category: "Internship",
+        filterCategory: "internship",
+        date: "12 Jan 2026 â€“ 19 Jan 2026",
+        badgeLabel: "Internship",
+        badgeColor: "#F59E0B",
+        badgeIcon: "fa-briefcase",
+        image: "../assets/images/img-20260808-144310.jpg",
+        description: "Completed a practical AI & ML internship at MATT Engineering Solutions, Vadasery, covering applied machine learning, data analysis and problem solving during B.Tech II year at DMI Engineering College.",
+        technologies: ["Artificial Intelligence", "Machine Learning", "Data Analysis", "Python"],
+        rowGroup: 3,
+        svg: `<img src="../assets/images/img-20260808-144310.jpg" alt="AI & ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: 100%; object-fit: cover;">`
+      },
+      {
+        id: "diploma-computer-application",
+        title: "Diploma in Computer Application",
+        issuer: "Metro Soft Computers",
+        category: "Computer Applications",
+        filterCategory: "applications",
+        date: "12 Dec 2020 â€“ 06 Mar 2021",
+        credentialId: "Reg. No.: 006312",
+        badgeLabel: "Computer Applications",
+        badgeColor: "#38BDF8",
+        badgeIcon: "fa-laptop-code",
+        image: "../assets/images/img-20260808-144839.jpg",
+        description: "Completed Diploma in Computer Application covering MS Office, programming basics, operating systems, and computer applications with Grade 'Excellent'.",
+        technologies: ["Computer Applications", "MS Office", "Programming Fundamentals", "Operating Systems", "Grade: Excellent"],
+        verificationUrl: "https://metrosoftcomputers.com/verify/006312",
+        rowGroup: 3,
+        svg: `<img src="../assets/images/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: 100%; object-fit: cover;">`
+      }
+    ];
+
+    // 2. Dynamic Metric Calculation (Directly from dataset)
+    function updateHeroStats() {
+      const total = certificates.length;
+      const verified = certificates.filter(c => c.credentialId && c.credentialId.trim() !== "").length;
+      const issuers = new Set(certificates.map(c => c.issuer)).size;
+      const internships = certificates.filter(c => c.filterCategory === "internship").length;
+
+      document.getElementById('stat-total-certs').textContent = total + "+";
+      document.getElementById('stat-verified-certs').textContent = verified + "+";
+      document.getElementById('stat-platforms').textContent = issuers + "+";
+      document.getElementById('stat-internship').textContent = internships + "+";
+    }
+
+    // 3. Render Certificate Cards Function (Data-Driven with 3 Rows matching reference)
+    const certsContainer = document.getElementById('certifications-container');
+    const emptyState = document.getElementById('empty-state');
+    let currentCategory = 'all';
+    let currentSearchTerm = '';
+
+    function renderCertificates() {
+      // Filter by category and search query
+      const filtered = certificates.filter(cert => {
+        const matchesCategory = (currentCategory === 'all') || (cert.filterCategory === currentCategory);
+        
+        const term = currentSearchTerm.toLowerCase().trim();
+        const matchesSearch = term === '' || 
+          cert.title.toLowerCase().includes(term) ||
+          cert.issuer.toLowerCase().includes(term) ||
+          cert.category.toLowerCase().includes(term) ||
+          cert.description.toLowerCase().includes(term) ||
+          cert.technologies.some(tech => tech.toLowerCase().includes(term)) ||
+          (cert.credentialId && cert.credentialId.toLowerCase().includes(term));
+
+        return matchesCategory && matchesSearch;
+      });
+
+      certsContainer.innerHTML = '';
+
+      if (filtered.length === 0) {
+        emptyState.classList.add('visible');
+        return;
+      } else {
+        emptyState.classList.remove('visible');
+      }
+
+      // If user is searching or has filtered, show clean adaptive grid
+      if (currentCategory !== 'all' || currentSearchTerm.trim() !== '') {
+        const grid = document.createElement('div');
+        grid.className = 'cert-grid';
+        filtered.forEach(cert => {
+          grid.appendChild(createCertCardElement(cert));
+        });
+        certsContainer.appendChild(grid);
+        return;
+      }
+      // Default view: render remaining certificates by row group.
+      const row1Certs = filtered.filter(c => c.rowGroup === 1);
+      if (row1Certs.length > 0) {
+        const row1Grid = document.createElement('div');
+        row1Grid.className = 'cert-grid';
+        row1Certs.forEach(cert => {
+          row1Grid.appendChild(createCertCardElement(cert));
+        });
+        certsContainer.appendChild(row1Grid);
+      }
+      const row2Certs = filtered.filter(c => c.rowGroup === 2);
+      if (row2Certs.length > 0) {
+        const row2Grid = document.createElement('div');
+        row2Grid.className = 'cert-grid four-cols';
+        row2Certs.forEach(cert => {
+          row2Grid.appendChild(createCertCardElement(cert));
+        });
+        certsContainer.appendChild(row2Grid);
+      }
+
+      // Row 3: MATT Internship, Diploma + "All Certificates Verified" Banner Card
+      const row3Certs = filtered.filter(c => c.rowGroup === 3);
+      const row3Grid = document.createElement('div');
+      row3Grid.className = 'cert-grid bottom-row';
+      row3Certs.forEach(cert => {
+        row3Grid.appendChild(createCertCardElement(cert));
+      });
+
+      // Append Right Banner Card
+      const bannerCard = document.createElement('div');
+      bannerCard.className = 'verified-banner-card';
+      bannerCard.innerHTML = `
+        <div class="verified-banner-header">
+          <div class="verified-shield-icon">
+            <i class="fa-solid fa-shield-check"></i>
+          </div>
+          <div>
+            <h3 class="verified-banner-title">All Certificates Verified</h3>
+            <p class="verified-banner-desc">
+              You can verify all my credentials through the respective issuing platforms or Credly links.
+            </p>
+          </div>
+        </div>
+        <div class="verified-banner-footer">
+          <button class="btn-verify-all" onclick="verifyAllCredentials()">
+            View All Credentials &rarr;
+          </button>
+          <div class="verified-script-note">
+            Continuous Learning Builds Better Opportunities
+          </div>
+        </div>
+      `;
+      row3Grid.appendChild(bannerCard);
+      certsContainer.appendChild(row3Grid);
+    }
+
+    function createCertCardElement(cert) {
+      const card = document.createElement('div');
+      card.className = 'cert-card';
+      card.setAttribute('data-id', cert.id);
+
+      card.innerHTML = `
+        <div class="cert-card-media">
+          ${cert.image ? `<img src="${cert.image}" alt="${cert.title} Certificate" style="width: 100%; height: 100%; object-fit: cover;">` : cert.svg}
+        </div>
+        <div class="cert-card-body">
+          <div class="cert-category-badge" style="border-color: ${cert.badgeColor}44; color: ${cert.badgeColor};">
+            <i class="fa-solid ${cert.badgeIcon}"></i> ${cert.badgeLabel}
+          </div>
+          <h3 class="cert-title">${cert.title}</h3>
+          <div class="cert-meta-row">
+            <span class="cert-meta-item"><i class="fa-solid fa-building-columns cyan"></i> ${cert.issuer}</span>
+            <span class="cert-meta-item"><i class="fa-regular fa-calendar cyan"></i> ${cert.date}</span>
+          </div>
+          <p class="cert-desc">${cert.description}</p>
+          ${cert.credentialId ? `<div class="cert-credential-id">Credential ID: ${cert.credentialId}</div>` : ''}
+          <div class="cert-card-actions">
+            <button class="cert-btn cert-btn-view" onclick="openCertModal('${cert.id}')">
+              <i class="fa-regular fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    // 4. Filter Button Event Handlers
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        currentCategory = btn.getAttribute('data-filter');
+        renderCertificates();
+      });
+    });
+
+    // 5. Search Bar Event Handlers
+    const searchInput = document.getElementById('cert-search-input');
+    const searchClearBtn = document.getElementById('search-clear-btn');
+
+    searchInput.addEventListener('input', (e) => {
+      currentSearchTerm = e.target.value;
+      if (currentSearchTerm.length > 0) {
+        searchClearBtn.style.display = 'block';
+      } else {
+        searchClearBtn.style.display = 'none';
+      }
+      renderCertificates();
+    });
+
+    searchClearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      currentSearchTerm = '';
+      searchClearBtn.style.display = 'none';
+      searchInput.focus();
+      renderCertificates();
+    });
+
+    // Clear Filters Reset Button
+    document.getElementById('clear-filters-btn').addEventListener('click', () => {
+      searchInput.value = '';
+      currentSearchTerm = '';
+      searchClearBtn.style.display = 'none';
+      currentCategory = 'all';
+      filterButtons.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-filter') === 'all');
+        b.setAttribute('aria-selected', b.getAttribute('data-filter') === 'all');
+      });
+      renderCertificates();
+    });
+
+    // 6. Modal Lightbox Logic
+    const certModalBackdrop = document.getElementById('cert-modal-backdrop');
+    const certModalCloseBtn = document.getElementById('modal-cert-close-btn');
+    const modalCertTitle = document.getElementById('modal-cert-title');
+    const modalCertBadge = document.getElementById('modal-cert-badge');
+    const modalCertIssuer = document.getElementById('modal-cert-issuer');
+    const modalCertDate = document.getElementById('modal-cert-date');
+    const modalCertId = document.getElementById('modal-cert-id');
+    const modalCertDesc = document.getElementById('modal-cert-desc');
+    const modalCertSvgBox = document.getElementById('modal-cert-svg-box');
+    const modalCertSkills = document.getElementById('modal-cert-skills');
+    const modalVerifyLink = document.getElementById('modal-verify-link');
+
+    function openCertModal(certId) {
+      const cert = certificates.find(c => c.id === certId);
+      if (!cert) return;
+
+      modalCertTitle.textContent = cert.title;
+      modalCertBadge.innerHTML = `<i class="fa-solid ${cert.badgeIcon}"></i> ${cert.badgeLabel}`;
+      modalCertBadge.style.color = cert.badgeColor;
+      modalCertBadge.style.borderColor = cert.badgeColor + '55';
+      modalCertIssuer.textContent = cert.issuer;
+      modalCertDate.textContent = cert.date;
+      modalCertId.textContent = cert.credentialId || 'Verified Record';
+      modalCertDesc.textContent = cert.description;
+      
+      if (cert.image) {
+        modalCertSvgBox.innerHTML = `<img src="${cert.image}" alt="${cert.title} Certificate - ${cert.issuer}" style="width: 100%; height: auto; max-height: 520px; object-fit: contain; display: block; border-radius: 8px;">`;
+      } else {
+        modalCertSvgBox.innerHTML = cert.svg;
+      }
+
+      modalCertSkills.innerHTML = cert.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('');
+      if (cert.verificationUrl) {
+        modalVerifyLink.href = cert.verificationUrl;
+        modalVerifyLink.style.display = '';
+      } else {
+        modalVerifyLink.href = '#';
+        modalVerifyLink.style.display = 'none';
+      }
+
+      certModalBackdrop.classList.add('open');
+      certModalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCertModal() {
+      certModalBackdrop.classList.remove('open');
+      certModalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    certModalCloseBtn.addEventListener('click', closeCertModal);
+
+    certModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === certModalBackdrop) {
+        closeCertModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && certModalBackdrop.classList.contains('open')) {
+        closeCertModal();
+      }
+    });
+
+    // 7. Verify Credential Helper
+    function verifyCredential(url) {
+      if (url && url !== '#') {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      } else {
+        alert("This verified credential is authenticated directly through official institutional records.");
+      }
+    }
+
+    function verifyAllCredentials() {
+      window.open('https://www.credly.com/users/rajesh-r', '_blank', 'noopener,noreferrer');
+    }
+
+    // 8. Mobile Navigation Drawer
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggleBtn && mobileNav) {
+      menuToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = mobileNav.classList.toggle('open');
+        menuToggleBtn.setAttribute('aria-expanded', isOpen);
+        const icon = menuToggleBtn.querySelector('i');
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+          mobileNav.classList.remove('open');
+          menuToggleBtn.setAttribute('aria-expanded', 'false');
+          const icon = menuToggleBtn.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // 9. Theme Toggle with LocalStorage Persistence (Dark / Light)
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-theme');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        if (isLight) {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+          }
+          localStorage.setItem('portfolio-theme', 'light');
+        } else {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+          }
+          localStorage.setItem('portfolio-theme', 'dark');
+        }
+      });
+    }
+
+    // 10. Scroll to top button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      updateHeroStats();
+      renderCertificates();
+    });
+  </script>
+</body>
+
+</html>

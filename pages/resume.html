@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Rajesh R — AI &amp; Data Science Engineer</title>
+  <meta name="description"
+    content="View Rajesh R's resume, including education, technical skills, AI and ML experience, projects, and certifications." />
+
+  <!-- Google Fonts: Inter, JetBrains Mono, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & THEME TOKENS (Strictly identical across Pages 01–07)
+       ========================================================================== */
+    :root {
+      --bg-base: #010811;
+      --bg-surface: #031122;
+      --bg-card: #051426;
+      --bg-card-hover: #071C33;
+      --cyan: #0CF2FF;
+      --cyan-dim: rgba(12, 242, 255, 0.1);
+      --cyan-border: rgba(12, 242, 255, 0.28);
+      --cyan-glow: rgba(12, 242, 255, 0.35);
+      --text-primary: #FFFFFF;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(12, 242, 255, 0.45);
+      --radius-sm: 6px;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body.light-theme {
+      --bg-base: #F8FAFC;
+      --bg-surface: #EDF2F7;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F1F5F9;
+      --cyan: #0284C7;
+      --cyan-dim: rgba(2, 132, 199, 0.08);
+      --cyan-border: rgba(2, 132, 199, 0.28);
+      --cyan-glow: rgba(2, 132, 199, 0.25);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-hover: rgba(2, 132, 199, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .cyan {
+      color: var(--cyan);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-bar {
+      width: 24px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       GLOBAL NAVBAR (Synced across Pages 01–08)
+       ========================================================================== */
+    header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 18px 0;
+      background: var(--bg-base);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: rgba(1, 8, 17, 0.92);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body.light-theme header {
+      background-color: rgba(248, 250, 252, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo .r-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-links a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -19px;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .mobile-nav {
+      display: none;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 20px;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 12px 0;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-nav a.active {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       HERO SECTION (Matching 7 Resume page reference.png)
+       ========================================================================== */
+    .hero-section {
+      padding: 48px 0 32px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text-col .eyebrow-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .hero-heading {
+      font-size: 3.35rem;
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtext {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 28px;
+      max-width: 520px;
+    }
+
+    .hero-cta-btns {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cyan {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      background: var(--cyan);
+      color: #010811;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border: 1px solid var(--cyan);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 0 16px var(--cyan-glow);
+    }
+
+    .btn-cyan:hover {
+      background: #3bf6ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px var(--cyan-glow);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-size: 0.92rem;
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cyan-border);
+      color: var(--cyan);
+      background: var(--bg-card);
+      transform: translateY(-2px);
+    }
+
+    /* Desk / Laptop Workspace Banner Graphic */
+    .hero-desk-banner {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: linear-gradient(135deg, #020f1e 0%, #06192d 100%);
+      border: 1px solid var(--cyan-border);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(12, 242, 255, 0.08);
+      height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-desk-banner svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-desk-script {
+      position: absolute;
+      left: 36px;
+      top: 36px;
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--cyan);
+      font-weight: 700;
+      line-height: 1.15;
+      text-shadow: 0 0 16px rgba(12, 242, 255, 0.5);
+      user-select: none;
+    }
+
+    /* ==========================================================================
+       MAIN RESUME SECTION (2-Column Layout: Left Content & Right Sticky Sheet)
+       ========================================================================== */
+    .resume-main-section {
+      padding: 30px 0 60px;
+    }
+
+    .resume-main-grid {
+      display: grid;
+      grid-template-columns: 1.75fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* --------------------------------------------------------------------------
+       LEFT COLUMN: Profile Widget + Stacked Content Cards
+       -------------------------------------------------------------------------- */
+    .resume-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Profile Sidebar Widget */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      transition: var(--transition);
+    }
+
+    .profile-card:hover {
+      border-color: var(--cyan-border);
+      box-shadow: 0 14px 36px rgba(12, 242, 255, 0.08);
+    }
+
+    .profile-avatar-wrap {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      position: relative;
+      flex-shrink: 0;
+      padding: 4px;
+      background: radial-gradient(circle, var(--cyan) 0%, transparent 70%);
+      box-shadow: 0 0 20px rgba(12, 242, 255, 0.3);
+    }
+
+    .profile-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 2px solid var(--cyan);
+    }
+
+    .profile-card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .profile-name {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .profile-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--cyan);
+      margin-top: -6px;
+    }
+
+    .profile-bio {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .profile-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+    }
+
+    .info-row i {
+      color: var(--cyan);
+      font-size: 0.95rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .info-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .info-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .info-val {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+
+    .profile-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .quick-links-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quick-link-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .quick-link-pill:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: var(--bg-card);
+    }
+
+    .signature-badge {
+      font-family: var(--font-script);
+      font-size: 1.95rem;
+      color: var(--cyan);
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 0 12px rgba(12, 242, 255, 0.4);
+      position: relative;
+    }
+
+    .signature-badge::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan);
+      border-radius: 2px;
+    }
+
+    /* Content Cards: Education, Skills, Experience */
+    .resume-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      transition: var(--transition);
+    }
+
+    .resume-card:hover {
+      border-color: var(--cyan-border);
+    }
+
+    .card-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .card-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-icon-bubble {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.015em;
+    }
+
+    .card-link-action {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--cyan);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .card-link-action:hover {
+      text-decoration: underline;
+      gap: 9px;
+    }
+
+    /* Education Nodes */
+    .edu-timeline {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .edu-node {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      padding-left: 18px;
+      border-left: 2px solid var(--cyan);
+    }
+
+    .edu-node-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .edu-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .edu-node-inst {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+    }
+
+    .edu-node-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* Skills Grid */
+    .skills-grid-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .skill-domain-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skill-domain-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .skill-domain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skill-item {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-item::before {
+      content: '•';
+      color: var(--cyan);
+      font-size: 1rem;
+    }
+
+    /* Experience Card Interior */
+    .exp-split-row {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .exp-main-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 18px;
+      border-left: 2px solid var(--cyan);
+    }
+
+    .exp-role-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .exp-org {
+      font-size: 0.92rem;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .exp-dates {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .exp-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .exp-quote-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 22px;
+      position: relative;
+    }
+
+    .exp-quote-text {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .exp-quote-author {
+      font-family: var(--font-script);
+      font-size: 1.4rem;
+      color: var(--cyan);
+      display: block;
+      text-align: right;
+    }
+
+    /* Certifications Preview Row */
+    .certs-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .cert-mini-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .cert-mini-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    .cert-mini-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #020b16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-mini-thumb img,
+    .cert-mini-thumb svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cert-mini-title {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .cert-mini-issuer {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    /* --------------------------------------------------------------------------
+       RIGHT COLUMN: Sticky High-Fidelity Printable Resume Document Preview
+       -------------------------------------------------------------------------- */
+    .resume-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 90px;
+    }
+
+    /* Styled Paper Document Sheet */
+    .resume-paper-sheet {
+      background: #FFFFFF;
+      color: #0F172A;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(12, 242, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.72rem;
+      line-height: 1.45;
+      position: relative;
+    }
+
+    .paper-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #0284C7;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .paper-header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .paper-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.15;
+    }
+
+    .paper-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0284C7;
+    }
+
+    .paper-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 0.65rem;
+      color: #475569;
+      margin-top: 4px;
+    }
+
+    .paper-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .paper-contact-item i {
+      color: #0284C7;
+      font-size: 0.65rem;
+    }
+
+    .paper-photo {
+      width: 58px;
+      height: 58px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1.5px solid #0284C7;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .paper-section {
+      margin-bottom: 12px;
+    }
+
+    .paper-sec-head {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #0284C7;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .paper-item {
+      margin-bottom: 6px;
+    }
+
+    .paper-item-title {
+      font-weight: 700;
+      color: #0F172A;
+      font-size: 0.7rem;
+    }
+
+    .paper-item-sub {
+      color: #64748B;
+      font-size: 0.64rem;
+    }
+
+    .paper-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      font-size: 0.62rem;
+    }
+
+    .paper-skill-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .paper-skill-header {
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    /* Action Card underneath */
+    .resume-download-card {
+      background: var(--bg-card);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .download-card-head {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .download-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .download-card-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .download-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .btn-download-full {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      background: var(--cyan);
+      color: #010811;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 0 14px var(--cyan-glow);
+    }
+
+    .btn-download-full:hover {
+      background: #3bf6ff;
+      box-shadow: 0 4px 20px var(--cyan-glow);
+      transform: translateY(-2px);
+    }
+
+    .download-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* ==========================================================================
+       SELECTED PROJECTS SHOWCASE (Prompt Section 12)
+       ========================================================================== */
+    .projects-showcase-section {
+      padding: 50px 0 30px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .section-head-flex {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: var(--cyan-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .project-desc {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .proj-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--cyan);
+    }
+
+    .project-link-btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--cyan);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       WHAT YOU'LL FIND IN MY RESUME (Prompt Section 17)
+       ========================================================================== */
+    .resume-breakdown-section {
+      padding: 40px 0;
+    }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .breakdown-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .breakdown-card:hover {
+      border-color: var(--cyan-border);
+      transform: translateY(-2px);
+    }
+
+    .breakdown-card i {
+      font-size: 1.25rem;
+      color: var(--cyan);
+      margin-bottom: 2px;
+    }
+
+    .breakdown-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .breakdown-desc {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       FINAL RECRUITER CTA (Prompt Section 19)
+       ========================================================================== */
+    .cta-section {
+      padding: 60px 0;
+      background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-surface) 100%);
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-heading {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .cta-subtext {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       GLOBAL FOOTER (Strictly Synced across Pages 01–08)
+       ========================================================================== */
+    footer {
+      border-top: none;
+      padding: 60px 0 30px;
+      background: var(--bg-base);
+      background-image: url('../assets/images/footer-bg.png');
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(1, 8, 17, 0.85);
+      z-index: 1;
+    }
+
+    body.light-theme footer::before {
+      background: rgba(248, 250, 252, 0.88);
+    }
+
+    footer .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 14px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+
+    .social-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan-glow);
+      transform: translateY(-2px);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a.active {
+      color: var(--cyan);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 30px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-scroll-top {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-scroll-top:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
+    }
+
+    /* ==========================================================================
+       INTERACTIVE FULL-PAGE RESUME VIEWER MODAL
+       ========================================================================== */
+    .resume-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(1, 8, 17, 0.9);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .resume-modal-backdrop.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .resume-modal {
+      background: var(--bg-card);
+      border: 1px solid var(--cyan-border);
+      border-radius: var(--radius-xl);
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(12, 242, 255, 0.18);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resume-modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .resume-modal-close-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .resume-modal-close-btn:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .resume-modal-body {
+      padding: 28px;
+    }
+
+    /* Print Stylesheet for Instant Clean PDF Export */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      .resume-paper-sheet,
+      .resume-paper-sheet * {
+        visibility: visible;
+      }
+      .resume-paper-sheet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS (360px, 768px, 1024px, 1280px, 1440px)
+       ========================================================================== */
+    @media (max-width: 1180px) {
+      .resume-main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resume-right-col {
+        position: static;
+        order: -1;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .breakdown-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-heading {
+        font-size: 2.75rem;
+      }
+
+      .skills-grid-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .certs-preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-info-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .edu-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .exp-split-row {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid-row {
+        grid-template-columns: 1fr;
+      }
+
+      .certs-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .breakdown-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       GLOBAL NAVBAR (Synced across Pages 01–08)
+       ========================================================================== -->
+  <header>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="home.html" class="logo" aria-label="Rajesh R Portfolio Homepage">
+          <span class="r-icon">R</span>
+          Rajesh
+        </a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html">Experience</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="resume.html" class="active" aria-current="page">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark and light theme" title="Toggle theme">
+            <i class="fa-regular fa-moon" id="theme-icon"></i>
+          </button>
+          <button class="mobile-menu-btn" id="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         HERO SECTION (Matching 7 Resume page reference.png)
+         ========================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left Column: Eyebrow, Heading, Subtitle & Action Buttons -->
+          <div class="hero-text-col">
+            <div class="eyebrow-tag">
+              <span class="eyebrow-bar"></span> MY RESUME
+            </div>
+            <h1 class="hero-heading" id="hero-title">
+              My Professional<br>
+              <span class="cyan">Resume</span>
+            </h1>
+            <p class="hero-subtext">
+              A complete overview of my education, skills, projects, experience and achievements. Feel free to download my resume or view it online.
+            </p>
+            <div class="hero-cta-btns">
+              <button class="btn-cyan" onclick="handleResumeDownload()">
+                <i class="fa-solid fa-download"></i> Download PDF
+              </button>
+              <button class="btn-outline" onclick="openResumeModal()">
+                <i class="fa-regular fa-eye"></i> View Online
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column Graphic: Desk / Laptop Workspace with Handwritten Script -->
+          <div class="hero-desk-banner" aria-hidden="true">
+            <svg viewBox="0 0 540 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="540" height="270" fill="#010e1c"/>
+              <!-- Ambient Room Wall Glow -->
+              <circle cx="440" cy="50" r="140" fill="url(#lampGrad)" opacity="0.6"/>
+              <!-- Wooden Desk Surface -->
+              <rect y="210" width="540" height="60" fill="#041525"/>
+              <line x1="0" y1="210" x2="540" y2="210" stroke="#0CF2FF" stroke-width="1.2" opacity="0.3"/>
+
+              <!-- Laptop Base -->
+              <path d="M220 220 L390 220 L410 230 L200 230 Z" fill="#0a253f" stroke="#0CF2FF" stroke-width="1"/>
+              <!-- Laptop Screen -->
+              <rect x="230" y="70" width="150" height="150" rx="6" fill="#021120" stroke="#0CF2FF" stroke-width="1.8"/>
+              <rect x="236" y="76" width="138" height="138" fill="#010912"/>
+
+              <!-- Code Lines in Laptop Screen -->
+              <line x1="246" y1="92" x2="310" y2="92" stroke="#0CF2FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="246" y1="104" x2="330" y2="104" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="256" y1="116" x2="350" y2="116" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="256" y1="128" x2="300" y2="128" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="246" y1="140" x2="320" y2="140" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="246" y1="152" x2="340" y2="152" stroke="#0CF2FF" stroke-width="1.5" stroke-linecap="round"/>
+
+              <!-- Ambient Screen Text -->
+              <text x="305" y="180" fill="#0CF2FF" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" text-anchor="middle">Better Code Better Future</text>
+
+              <!-- Coffee Cup with </> -->
+              <rect x="160" y="180" width="28" height="34" rx="4" fill="#041f33" stroke="#0CF2FF" stroke-width="1.2"/>
+              <path d="M188 188 C196 188 196 200 188 200" stroke="#0CF2FF" stroke-width="1.5" fill="none"/>
+              <text x="174" y="202" fill="#0CF2FF" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" text-anchor="middle">&lt;/&gt;</text>
+
+              <!-- Desk Lamp Silhouette -->
+              <path d="M440 20 L440 210" stroke="#133654" stroke-width="4"/>
+              <path d="M420 50 L460 50 L470 75 L410 75 Z" fill="#0CF2FF" opacity="0.3"/>
+              
+              <defs>
+                <radialGradient id="lampGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(440 60) scale(140)">
+                  <stop stop-color="#0CF2FF" stop-opacity="0.35"/>
+                  <stop offset="1" stop-color="#0CF2FF" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+            </svg>
+            <div class="hero-desk-script">
+              Build<br>
+              Learn<br>
+              Grow
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MAIN RESUME GRID SECTION (Left: Content Cards & Right: Document Preview)
+         ========================================================================== -->
+    <section class="resume-main-section" aria-label="Resume Details and Document Preview">
+      <div class="container">
+        <div class="resume-main-grid">
+
+          <!-- --------------------------------------------------------------------
+               LEFT COLUMN: Profile Card, Education, Skills, Experience, Certs
+               -------------------------------------------------------------------- -->
+          <div class="resume-left-col">
+
+            <!-- Profile Sidebar Widget -->
+            <article class="profile-card" aria-labelledby="profile-name">
+              <div class="profile-avatar-wrap">
+                <img src="../assets/images/rajesh-image-2.png" alt="Rajesh R - AI &amp; Data Science Engineer" class="profile-avatar" />
+              </div>
+
+              <div class="profile-card-content">
+                <h2 class="profile-name" id="profile-name">Rajesh R</h2>
+                <div class="profile-role">AI &amp; Data Science Engineer</div>
+                <p class="profile-bio">
+                  I'm a passionate and curious learner, currently pursuing my engineering degree. I enjoy solving real-world problems with technology, especially in AI, Data Science and system design.
+                </p>
+
+                <div class="profile-info-grid">
+                  <div class="info-row">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div class="info-text-group">
+                      <span class="info-label">Education</span>
+                      <span class="info-val">B.E. Computer Science &amp; Engineering (Pursuing)</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="info-text-group">
+                      <span class="info-label">Location</span>
+                      <span class="info-val">India</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div class="info-text-group">
+                      <span class="info-label">Date of Birth</span>
+                      <span class="info-val">16 April 2006</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <div class="info-text-group">
+                      <span class="info-label">Career Goal</span>
+                      <span class="info-val">Become a skilled AI/ML Engineer and build impactful solutions.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile-footer-row">
+                  <div class="quick-links-group">
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Quick Links:</span>
+                    <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer" class="quick-link-pill">
+                      <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/rajesh-r" target="_blank" rel="noopener noreferrer" class="quick-link-pill">
+                      <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="mailto:rajeshrt.work@gmail.com" class="quick-link-pill">
+                      <i class="fa-regular fa-envelope"></i> Email
+                    </a>
+                  </div>
+                  <div class="signature-badge">
+                    Rajesh R
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 1. Education Card -->
+            <article class="resume-card" aria-labelledby="card-title-edu">
+              <div class="card-header-bar">
+                <div class="card-title-group">
+                  <div class="card-icon-bubble">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <h3 class="card-title" id="card-title-edu">Education</h3>
+                </div>
+              </div>
+
+              <div class="edu-timeline">
+                <div class="edu-node">
+                  <h4 class="edu-node-title">B.E. Computer Science &amp; Engineering</h4>
+                  <span class="edu-status-pill"><i class="fa-solid fa-circle-dot"></i> (Pursuing)</span>
+                  <p class="edu-node-inst">College: Engineering Institution</p>
+                  <p class="edu-node-meta">Expected Graduation: 2026</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <div class="edu-node">
+                    <h4 class="edu-node-title">Higher Secondary (12th)</h4>
+                    <p class="edu-node-inst">Tamil Nadu State Board (2024)</p>
+                    <p class="edu-node-meta">Subjects: Physics, Chemistry, Mathematics</p>
+                  </div>
+
+                  <div class="edu-node">
+                    <h4 class="edu-node-title">Secondary (10th)</h4>
+                    <p class="edu-node-inst">Tamil Nadu State Board (2022)</p>
+                    <p class="edu-node-meta" style="color: #F59E0B; font-weight: 700;">2nd Rank Academic Achievement</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Skills Card -->
+            <article class="resume-card" aria-labelledby="card-title-skills">
+              <div class="card-header-bar">
+                <div class="card-title-group">
+                  <div class="card-icon-bubble">
+                    <i class="fa-solid fa-gear"></i>
+                  </div>
+                  <h3 class="card-title" id="card-title-skills">Skills</h3>
+                </div>
+                <a href="skills.html" class="card-link-action">Explore All Skills &rarr;</a>
+              </div>
+
+              <div class="skills-grid-row">
+                <div class="skill-domain-col">
+                  <h4 class="skill-domain-title"><i class="fa-solid fa-code"></i> Programming</h4>
+                  <ul class="skill-domain-list">
+                    <li class="skill-item">Python</li>
+                    <li class="skill-item">Java</li>
+                    <li class="skill-item">C</li>
+                    <li class="skill-item">JavaScript</li>
+                  </ul>
+                </div>
+
+                <div class="skill-domain-col">
+                  <h4 class="skill-domain-title"><i class="fa-solid fa-brain"></i> AI &amp; ML</h4>
+                  <ul class="skill-domain-list">
+                    <li class="skill-item">Machine Learning</li>
+                    <li class="skill-item">Deep Learning</li>
+                    <li class="skill-item">NLP</li>
+                    <li class="skill-item">Data Analysis</li>
+                  </ul>
+                </div>
+
+                <div class="skill-domain-col">
+                  <h4 class="skill-domain-title"><i class="fa-solid fa-globe"></i> Web Dev</h4>
+                  <ul class="skill-domain-list">
+                    <li class="skill-item">HTML</li>
+                    <li class="skill-item">CSS</li>
+                    <li class="skill-item">JavaScript</li>
+                    <li class="skill-item">React</li>
+                  </ul>
+                </div>
+
+                <div class="skill-domain-col">
+                  <h4 class="skill-domain-title"><i class="fa-solid fa-database"></i> Databases</h4>
+                  <ul class="skill-domain-list">
+                    <li class="skill-item">MongoDB</li>
+                    <li class="skill-item">MySQL</li>
+                    <li class="skill-item">PostgreSQL</li>
+                  </ul>
+                </div>
+
+                <div class="skill-domain-col">
+                  <h4 class="skill-domain-title"><i class="fa-solid fa-wrench"></i> Tools &amp; Others</h4>
+                  <ul class="skill-domain-list">
+                    <li class="skill-item">Git &amp; GitHub</li>
+                    <li class="skill-item">VS Code</li>
+                    <li class="skill-item">Linux</li>
+                    <li class="skill-item">Docker</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Experience Card -->
+            <article class="resume-card" aria-labelledby="card-title-exp">
+              <div class="card-header-bar">
+                <div class="card-title-group">
+                  <div class="card-icon-bubble">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <h3 class="card-title" id="card-title-exp">Experience</h3>
+                </div>
+                <a href="experience.html" class="card-link-action">Detailed Experience &rarr;</a>
+              </div>
+
+              <div class="exp-split-row">
+                <div class="exp-main-details">
+                  <h4 class="exp-role-title">AI &amp; ML Intern</h4>
+                  <div class="exp-org">MATT Engineering Solutions</div>
+                  <div class="exp-dates"><i class="fa-regular fa-calendar"></i> 12 Jan 2026 – 19 Jan 2026</div>
+                  <div class="exp-bullets">
+                    <p>&bull; Worked on real-world AI and ML projects, gaining hands-on exposure.</p>
+                    <p>&bull; Gained practical experience in model building, data analysis and problem solving.</p>
+                    <p>&bull; Used Python and various machine learning workflows.</p>
+                  </div>
+                </div>
+
+                <div class="exp-quote-box">
+                  <p class="exp-quote-text">
+                    &ldquo;Every project and experience has helped me become a better version of myself.&rdquo;
+                  </p>
+                  <span class="exp-quote-author">&mdash; Rajesh R</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Certifications & Credentials Row -->
+            <article class="resume-card" aria-labelledby="card-title-certs">
+              <div class="card-header-bar">
+                <div class="card-title-group">
+                  <div class="card-icon-bubble">
+                    <i class="fa-solid fa-certificate"></i>
+                  </div>
+                  <h3 class="card-title" id="card-title-certs">Certifications &amp; Credentials</h3>
+                </div>
+                <a href="certifications.html" class="card-link-action">View All &rarr;</a>
+              </div>
+
+              <div class="certs-preview-grid">
+                <div class="cert-mini-card">
+                  <div class="cert-mini-thumb">
+                    <img src="../assets/images/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate" />
+                  </div>
+                  <h5 class="cert-mini-title">Cybersecurity &amp; Ethical Hacking</h5>
+                  <span class="cert-mini-issuer">Cappriciosec University</span>
+                </div>
+
+                
+
+                
+
+                <div class="cert-mini-card">
+                  <div class="cert-mini-thumb">
+                    <img src="../assets/images/java-certificate.jpg" alt="Java Fundamentals Certificate" />
+                  </div>
+                  <h5 class="cert-mini-title">Java Fundamentals</h5>
+                  <span class="cert-mini-issuer">Uniq Technologies</span>
+                </div>
+
+                <div class="cert-mini-card">
+                  <div class="cert-mini-thumb">
+                    <img src="../assets/images/img-20260808-151740.jpg" alt="UI &amp; UX Design Internship Certificate - JCS Infotech" />
+                  </div>
+                  <h5 class="cert-mini-title">UI &amp; UX Design Internship</h5>
+                  <span class="cert-mini-issuer">JCS Infotech</span>
+                </div>
+
+                <div class="cert-mini-card">
+                  <div class="cert-mini-thumb">
+                    <img src="../assets/images/img-20260808-144310.jpg" alt="AI &amp; ML Internship Certificate - MATT Engineering Solutions" />
+                  </div>
+                  <h5 class="cert-mini-title">AI &amp; ML Internship</h5>
+                  <span class="cert-mini-issuer">MATT Engineering</span>
+                </div>
+
+                <div class="cert-mini-card">
+                  <div class="cert-mini-thumb">
+                    <img src="../assets/images/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate" />
+                  </div>
+                  <h5 class="cert-mini-title">Diploma in Computer Application</h5>
+                  <span class="cert-mini-issuer">Metro Soft Computers</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- --------------------------------------------------------------------
+               RIGHT COLUMN: Sticky High-Fidelity Printable Resume Document Preview
+               -------------------------------------------------------------------- -->
+          <div class="resume-right-col">
+
+            <!-- Printable Document Preview Sheet -->
+            <div class="resume-paper-sheet" id="printable-resume-sheet" aria-label="Resume Document Preview">
+              <!-- Paper Header -->
+              <div class="paper-header">
+                <div class="paper-header-left">
+                  <h2 class="paper-name">Rajesh R</h2>
+                  <div class="paper-title">AI &amp; Data Science Engineer</div>
+                  <div class="paper-contact-list">
+                    <span class="paper-contact-item"><i class="fa-regular fa-envelope"></i> rajeshrt.work@gmail.com</span>
+                    <span class="paper-contact-item"><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+                    <span class="paper-contact-item"><i class="fa-solid fa-location-dot"></i> India</span>
+                    <span class="paper-contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/rajesh-r</span>
+                    <span class="paper-contact-item"><i class="fa-brands fa-github"></i> github.com/rajeshrt-r</span>
+                  </div>
+                </div>
+                <img src="../assets/images/rajesh-image-2.png" alt="Rajesh R" class="paper-photo" />
+              </div>
+
+              <!-- Paper Education Section -->
+              <div class="paper-section">
+                <div class="paper-sec-head"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+                <div class="paper-item">
+                  <div class="paper-item-title">B.E. Computer Science &amp; Engineering (Pursuing)</div>
+                  <div class="paper-item-sub">Expected: 2026 &bull; Engineering Institution</div>
+                </div>
+                <div class="paper-item">
+                  <div class="paper-item-title">Higher Secondary (12th) – TN State Board (2024)</div>
+                  <div class="paper-item-sub">Subjects: Physics, Chemistry, Mathematics</div>
+                </div>
+                <div class="paper-item">
+                  <div class="paper-item-title">Secondary (10th) – TN State Board (2022)</div>
+                  <div class="paper-item-sub">2nd Rank Academic Achievement</div>
+                </div>
+              </div>
+
+              <!-- Paper Skills Section -->
+              <div class="paper-section">
+                <div class="paper-sec-head"><i class="fa-solid fa-gear"></i> Skills</div>
+                <div class="paper-skills-grid">
+                  <div class="paper-skill-col">
+                    <span class="paper-skill-header">Programming</span>
+                    <span>&bull; Python</span>
+                    <span>&bull; Java</span>
+                    <span>&bull; C</span>
+                    <span>&bull; JavaScript</span>
+                  </div>
+                  <div class="paper-skill-col">
+                    <span class="paper-skill-header">AI &amp; ML</span>
+                    <span>&bull; Machine Learning</span>
+                    <span>&bull; Deep Learning</span>
+                    <span>&bull; NLP</span>
+                    <span>&bull; Data Analysis</span>
+                  </div>
+                  <div class="paper-skill-col">
+                    <span class="paper-skill-header">Web &amp; Databases</span>
+                    <span>&bull; React, HTML/CSS</span>
+                    <span>&bull; MongoDB</span>
+                    <span>&bull; MySQL, PostgreSQL</span>
+                    <span>&bull; Git &amp; GitHub, Linux</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paper Experience Section -->
+              <div class="paper-section">
+                <div class="paper-sec-head"><i class="fa-solid fa-briefcase"></i> Experience</div>
+                <div class="paper-item">
+                  <div class="paper-item-title">AI &amp; ML Intern | MATT Engineering Solutions</div>
+                  <div class="paper-item-sub">12 Jan 2026 – 19 Jan 2026</div>
+                  <div style="font-size: 0.62rem; color: #475569; margin-top: 2px;">
+                    Worked on real-world AI and ML projects; gained hands-on experience in model building and data analysis.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paper Projects Section -->
+              <div class="paper-section">
+                <div class="paper-sec-head"><i class="fa-solid fa-diagram-project"></i> Projects</div>
+                <div style="display: flex; flex-direction: column; gap: 2px; font-size: 0.63rem; color: #334155;">
+                  <span>&bull; <strong>AI Health Assistant:</strong> ML risk prediction pipeline</span>
+                  <span>&bull; <strong>Student Performance Analysis:</strong> EDA &amp; visual regression</span>
+                  <span>&bull; <strong>Personal Finance Tracker:</strong> Full-stack MERN dashboard</span>
+                  <span>&bull; <strong>Carbon Footprint Analyzer:</strong> AI sustainability calculator</span>
+                </div>
+              </div>
+
+              <!-- Paper Certifications Section -->
+              <div class="paper-section">
+                <div class="paper-sec-head"><i class="fa-solid fa-certificate"></i> Certifications</div>
+                <div style="font-size: 0.62rem; color: #475569;">
+                  Credentials across AI, UI &amp; UX Design, Java Fundamentals, Computer Applications (DCA), and Cybersecurity.
+                </div>
+              </div>
+
+              <!-- Paper Career Goal Section -->
+              <div class="paper-section" style="margin-bottom: 0;">
+                <div class="paper-sec-head"><i class="fa-solid fa-bullseye"></i> Career Goal</div>
+                <div style="font-size: 0.62rem; color: #475569;">
+                  Become a skilled AI/ML Engineer and build impactful technological solutions.
+                </div>
+              </div>
+            </div>
+
+            <!-- Ready to Get Full Resume CTA Card -->
+            <div class="resume-download-card">
+              <div class="download-card-head">
+                <div class="download-card-icon">
+                  <i class="fa-regular fa-file-pdf"></i>
+                </div>
+                <div>
+                  <h3 class="download-card-title">Ready to get the full resume?</h3>
+                  <p class="download-card-desc">
+                    Download my professional resume in PDF format with complete details.
+                  </p>
+                </div>
+              </div>
+
+              <button class="btn-download-full" onclick="handleResumeDownload()">
+                <i class="fa-solid fa-download"></i> Download Resume (PDF)
+              </button>
+
+              <div class="download-card-meta">
+                <span><i class="fa-regular fa-clock"></i> Updated: 2026</span>
+                <span><i class="fa-regular fa-file"></i> File Size: 1.2 MB</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SELECTED PROJECTS SHOWCASE (Prompt Section 12)
+         ========================================================================== -->
+    <section class="projects-showcase-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-head-flex">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-bar"></span> PORTFOLIO HIGHLIGHTS
+            </div>
+            <h2 class="card-title" id="projects-heading" style="font-size: 1.85rem;">Selected Projects</h2>
+          </div>
+          <a href="projects.html" class="btn-outline">
+            View All Projects &rarr;
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3 class="project-title">AI Health Assistant</h3>
+            <p class="project-desc">
+              Machine learning predictive pipeline calculating disease risk factors and offering personalized recommendations.
+            </p>
+            <div class="project-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ML</span>
+              <span class="proj-tag">Streamlit</span>
+            </div>
+            <a href="projects.html#ai-health-assistant" class="project-link-btn">
+              Explore Project &rarr;
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Student Performance Analysis</h3>
+            <p class="project-desc">
+              Exploratory statistical data analysis uncovering critical academic performance drivers and socio-demographic indicators.
+            </p>
+            <div class="project-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Pandas</span>
+              <span class="proj-tag">Matplotlib</span>
+            </div>
+            <a href="projects.html#student-performance-analysis" class="project-link-btn">
+              Explore Project &rarr;
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Personal Finance Tracker</h3>
+            <p class="project-desc">
+              Full-stack expense tracking dashboard with monthly budgeting and real-time category visualization charts.
+            </p>
+            <div class="project-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">MongoDB</span>
+            </div>
+            <a href="projects.html#personal-finance-tracker" class="project-link-btn">
+              Explore Project &rarr;
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Carbon Footprint Analyzer</h3>
+            <p class="project-desc">
+              AI-powered sustainability application estimating daily emissions and recommending greener lifestyle alternatives.
+            </p>
+            <div class="project-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Machine Learning</span>
+              <span class="proj-tag">Data</span>
+            </div>
+            <a href="projects.html#carbon-footprint-analyzer" class="project-link-btn">
+              Explore Project &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WHAT YOU'LL FIND IN MY RESUME (Prompt Section 17)
+         ========================================================================== -->
+    <section class="resume-breakdown-section" aria-labelledby="breakdown-heading">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <div class="eyebrow" style="margin-bottom: 8px;">
+            <span class="eyebrow-bar"></span> DOCUMENT ARCHITECTURE
+          </div>
+          <h2 class="card-title" id="breakdown-heading" style="font-size: 1.65rem;">What You'll Find in My Resume</h2>
+        </div>
+
+        <div class="breakdown-grid">
+          <div class="breakdown-card">
+            <i class="fa-solid fa-user-tie"></i>
+            <h4 class="breakdown-title">Profile</h4>
+            <p class="breakdown-desc">Clear technical identity, aspirations, and verified contact links.</p>
+          </div>
+
+          <div class="breakdown-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h4 class="breakdown-title">Education</h4>
+            <p class="breakdown-desc">Engineering coursework foundation and state rank academic record.</p>
+          </div>
+
+          <div class="breakdown-card">
+            <i class="fa-solid fa-code"></i>
+            <h4 class="breakdown-title">Skills</h4>
+            <p class="breakdown-desc">Grouped competencies across AI, ML, programming, databases and tools.</p>
+          </div>
+
+          <div class="breakdown-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h4 class="breakdown-title">Experience</h4>
+            <p class="breakdown-desc">Practical AI/ML internship training and hands-on exposure.</p>
+          </div>
+
+          <div class="breakdown-card">
+            <i class="fa-solid fa-award"></i>
+            <h4 class="breakdown-title">Certifications</h4>
+            <p class="breakdown-desc">Verified credentials from Uniq Tech and Cappriciosec.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FINAL RECRUITER CTA (Prompt Section 19)
+         ========================================================================== -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="eyebrow">
+            <span class="eyebrow-bar"></span> PROFESSIONAL GROWTH
+          </div>
+          <h2 class="cta-heading" id="cta-heading">
+            LOOKING FORWARD TO THE<br>
+            <span class="cyan">NEXT OPPORTUNITY.</span>
+          </h2>
+          <p class="cta-subtext">
+            Interested in internships, entry-level opportunities, technical projects, and opportunities to learn, build, and contribute meaningfully to AI and Data Science engineering teams.
+          </p>
+          <div class="cta-actions">
+            <a href="projects.html" class="btn-cyan">
+              <i class="fa-solid fa-diagram-project"></i> View Projects
+            </a>
+            <a href="contact.html" class="btn-outline">
+              <i class="fa-regular fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER (Synced across Pages 01–08)
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">RAJESH R</div>
+          <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/rajesh-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:rajeshrt.work@gmail.com" class="social-btn" aria-label="Send Email" title="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="resume.html" class="active" aria-current="page">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 Rajesh R. All rights reserved.
+        </div>
+        <div class="footer-bottom-right">
+          <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
+          <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       INTERACTIVE FULL-PAGE RESUME MODAL VIEWER
+       ========================================================================== -->
+  <div class="resume-modal-backdrop" id="resume-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-resume-title">
+    <div class="resume-modal" id="resume-modal">
+      <div class="resume-modal-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <i class="fa-regular fa-file-pdf cyan" style="font-size: 1.3rem;"></i>
+          <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary);" id="modal-resume-title">
+            Rajesh R &mdash; Complete Professional Resume
+          </h3>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-cyan" onclick="window.print()" style="padding: 8px 16px; font-size: 0.82rem;">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="resume-modal-close-btn" id="resume-modal-close-btn" aria-label="Close resume viewer">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="resume-modal-body" id="modal-body-content">
+        <!-- Cloned or dynamically formatted document sheet -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT ENGINE
+       ========================================================================== -->
+  <script>
+    // 1. Centralized Site & Resume Config
+    const siteConfig = {
+      resumeUrl: "../resume.pdf",
+      candidateName: "Rajesh R",
+      candidateRole: "AI & Data Science Engineer"
+    };
+
+    // 2. Download / Print Handler
+    function handleResumeDownload() {
+      // Offers clean browser print-to-PDF dialog for instant high-res output
+      window.print();
+    }
+
+    // 3. Modal Lightbox Logic
+    const resumeModalBackdrop = document.getElementById('resume-modal-backdrop');
+    const resumeModalCloseBtn = document.getElementById('resume-modal-close-btn');
+    const modalBodyContent = document.getElementById('modal-body-content');
+    const printableSheet = document.getElementById('printable-resume-sheet');
+
+    function openResumeModal() {
+      if (modalBodyContent && printableSheet) {
+        modalBodyContent.innerHTML = printableSheet.outerHTML;
+      }
+      resumeModalBackdrop.classList.add('open');
+      resumeModalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeResumeModal() {
+      resumeModalBackdrop.classList.remove('open');
+      resumeModalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    if (resumeModalCloseBtn) {
+      resumeModalCloseBtn.addEventListener('click', closeResumeModal);
+    }
+
+    if (resumeModalBackdrop) {
+      resumeModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === resumeModalBackdrop) {
+          closeResumeModal();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && resumeModalBackdrop.classList.contains('open')) {
+        closeResumeModal();
+      }
+    });
+
+    // 4. Mobile Navigation Drawer
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (menuToggleBtn && mobileNav) {
+      menuToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = mobileNav.classList.toggle('open');
+        menuToggleBtn.setAttribute('aria-expanded', isOpen);
+        const icon = menuToggleBtn.querySelector('i');
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+          mobileNav.classList.remove('open');
+          menuToggleBtn.setAttribute('aria-expanded', 'false');
+          const icon = menuToggleBtn.querySelector('i');
+          if (icon) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          }
+        }
+      });
+    }
+
+    // 5. Theme Toggle with LocalStorage Persistence
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-theme');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.contains('light-theme');
+        if (isLight) {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+          }
+          localStorage.setItem('portfolio-theme', 'light');
+        } else {
+          if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+          }
+          localStorage.setItem('portfolio-theme', 'dark');
+        }
+      });
+    }
+
+    // 6. Scroll to top button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+
+</html>
