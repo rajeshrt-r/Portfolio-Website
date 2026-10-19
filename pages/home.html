@@ -326,6 +326,12 @@
       padding: 30px 0 40px;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(120deg, #020B16 0%, #06111F 100%);
+    }
+
+    body.light-theme .hero {
+      background: var(--bg-base);
     }
 
     .hero-bg {
@@ -334,7 +340,35 @@
       right: 0;
       width: 60%;
       height: 100%;
-      background: radial-gradient(circle at 70% 30%, rgba(12, 242, 255, 0.1) 0%, transparent 60%);
+      background:
+        radial-gradient(ellipse at 68% 34%, rgba(0, 217, 255, 0.12) 0%, transparent 56%),
+        radial-gradient(ellipse at 82% 76%, rgba(36, 123, 255, 0.1) 0%, transparent 58%);
+      background-size: 150% 150%;
+      animation: hero-glow-drift 24s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes hero-glow-drift {
+      from {
+        background-position: 0% 10%;
+      }
+
+      to {
+        background-position: 100% 90%;
+      }
+    }
+
+    body.light-theme .hero-bg {
+      animation: none;
+      background: radial-gradient(ellipse at 70% 35%, rgba(2, 132, 199, 0.09) 0%, transparent 62%);
+    }
+
+    .hero-network {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 0;
     }
@@ -474,6 +508,12 @@
       z-index: 1;
       mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
       -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg {
+        animation: none;
+      }
     }
 
     .code-panel {
@@ -880,6 +920,7 @@
 
   <section class="hero">
     <div class="hero-bg"></div>
+    <canvas class="hero-network" aria-hidden="true"></canvas>
     <div class="container">
       <div class="hero-left">
         <div class="eyebrow">Hello, I'm</div>
@@ -1189,6 +1230,187 @@
       scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
+    }
+
+    // Decorative neural network, kept independent from the interactive hero content.
+    const hero = document.querySelector('.hero');
+    const networkCanvas = hero ? hero.querySelector('.hero-network') : null;
+    const networkContext = networkCanvas ? networkCanvas.getContext('2d') : null;
+
+    if (hero && networkCanvas && networkContext) {
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let nodes = [];
+      let width = 0;
+      let height = 0;
+      let frameId = null;
+      let lastFrameTime = null;
+      let isVisible = true;
+
+      const getSafeArea = () => {
+        const heroBounds = hero.getBoundingClientRect();
+        const leftBounds = hero.querySelector('.hero-left').getBoundingClientRect();
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+        if (isMobile) {
+          return {
+            left: 12,
+            right: Math.max(13, width - 12),
+            top: Math.min(height - 1, leftBounds.bottom - heroBounds.top + 16),
+            bottom: Math.max(1, height - 12)
+          };
+        }
+
+        return {
+          left: Math.min(width - 1, leftBounds.right - heroBounds.left + 24),
+          right: Math.max(1, width - 12),
+          top: 12,
+          bottom: Math.max(1, height - 12)
+        };
+      };
+
+      const createNodes = () => {
+        const count = width <= 480 ? 14 : width <= 768 ? 22 : 34;
+        const area = getSafeArea();
+        nodes = Array.from({ length: count }, () => ({
+          x: area.left + Math.random() * Math.max(1, area.right - area.left),
+          y: area.top + Math.random() * Math.max(1, area.bottom - area.top),
+          vx: (Math.random() - 0.5) * 10,
+          vy: (Math.random() - 0.5) * 10,
+          radius: 1.1 + Math.random() * 1.1,
+          phase: Math.random() * Math.PI * 2
+        }));
+      };
+
+      const drawNetwork = (time, animate) => {
+        const area = getSafeArea();
+        const seconds = time / 1000;
+        const isLightTheme = document.body.classList.contains('light-theme');
+        const connectionRange = width <= 480 ? 105 : 145;
+        const delta = animate && lastFrameTime !== null
+          ? Math.min((time - lastFrameTime) / 1000, 0.05)
+          : 0;
+        lastFrameTime = animate ? time : null;
+        networkContext.clearRect(0, 0, width, height);
+
+        nodes.forEach((node) => {
+          if (delta) {
+            node.x += node.vx * delta;
+            node.y += node.vy * delta;
+
+            if (node.x < area.left || node.x > area.right) node.vx *= -1;
+            if (node.y < area.top || node.y > area.bottom) node.vy *= -1;
+            node.x = Math.max(area.left, Math.min(area.right, node.x));
+            node.y = Math.max(area.top, Math.min(area.bottom, node.y));
+          }
+        });
+
+        for (let i = 0; i < nodes.length; i += 1) {
+          for (let j = i + 1; j < nodes.length; j += 1) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const distance = Math.hypot(dx, dy);
+
+            if (distance < connectionRange) {
+              const opacity = (1 - distance / connectionRange) * 0.14;
+              networkContext.strokeStyle = isLightTheme
+                ? `rgba(36, 123, 255, ${opacity * 0.55})`
+                : `rgba(0, 217, 255, ${opacity})`;
+              networkContext.lineWidth = 0.7;
+              networkContext.beginPath();
+              networkContext.moveTo(nodes[i].x, nodes[i].y);
+              networkContext.lineTo(nodes[j].x, nodes[j].y);
+              networkContext.stroke();
+            }
+          }
+        }
+
+        nodes.forEach((node, index) => {
+          const pulse = animate ? (Math.sin(seconds * 0.65 + node.phase) + 1) / 2 : 0.35;
+          const opacity = 0.16 + pulse * 0.2;
+          networkContext.beginPath();
+          networkContext.arc(node.x, node.y, node.radius + pulse * 0.35, 0, Math.PI * 2);
+          networkContext.fillStyle = isLightTheme
+            ? `rgba(2, 132, 199, ${opacity * 0.65})`
+            : `rgba(${index % 4 === 0 ? '36, 123, 255' : '0, 217, 255'}, ${opacity})`;
+          networkContext.fill();
+        });
+      };
+
+      const renderFrame = (time) => {
+        frameId = null;
+        drawNetwork(time, true);
+        if (isVisible && !document.hidden && !reducedMotion.matches) {
+          frameId = window.requestAnimationFrame(renderFrame);
+        }
+      };
+
+      const stopAnimation = () => {
+        if (frameId !== null) {
+          window.cancelAnimationFrame(frameId);
+          frameId = null;
+        }
+        lastFrameTime = null;
+      };
+
+      const startAnimation = () => {
+        if (reducedMotion.matches || !isVisible || document.hidden || frameId !== null) return;
+        frameId = window.requestAnimationFrame(renderFrame);
+      };
+
+      const resizeCanvas = () => {
+        const bounds = hero.getBoundingClientRect();
+        const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+        width = bounds.width;
+        height = bounds.height;
+        networkCanvas.width = Math.round(width * pixelRatio);
+        networkCanvas.height = Math.round(height * pixelRatio);
+        networkContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+        createNodes();
+        drawNetwork(0, false);
+        startAnimation();
+      };
+
+      const handleMotionPreference = () => {
+        stopAnimation();
+        drawNetwork(0, false);
+        startAnimation();
+      };
+
+      const handleVisibilityChange = () => {
+        if (document.hidden) {
+          stopAnimation();
+        } else {
+          startAnimation();
+        }
+      };
+
+      const intersectionObserver = new IntersectionObserver(([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          startAnimation();
+        } else {
+          stopAnimation();
+        }
+      });
+      intersectionObserver.observe(hero);
+      const resizeObserver = new ResizeObserver(resizeCanvas);
+      resizeObserver.observe(hero);
+      const themeObserver = new MutationObserver(() => {
+        if (reducedMotion.matches) drawNetwork(0, false);
+      });
+      themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      reducedMotion.addEventListener('change', handleMotionPreference);
+      const cleanup = () => {
+        stopAnimation();
+        intersectionObserver.disconnect();
+        resizeObserver.disconnect();
+        themeObserver.disconnect();
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        reducedMotion.removeEventListener('change', handleMotionPreference);
+      };
+      window.addEventListener('pagehide', cleanup, { once: true });
+      resizeCanvas();
     }
   </script>
 </body>
