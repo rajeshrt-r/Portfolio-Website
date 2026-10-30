@@ -5,8 +5,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Rajesh R — AI &amp; Data Science Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/icons/favicon.svg">
+
     <meta name="description"
         content="Get in touch with Rajesh R for internships, technical projects, collaborations, and professional opportunities in AI and Data Science." />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Rajesh R",
+      "description": "Get in touch with Rajesh R for internships, technical projects, collaborations, and professional opportunities in AI and Data Science.",
+      "url": "https://rajesh-r.dev/contact",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Rajesh R",
+        "jobTitle": "AI & Data Science Engineer",
+        "email": "mailto:rajeshrt905@gmail.com",
+        "url": "https://rajesh-r.dev",
+        "sameAs": [
+          "https://github.com/rajeshrt-r",
+          "https://linkedin.com/in/rajesh-r-50ab65355",
+          "https://twitter.com/Rajeshrtrj",
+          "https://instagram.com/rajesh_the_don_r"
+        ]
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -1184,7 +1211,7 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.8) 100%),
-                url('/assets/images/footer-bg.png');
+                url('../assets/images/backgrounds/footer-bg.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1847,7 +1874,7 @@
 
                     <!-- PANEL 3: VISUAL SHOWCASE CARD -->
                     <aside class="showcase-panel" aria-label="Portfolio Inspiration Visual">
-                        <img src="/assets/images/contact_showcase.png"
+                        <img src="../assets/images/backgrounds/contact_showcase.png"
                             alt="Rajesh R coding with laptop under the mountain night sky" class="showcase-bg-img"
                             loading="lazy" />
                         <div class="showcase-overlay"></div>
@@ -2329,7 +2356,7 @@
                 if (response.ok) {
                     showToast("Message sent successfully!");
                     // Reveal feedback card with success message
-                    document.getElementById('feedback-text').innerHTML = 
+                    document.getElementById('feedback-text').innerHTML =
                         `Your message has been sent to <strong>${siteConfig.email}</strong>. I'll get back to you soon!`;
                     feedbackCard.querySelector('.feedback-header i').className = 'fa-solid fa-circle-check';
                     feedbackCard.querySelector('.feedback-header span').textContent = 'Message Sent Successfully';
