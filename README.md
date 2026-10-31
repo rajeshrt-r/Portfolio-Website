@@ -10,8 +10,10 @@ Open `index.html` in a browser, or serve the repository root with any static fil
 
 - `pages/` contains the portfolio pages.
 - `assets/images/` contains images organized by backgrounds, profile, certifications, and icons.
-- `assets/js/` contains the standalone JavaScript files.
+- `assets/css/pages/` contains each page's extracted stylesheet.
+- `assets/js/pages/` contains each page's extracted JavaScript.
+- `assets/js/` contains reusable standalone JavaScript modules.
 - `assets/data/` contains the reusable profile and certification datasets.
 - `documents/` is reserved for downloadable documents.
 
-Page-specific CSS and JavaScript remain inline in the HTML pages to preserve the current behavior.
+Each page links to its own CSS and JavaScript files. JSON-LD structured data stays in the page head.
