@@ -73,11 +73,8 @@
 
     const portrait = document.querySelector('.hero-portrait');
     const portraitImage = portrait?.querySelector('.hero-image');
-    const heroCenter = portrait?.closest('.hero-center');
     const heroScene = portrait?.closest('.hero-scene');
-    const liquidGlass = heroScene?.querySelector('.liquid-glass');
     const portraitHero = portrait?.closest('.hero');
-    const heroNetwork = portraitHero?.querySelector('.hero-network');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const supportsTilt = window.matchMedia('(min-width: 769px) and (hover: hover) and (pointer: fine)');
     let tiltFrame = null;
@@ -102,12 +99,6 @@
         portrait.style.removeProperty('--portrait-tilt-y');
         heroScene?.style.removeProperty('--hero-camera-tilt-x');
         heroScene?.style.removeProperty('--hero-camera-tilt-y');
-        heroNetwork?.style.removeProperty('--hero-network-camera-x');
-        heroNetwork?.style.removeProperty('--hero-network-camera-y');
-        liquidGlass?.style.removeProperty('--glass-light-x');
-        liquidGlass?.style.removeProperty('--glass-light-y');
-        liquidGlass?.style.removeProperty('--glass-tilt-x');
-        liquidGlass?.style.removeProperty('--glass-tilt-y');
       };
 
       const applyTilt = () => {
@@ -121,12 +112,6 @@
         portrait.style.setProperty('--portrait-tilt-y', `${horizontal * 6}deg`);
         heroScene?.style.setProperty('--hero-camera-tilt-x', `${-vertical * 2}deg`);
         heroScene?.style.setProperty('--hero-camera-tilt-y', `${horizontal * 2}deg`);
-        heroNetwork?.style.setProperty('--hero-network-camera-x', `${-horizontal * 8}px`);
-        heroNetwork?.style.setProperty('--hero-network-camera-y', `${-vertical * 5}px`);
-        liquidGlass?.style.setProperty('--glass-light-x', `${50 + horizontal * 42}%`);
-        liquidGlass?.style.setProperty('--glass-light-y', `${50 + vertical * 42}%`);
-        liquidGlass?.style.setProperty('--glass-tilt-x', `${-vertical * 3}deg`);
-        liquidGlass?.style.setProperty('--glass-tilt-y', `${horizontal * 4}deg`);
       };
 
       const handlePointerMove = (event) => {
@@ -166,11 +151,6 @@
     const clearHeroParallax = () => {
       portrait?.style.removeProperty('--portrait-scroll-y');
       portrait?.style.removeProperty('--portrait-scroll-scale');
-      heroCenter?.style.removeProperty('--hero-aura-scale');
-      heroCenter?.style.removeProperty('--hero-aura-brightness');
-      heroCenter?.style.removeProperty('--hero-orbit-scale');
-      heroCenter?.style.removeProperty('--hero-orbit-opacity');
-      heroNetwork?.style.removeProperty('--hero-network-parallax');
       heroTagline?.style.removeProperty('--hero-tagline-y');
       heroTagline?.style.removeProperty('--hero-tagline-opacity');
     };
@@ -189,11 +169,6 @@
 
       portrait?.style.setProperty('--portrait-scroll-y', `${-48 * progress}px`);
       portrait?.style.setProperty('--portrait-scroll-scale', `${1 - 0.07 * progress}`);
-      heroCenter?.style.setProperty('--hero-aura-scale', `${1 - 0.2 * progress}`);
-      heroCenter?.style.setProperty('--hero-aura-brightness', `${1 - 0.3 * progress}`);
-      heroCenter?.style.setProperty('--hero-orbit-scale', `${1 - 0.12 * progress}`);
-      heroCenter?.style.setProperty('--hero-orbit-opacity', `${1 - 0.72 * progress}`);
-      heroNetwork?.style.setProperty('--hero-network-parallax', `${-34 * progress}px`);
       heroTagline?.style.setProperty('--hero-tagline-y', `${-24 * progress}px`);
       heroTagline?.style.setProperty('--hero-tagline-opacity', `${1 - progress}`);
     };
@@ -282,44 +257,51 @@
           void main() {
             float aspect = uResolution.x / max(uResolution.y, 1.0);
             vec2 space = vec2((vUv.x - 0.5) * aspect, vUv.y - 0.5);
-            float time = uTime * 0.025;
+            float time = uTime * 0.14;
             vec2 warp = vec2(
-              fbm(space * 1.7 + vec2(time * 0.18, -time * 0.12)),
-              fbm(space * 1.7 + vec2(8.3 - time * 0.1, 3.7 + time * 0.14))
+              fbm(space * 1.7 + vec2(time * 0.42, -time * 0.29)),
+              fbm(space * 1.7 + vec2(8.3 - time * 0.26, 3.7 + time * 0.34))
             );
-            vec2 flow = space * 3.25 + (warp - 0.5) * 2.5;
-            flow += vec2(time * 0.22, -time * 0.13);
+            vec2 flow = space * 3.25 + (warp - 0.5) * 3.0;
+            flow += vec2(time * 0.48, -time * 0.3);
 
             float cloudShape = fbm(flow);
-            float cloudDetail = fbm(flow * 1.9 + vec2(4.2, -2.6));
-            float cloud = smoothstep(0.31, 0.73, cloudShape * 0.72 + cloudDetail * 0.28);
-            float region = smoothstep(-0.56, -0.02, space.x)
-              * (0.78 + 0.22 * (1.0 - smoothstep(0.12, 0.68, abs(space.y))));
-            float wisps = smoothstep(0.48, 0.82, cloudDetail + cloudShape * 0.22);
-            float density = clamp(cloud * region * (0.68 + wisps * 0.42), 0.0, 1.0);
-            float core = density * smoothstep(0.56, 0.9, cloudShape + cloudDetail * 0.14);
+            float cloudDetail = fbm(flow * 1.9 + vec2(4.2 - time * 0.22, -2.6 + time * 0.16));
+            float cloud = smoothstep(0.32, 0.7, cloudShape * 0.66 + cloudDetail * 0.34);
+            float textSafeGlow = mix(0.42, 1.0, smoothstep(-1.3, 0.7, space.x));
+            float verticalFalloff = 0.78 + 0.22 * (1.0 - smoothstep(0.12, 0.68, abs(space.y)));
+            float region = textSafeGlow * verticalFalloff;
+            float filaments = 1.0 - abs(cloudDetail * 2.0 - 1.0);
+            float wisps = smoothstep(0.36, 0.82, filaments + cloudShape * 0.2);
+            float densityPulse = 0.95 + 0.05 * sin(time * 1.1 + warp.x * 4.0);
+            float density = clamp(cloud * region * (0.78 + wisps * 0.62) * densityPulse, 0.0, 1.0);
+            float core = smoothstep(0.55, 0.88, cloudShape + cloudDetail * 0.22) * density;
 
-            vec3 deepBlue = vec3(0.008, 0.075, 0.22);
-            vec3 cobalt = vec3(0.018, 0.2, 0.48);
-            vec3 turquoise = vec3(0.025, 0.48, 0.62);
-            vec3 cloudColor = mix(deepBlue, cobalt, smoothstep(0.22, 0.72, cloudDetail));
-            cloudColor = mix(cloudColor, turquoise, core * 0.72);
-            float halo = exp(-dot(space - vec2(0.24, 0.02), space - vec2(0.24, 0.02)) * 2.4);
-            cloudColor += vec3(0.0, 0.08, 0.16) * halo * density;
+            vec3 deepBlue = vec3(0.006, 0.035, 0.13);
+            vec3 cobalt = vec3(0.012, 0.16, 0.43);
+            vec3 electricBlue = vec3(0.015, 0.32, 0.72);
+            vec3 turquoise = vec3(0.02, 0.56, 0.72);
+            vec3 cloudColor = mix(deepBlue, cobalt, smoothstep(0.18, 0.72, cloudDetail));
+            cloudColor = mix(cloudColor, electricBlue, smoothstep(0.34, 0.88, cloudShape) * 0.7);
+            cloudColor = mix(cloudColor, turquoise, core * 0.74);
+            float cloudAlpha = clamp(density * 0.66 + core * 0.12, 0.0, 0.72);
 
-            vec2 starGrid = vUv * vec2(150.0 * aspect, 86.0);
+            vec3 cloudTint = vec3(0.0, 0.16, 0.42) * core * (0.4 + 0.6 * sin(time * 0.9 + cloudDetail * 8.0));
+            cloudColor += cloudTint;
+
+            vec2 starGrid = vUv * vec2(105.0 * aspect, 64.0);
             vec2 starCell = floor(starGrid);
             vec2 starLocal = fract(starGrid);
             vec2 starPoint = vec2(hash(starCell), hash(starCell + 17.1));
             float starDistance = length((starLocal - starPoint) * vec2(1.0, aspect));
             float starSeed = hash(starCell + 31.7);
-            float star = (1.0 - smoothstep(0.006, 0.022, starDistance))
-              * step(0.988, starSeed)
-              * (0.55 + 0.45 * sin(uTime * 0.7 + starSeed * 48.0));
+            float star = (1.0 - smoothstep(0.035, 0.15, starDistance))
+              * step(0.95, starSeed)
+              * (0.72 + 0.28 * sin(uTime * 0.7 + starSeed * 48.0));
 
-            float alpha = clamp(density * 0.56 + halo * density * 0.12 + star * 0.62, 0.0, 0.66);
-            float lightFactor = mix(1.0, 0.17, uLightTheme);
-            vec3 color = mix(cloudColor, vec3(0.48, 0.82, 0.98), star);
+            float alpha = clamp(cloudAlpha + star * 0.62, 0.0, 0.9);
+            float lightFactor = mix(1.0, 0.2, uLightTheme);
+            vec3 color = mix(cloudColor, vec3(0.58, 0.86, 1.0), star);
             gl_FragColor = vec4(color, alpha * lightFactor);
           }
         `;
@@ -379,6 +361,7 @@
               const octaveLocation = nebulaGl.getUniformLocation(nebulaProgram, 'uOctaves');
               let nebulaFrame = null;
               let lastNebulaFrame = 0;
+              let nebulaElapsed = 0;
               let nebulaVisible = false;
               let nebulaDisposed = false;
 
@@ -399,20 +382,37 @@
                   window.cancelAnimationFrame(nebulaFrame);
                   nebulaFrame = null;
                 }
+                lastNebulaFrame = 0;
               };
 
               const animateNebula = (timestamp) => {
                 nebulaFrame = null;
-                if (!nebulaVisible || document.hidden || reducedMotion.matches || nebulaDisposed) return;
+                if (
+                  !nebulaVisible
+                  || document.hidden
+                  || reducedMotion.matches
+                  || nebulaDisposed
+                  || nebulaGl.isContextLost()
+                ) return;
                 if (timestamp - lastNebulaFrame >= 33) {
-                  drawNebula(timestamp / 1000);
+                  if (lastNebulaFrame > 0) {
+                    nebulaElapsed += Math.min((timestamp - lastNebulaFrame) / 1000, 0.05);
+                  }
+                  drawNebula(nebulaElapsed);
                   lastNebulaFrame = timestamp;
                 }
                 nebulaFrame = window.requestAnimationFrame(animateNebula);
               };
 
               const startNebula = () => {
-                if (nebulaFrame !== null || !nebulaVisible || document.hidden || reducedMotion.matches || nebulaDisposed) return;
+                if (
+                  nebulaFrame !== null
+                  || !nebulaVisible
+                  || document.hidden
+                  || reducedMotion.matches
+                  || nebulaDisposed
+                  || nebulaGl.isContextLost()
+                ) return;
                 nebulaFrame = window.requestAnimationFrame(animateNebula);
               };
 
@@ -426,14 +426,13 @@
                   nebulaCanvas.width = width;
                   nebulaCanvas.height = height;
                 }
-                drawNebula(0);
+                drawNebula(nebulaElapsed);
                 startNebula();
               };
 
               const handleNebulaMotion = () => {
                 stopNebula();
-                lastNebulaFrame = 0;
-                drawNebula(0);
+                drawNebula(nebulaElapsed);
                 startNebula();
               };
 
@@ -441,9 +440,25 @@
                 if (document.hidden) {
                   stopNebula();
                 } else {
-                  drawNebula(0);
+                  drawNebula(nebulaElapsed);
                   startNebula();
                 }
+              };
+
+              const handleNebulaPageHide = (event) => {
+                if (event.persisted) return;
+                nebulaDisposed = true;
+                stopNebula();
+                nebulaObserver.disconnect();
+                nebulaResizeObserver.disconnect();
+                nebulaThemeObserver.disconnect();
+                nebulaCanvas.removeEventListener('webglcontextlost', handleNebulaContextLoss);
+                document.removeEventListener('visibilitychange', handleNebulaVisibility);
+                window.removeEventListener('pageshow', handleNebulaVisibility);
+                reducedMotion.removeEventListener('change', handleNebulaMotion);
+                nebulaGl.deleteBuffer(nebulaBuffer);
+                nebulaGl.deleteProgram(nebulaProgram);
+                nebulaGl.getExtension('WEBGL_lose_context')?.loseContext();
               };
 
               const handleNebulaContextLoss = (event) => {
@@ -456,218 +471,26 @@
               const nebulaObserver = new IntersectionObserver(([entry]) => {
                 nebulaVisible = entry.isIntersecting;
                 if (nebulaVisible) {
-                  drawNebula(0);
+                  drawNebula(nebulaElapsed);
                   startNebula();
                 } else {
                   stopNebula();
                 }
               });
               const nebulaResizeObserver = new ResizeObserver(resizeNebula);
-              const nebulaThemeObserver = new MutationObserver(() => drawNebula(0));
+              const nebulaThemeObserver = new MutationObserver(() => drawNebula(nebulaElapsed));
               nebulaObserver.observe(nebulaHero);
               nebulaResizeObserver.observe(nebulaHero);
               nebulaThemeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
               nebulaCanvas.addEventListener('webglcontextlost', handleNebulaContextLoss);
               document.addEventListener('visibilitychange', handleNebulaVisibility);
+              window.addEventListener('pageshow', handleNebulaVisibility);
               reducedMotion.addEventListener('change', handleNebulaMotion);
               resizeNebula();
 
-              window.addEventListener('pagehide', () => {
-                nebulaDisposed = true;
-                stopNebula();
-                nebulaObserver.disconnect();
-                nebulaResizeObserver.disconnect();
-                nebulaThemeObserver.disconnect();
-                nebulaCanvas.removeEventListener('webglcontextlost', handleNebulaContextLoss);
-                document.removeEventListener('visibilitychange', handleNebulaVisibility);
-                reducedMotion.removeEventListener('change', handleNebulaMotion);
-                nebulaGl.deleteBuffer(nebulaBuffer);
-                nebulaGl.deleteProgram(nebulaProgram);
-                nebulaGl.getExtension('WEBGL_lose_context')?.loseContext();
-              }, { once: true });
+              window.addEventListener('pagehide', handleNebulaPageHide);
             }
           }
         }
       }
-    }
-
-    // Decorative neural network, kept independent from the interactive hero content.
-    const hero = document.querySelector('.hero');
-    const networkCanvas = hero ? hero.querySelector('.hero-network') : null;
-    const networkContext = networkCanvas ? networkCanvas.getContext('2d') : null;
-
-    if (hero && networkCanvas && networkContext) {
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      let nodes = [];
-      let width = 0;
-      let height = 0;
-      let frameId = null;
-      let lastFrameTime = null;
-      let isVisible = true;
-
-      const getSafeArea = () => {
-        const heroBounds = hero.getBoundingClientRect();
-        const leftBounds = hero.querySelector('.hero-left').getBoundingClientRect();
-        const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-        if (isMobile) {
-          return {
-            left: 12,
-            right: Math.max(13, width - 12),
-            top: Math.min(height - 1, leftBounds.bottom - heroBounds.top + 16),
-            bottom: Math.max(1, height - 12)
-          };
-        }
-
-        return {
-          left: Math.min(width - 1, leftBounds.right - heroBounds.left + 24),
-          right: Math.max(1, width - 12),
-          top: 12,
-          bottom: Math.max(1, height - 12)
-        };
-      };
-
-      const createNodes = () => {
-        const count = width <= 480 ? 14 : width <= 768 ? 22 : 34;
-        const area = getSafeArea();
-        nodes = Array.from({ length: count }, () => ({
-          x: area.left + Math.random() * Math.max(1, area.right - area.left),
-          y: area.top + Math.random() * Math.max(1, area.bottom - area.top),
-          vx: (Math.random() - 0.5) * 10,
-          vy: (Math.random() - 0.5) * 10,
-          radius: 1.1 + Math.random() * 1.1,
-          phase: Math.random() * Math.PI * 2
-        }));
-      };
-
-      const drawNetwork = (time, animate) => {
-        const area = getSafeArea();
-        const seconds = time / 1000;
-        const isLightTheme = document.body.classList.contains('light-theme');
-        const connectionRange = width <= 480 ? 105 : 145;
-        const delta = animate && lastFrameTime !== null
-          ? Math.min((time - lastFrameTime) / 1000, 0.05)
-          : 0;
-        lastFrameTime = animate ? time : null;
-        networkContext.clearRect(0, 0, width, height);
-
-        nodes.forEach((node) => {
-          if (delta) {
-            node.x += node.vx * delta;
-            node.y += node.vy * delta;
-
-            if (node.x < area.left || node.x > area.right) node.vx *= -1;
-            if (node.y < area.top || node.y > area.bottom) node.vy *= -1;
-            node.x = Math.max(area.left, Math.min(area.right, node.x));
-            node.y = Math.max(area.top, Math.min(area.bottom, node.y));
-          }
-        });
-
-        for (let i = 0; i < nodes.length; i += 1) {
-          for (let j = i + 1; j < nodes.length; j += 1) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const distance = Math.hypot(dx, dy);
-
-            if (distance < connectionRange) {
-              const opacity = (1 - distance / connectionRange) * 0.14;
-              networkContext.strokeStyle = isLightTheme
-                ? `rgba(36, 123, 255, ${opacity * 0.55})`
-                : `rgba(0, 217, 255, ${opacity})`;
-              networkContext.lineWidth = 0.7;
-              networkContext.beginPath();
-              networkContext.moveTo(nodes[i].x, nodes[i].y);
-              networkContext.lineTo(nodes[j].x, nodes[j].y);
-              networkContext.stroke();
-            }
-          }
-        }
-
-        nodes.forEach((node, index) => {
-          const pulse = animate ? (Math.sin(seconds * 0.65 + node.phase) + 1) / 2 : 0.35;
-          const opacity = 0.16 + pulse * 0.2;
-          networkContext.beginPath();
-          networkContext.arc(node.x, node.y, node.radius + pulse * 0.35, 0, Math.PI * 2);
-          networkContext.fillStyle = isLightTheme
-            ? `rgba(2, 132, 199, ${opacity * 0.65})`
-            : `rgba(${index % 4 === 0 ? '36, 123, 255' : '0, 217, 255'}, ${opacity})`;
-          networkContext.fill();
-        });
-      };
-
-      const renderFrame = (time) => {
-        frameId = null;
-        drawNetwork(time, true);
-        if (isVisible && !document.hidden && !reducedMotion.matches) {
-          frameId = window.requestAnimationFrame(renderFrame);
-        }
-      };
-
-      const stopAnimation = () => {
-        if (frameId !== null) {
-          window.cancelAnimationFrame(frameId);
-          frameId = null;
-        }
-        lastFrameTime = null;
-      };
-
-      const startAnimation = () => {
-        if (reducedMotion.matches || !isVisible || document.hidden || frameId !== null) return;
-        frameId = window.requestAnimationFrame(renderFrame);
-      };
-
-      const resizeCanvas = () => {
-        const bounds = hero.getBoundingClientRect();
-        const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
-        width = bounds.width;
-        height = bounds.height;
-        networkCanvas.width = Math.round(width * pixelRatio);
-        networkCanvas.height = Math.round(height * pixelRatio);
-        networkContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-        createNodes();
-        drawNetwork(0, false);
-        startAnimation();
-      };
-
-      const handleMotionPreference = () => {
-        stopAnimation();
-        drawNetwork(0, false);
-        startAnimation();
-      };
-
-      const handleVisibilityChange = () => {
-        if (document.hidden) {
-          stopAnimation();
-        } else {
-          startAnimation();
-        }
-      };
-
-      const intersectionObserver = new IntersectionObserver(([entry]) => {
-        isVisible = entry.isIntersecting;
-        if (isVisible) {
-          startAnimation();
-        } else {
-          stopAnimation();
-        }
-      });
-      intersectionObserver.observe(hero);
-      const resizeObserver = new ResizeObserver(resizeCanvas);
-      resizeObserver.observe(hero);
-      const themeObserver = new MutationObserver(() => {
-        if (reducedMotion.matches) drawNetwork(0, false);
-      });
-      themeObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-      reducedMotion.addEventListener('change', handleMotionPreference);
-      const cleanup = () => {
-        stopAnimation();
-        intersectionObserver.disconnect();
-        resizeObserver.disconnect();
-        themeObserver.disconnect();
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        reducedMotion.removeEventListener('change', handleMotionPreference);
-      };
-      window.addEventListener('pagehide', cleanup, { once: true });
-      resizeCanvas();
     }
