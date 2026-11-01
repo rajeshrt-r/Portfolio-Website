@@ -32,6 +32,7 @@
       "knowsAbout": ["Python", "Java", "C", "JavaScript", "Machine Learning", "Deep Learning", "NLP", "Data Analysis", "HTML", "CSS", "React", "Node.js", "MongoDB", "MySQL", "PostgreSQL", "Git", "Docker", "Linux", "VS Code"],
       "alumniOf": {"@type": "EducationalOrganization", "name": "DMI Engineering College"},
       "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "name": "AI Agents with Large Language Models (LLMs)", "credentialCategory": "Certification", "recognizedBy": {"@type": "Organization", "name": "JClick Solutions"}, "startDate": "2026-07-27", "endDate": "2026-07-31", "credentialId": "JCS/VAC/026/41"},
         {"@type": "EducationalOccupationalCredential", "name": "Cybersecurity & Ethical Hacking", "credentialCategory": "Certification", "recognizedBy": {"@type": "Organization", "name": "Cappriciosec University"}, "dateCreated": "2026-01-18"},
         {"@type": "EducationalOccupationalCredential", "name": "Java Fundamentals", "credentialCategory": "Certification", "recognizedBy": {"@type": "Organization", "name": "Uniq Technologies"}, "dateCreated": "2026-01"},
         {"@type": "EducationalOccupationalCredential", "name": "UI & UX Design Internship", "credentialCategory": "Internship", "recognizedBy": {"@type": "Organization", "name": "JCS Infotech"}, "startDate": "2026-06-03", "endDate": "2026-06-30"},
@@ -63,20 +64,20 @@
   <header>
     <div class="container">
       <div class="nav-inner">
-        <a href="/pages/home.html" class="logo" aria-label="Rajesh R Portfolio Homepage">
+        <a href="../pages/home.html" class="logo" aria-label="Rajesh R Portfolio Homepage">
           <span class="r-icon">R</span>
           Rajesh
         </a>
 
         <nav class="nav-links" aria-label="Primary Navigation">
-          <a href="/pages/home.html">Home</a>
-          <a href="/pages/about.html">About</a>
-          <a href="/pages/projects.html">Projects</a>
-          <a href="/pages/skills.html">Skills</a>
-          <a href="/pages/experience.html">Experience</a>
-          <a href="/pages/certifications.html">Certifications</a>
-          <a href="/pages/resume.html" class="active" aria-current="page">Resume</a>
-          <a href="/pages/contact.html">Contact</a>
+          <a href="../pages/home.html">Home</a>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/projects.html">Projects</a>
+          <a href="../pages/skills.html">Skills</a>
+          <a href="../pages/experience.html">Experience</a>
+          <a href="../pages/certifications.html">Certifications</a>
+          <a href="../pages/resume.html" class="active" aria-current="page">Resume</a>
+          <a href="../pages/contact.html">Contact</a>
         </nav>
 
         <div class="nav-actions">
@@ -95,14 +96,14 @@
 
   <!-- Mobile Drawer Menu -->
   <div class="mobile-nav" id="mobile-nav">
-    <a href="/pages/home.html">Home</a>
-    <a href="/pages/about.html">About</a>
-    <a href="/pages/projects.html">Projects</a>
-    <a href="/pages/skills.html">Skills</a>
-    <a href="/pages/experience.html">Experience</a>
-    <a href="/pages/certifications.html">Certifications</a>
-    <a href="/pages/resume.html" class="active">Resume</a>
-    <a href="/pages/contact.html">Contact</a>
+    <a href="../pages/home.html">Home</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../pages/projects.html">Projects</a>
+    <a href="../pages/skills.html">Skills</a>
+    <a href="../pages/experience.html">Experience</a>
+    <a href="../pages/certifications.html">Certifications</a>
+    <a href="../pages/resume.html" class="active">Resume</a>
+    <a href="../pages/contact.html">Contact</a>
   </div>
 
   <main id="main-content">
@@ -322,7 +323,7 @@
                   </div>
                   <h3 class="card-title" id="card-title-skills">Skills</h3>
                 </div>
-                <a href="/pages/skills.html" class="card-link-action">Explore All Skills &rarr;</a>
+                <a href="../pages/skills.html" class="card-link-action">Explore All Skills &rarr;</a>
               </div>
 
               <div class="skills-grid-row">
@@ -386,7 +387,7 @@
                   </div>
                   <h3 class="card-title" id="card-title-projects">Projects</h3>
                 </div>
-                <a href="/pages/projects.html" class="card-link-action">View All &rarr;</a>
+                <a href="../pages/projects.html" class="card-link-action">View All &rarr;</a>
               </div>
 
               <div style="display: flex; flex-direction: column; gap: 18px;">
@@ -443,10 +444,18 @@
                   </div>
                   <h3 class="card-title" id="card-title-certs">Certifications &amp; Credentials</h3>
                 </div>
-                <a href="/pages/certifications.html" class="card-link-action">View All &rarr;</a>
+                <a href="../pages/certifications.html" class="card-link-action">View All &rarr;</a>
               </div>
 
               <div class="certs-preview-grid">
+                <div class="cert-mini-card">
+                  <div class="cert-mini-thumb">
+                    <img src="../assets/images/certifications/ai-agents-llm-jclick-solutions.jpg"
+                      alt="AI Agents with Large Language Models (LLMs) Certificate - JClick Solutions" />
+                  </div>
+                  <h5 class="cert-mini-title">AI Agents with Large Language Models (LLMs)</h5>
+                  <span class="cert-mini-issuer">JClick Solutions</span>
+                </div>
                 <div class="cert-mini-card">
                   <div class="cert-mini-thumb">
                     <img src="../assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg"
@@ -637,7 +646,7 @@
             </div>
             <h2 class="card-title" id="projects-heading" style="font-size: 1.85rem;">Selected Projects</h2>
           </div>
-          <a href="/pages/projects.html" class="btn-outline">
+          <a href="../pages/projects.html" class="btn-outline">
             View All Projects &rarr;
           </a>
         </div>
@@ -750,10 +759,10 @@
             and contribute meaningfully to AI and Data Science engineering teams.
           </p>
           <div class="cta-actions">
-            <a href="/pages/projects.html" class="btn-cyan">
+            <a href="../pages/projects.html" class="btn-cyan">
               <i class="fa-solid fa-diagram-project"></i> View Projects
             </a>
-            <a href="/pages/contact.html" class="btn-outline">
+            <a href="../pages/contact.html" class="btn-outline">
               <i class="fa-regular fa-paper-plane"></i> Contact Me
             </a>
           </div>
@@ -790,14 +799,14 @@
       </div>
 
       <nav class="footer-nav" aria-label="Footer Navigation">
-        <a href="/pages/home.html">Home</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/skills.html">Skills</a>
-        <a href="/pages/experience.html">Experience</a>
-        <a href="/pages/certifications.html">Certifications</a>
-        <a href="/pages/resume.html" class="active" aria-current="page">Resume</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="../pages/home.html">Home</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/projects.html">Projects</a>
+        <a href="../pages/skills.html">Skills</a>
+        <a href="../pages/experience.html">Experience</a>
+        <a href="../pages/certifications.html">Certifications</a>
+        <a href="../pages/resume.html" class="active" aria-current="page">Resume</a>
+        <a href="../pages/contact.html">Contact</a>
       </nav>
 
       <div class="footer-bottom">

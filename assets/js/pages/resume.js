@@ -1,6 +1,5 @@
 // 1. Centralized Site & Resume Config
     const siteConfig = {
-      resumeUrl: "../resume.pdf",
       candidateName: "Rajesh R",
       candidateRole: "AI & Data Science Engineer"
     };

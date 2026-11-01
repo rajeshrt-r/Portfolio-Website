@@ -1,6 +1,24 @@
 // 1. Full Verified Dataset of 9 Certificates + 1 Verified Banner Card
     const certificates = [
       {
+        id: "ai-agents-llm",
+        title: "AI Agents with Large Language Models (LLMs)",
+        issuer: "JClick Solutions",
+        category: "AI & ML",
+        filterCategory: "ai-ml",
+        date: "27 Jul 2026 – 31 Jul 2026",
+        credentialId: "JCS/VAC/026/41",
+        badgeLabel: "AI & LLM",
+        badgeColor: "#0CF2FF",
+        badgeIcon: "fa-robot",
+        image: "../assets/images/certifications/ai-agents-llm-jclick-solutions.jpg",
+        description: "Completed 5-Days Value-Added course on \"AI Agents with Large Language Models (LLMs)\" organized by JClick Solutions at DMI Engineering College in association with the Department of Artificial Intelligence and Data Science.",
+        technologies: ["AI Agents", "Large Language Models (LLMs)", "Prompt Engineering", "Artificial Intelligence", "Autonomous Agents"],
+        verificationUrl: "https://www.jclicksolutions.in",
+        rowGroup: 1,
+        svg: `<img src="../assets/images/certifications/ai-agents-llm-jclick-solutions.jpg" alt="AI Agents with Large Language Models (LLMs) Certificate - JClick Solutions" style="width: 100%; height: 100%; object-fit: cover;">`
+      },
+      {
         id: "cybersecurity-ethical-hacking",
         title: "Cybersecurity & Ethical Hacking",
         issuer: "Cappriciosec University",
@@ -49,7 +67,7 @@
         image: "../assets/images/certifications/img-20260808-151740.jpg",
         description: "Completed a UI & UX Design internship at JCS Infotech with an Excellent performance evaluation.",
         technologies: ["UI Design", "UX Design"],
-        rowGroup: 1,
+        rowGroup: 3,
         svg: `<img src="../assets/images/certifications/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: 100%; object-fit: cover;">`
       },
       {

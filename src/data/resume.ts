@@ -16,7 +16,6 @@ export interface ProfileData {
   email: string;
   github: string;
   linkedin: string;
-  resumePdfUrl: string;
 }
 
 export const profileData: ProfileData = {
@@ -29,8 +28,7 @@ export const profileData: ProfileData = {
   careerGoal: "Become a skilled AI/ML Engineer and build impactful solutions.",
   email: "rajeshrt.work@gmail.com",
   github: "https://github.com/rajeshrt-r",
-  linkedin: "https://linkedin.com/in/rajesh-r",
-  resumePdfUrl: "../resume.pdf"
+  linkedin: "https://linkedin.com/in/rajesh-r"
 };
 
 export interface EducationEntry {

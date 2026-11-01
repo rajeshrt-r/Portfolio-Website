@@ -17,7 +17,6 @@
  * @property {string} email
  * @property {string} github
  * @property {string} linkedin
- * @property {string} resumePdfUrl
  */
 
 export const profileData = {
@@ -30,8 +29,7 @@ export const profileData = {
   careerGoal: "Become a skilled AI/ML Engineer and build impactful solutions.",
   email: "rajeshrt.work@gmail.com",
   github: "https://github.com/rajeshrt-r",
-  linkedin: "https://linkedin.com/in/rajesh-r",
-  resumePdfUrl: "../resume.pdf"
+  linkedin: "https://linkedin.com/in/rajesh-r"
 };
 
 export const educationHistory = [

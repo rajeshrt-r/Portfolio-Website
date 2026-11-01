@@ -25,6 +25,23 @@ export interface Certification {
 
 export const certificationsData: Certification[] = [
   {
+    id: "ai-agents-llm",
+    title: "AI Agents with Large Language Models (LLMs)",
+    issuer: "JClick Solutions",
+    category: "AI & ML",
+    filterCategory: "ai-ml",
+    date: "27 Jul 2026 – 31 Jul 2026",
+    credentialId: "JCS/VAC/026/41",
+    badgeLabel: "AI & LLM",
+    badgeColor: "#0CF2FF",
+    badgeIcon: "fa-robot",
+    image: "../../assets/images/certifications/ai-agents-llm-jclick-solutions.jpg",
+    description: "Completed 5-Days Value-Added course on \"AI Agents with Large Language Models (LLMs)\" organized by JClick Solutions at DMI Engineering College in association with the Department of Artificial Intelligence and Data Science.",
+    technologies: ["AI Agents", "Large Language Models (LLMs)", "Prompt Engineering", "Artificial Intelligence", "Autonomous Agents"],
+    verificationUrl: "https://www.jclicksolutions.in",
+    featured: true
+  },
+  {
     id: "cybersecurity-ethical-hacking",
     title: "Cybersecurity & Ethical Hacking",
     issuer: "Cappriciosec University",

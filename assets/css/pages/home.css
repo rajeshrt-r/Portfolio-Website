@@ -869,35 +869,90 @@
     }
 
     /* SKILLS */
+    .skills-card {
+      background: #051426;
+      border: 1px solid rgba(12, 242, 255, 0.18);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skills-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--cyan) 40%, var(--cyan) 60%, transparent 100%);
+      opacity: 0.45;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 24px;
+      gap: 20px;
+    }
+
+    .skill-col {
+      background: #071C33;
+      border: 1px solid rgba(12, 242, 255, 0.2);
+      border-radius: 14px;
+      padding: 24px 20px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .skill-col:hover {
+      border-color: rgba(12, 242, 255, 0.55);
+      box-shadow: 0 0 24px rgba(12, 242, 255, 0.12);
+      transform: translateY(-4px);
     }
 
     .skill-col h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .skill-col h3 i {
       color: var(--cyan);
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .skill-col ul {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .skill-col li {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color var(--transition);
+    }
+
+    .skill-col li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--cyan);
+      opacity: 0.55;
+      flex-shrink: 0;
+    }
+
+    .skill-col:hover li {
+      color: var(--text-primary);
     }
 
     /* CTA / FOOTER */
@@ -1002,6 +1057,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .skills-card {
+        padding: 24px;
+      }
+
       .skills-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -1060,7 +1119,11 @@
 
       .projects-grid,
       .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skills-card {
+        padding: 16px;
       }
 
       .cta-mid {
