@@ -6,7 +6,7 @@
         date: "18 Jan 2026",
         id: "8b319c5aaa096add1365",
         skills: "Linux, Go, Python, Social Engineering, Wi-Fi Hacking, Web/API Pentesting, Active Directory Pentesting, Hardware & IoT Hacking",
-        svg: `<img src="../assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
       },
       java: {
         title: "Java Fundamentals",
@@ -14,7 +14,7 @@
         date: "Jan 2026",
         id: "Reg. No.: UQ25-0379",
         skills: "Core Java, OOP Architecture, Data Structures, Exception Handling, Collections",
-        svg: `<img src="../assets/images/certifications/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
       },
       uiux: {
         title: "UI & UX Design Internship",
@@ -22,7 +22,7 @@
         date: "03 Jun 2026 – 30 Jun 2026",
         id: "Internship Certificate • JCS Infotech",
         skills: "UI Design, UX Design",
-        svg: `<img src="../assets/images/certifications/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
       },
       aiml: {
         title: "AI & ML Internship",
@@ -30,7 +30,7 @@
         date: "12 Jan 2026 – 19 Jan 2026",
         id: "Internship Certificate • Issued by K. Ragunathan",
         skills: "Artificial Intelligence, Machine Learning, Data Analysis, Python, Applied ML Workflows",
-        svg: `<img src="../assets/images/certifications/img-20260808-144310.jpg" alt="AI & ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-144310.jpg" alt="AI & ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
       },
       dca: {
         title: "Diploma in Computer Application",
@@ -38,7 +38,7 @@
         date: "12 Dec 2020 – 06 Mar 2021 (Issued: 25 Mar 2021)",
         id: "Reg. No.: 006312 • Grade: Excellent",
         skills: "Computer Applications, MS Office, Programming Fundamentals, Operating Systems, Office Productivity",
-        svg: `<img src="../assets/images/certifications/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; border-radius: 6px;">`
       }
     };
 

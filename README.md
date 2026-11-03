@@ -8,7 +8,13 @@ Serve the repository root with a local static server. For example, run `python -
 
 ## Install as an app
 
-The site is configured as an installable progressive web app. Use a secure HTTPS deployment or `localhost`; browsers do not allow app installation when opening files directly from disk. In a supported browser, use the install icon in the address bar or the browser menu. The core pages and styles are cached for offline navigation; other assets are cached as they are visited.
+The site is configured as an installable progressive web app. Use a secure HTTPS deployment or `localhost`; browsers do not allow app installation when opening files directly from disk. In a supported browser, use the install icon in the address bar or the browser menu. The core pages and styles are cached for offline navigation. Images load from this repository's public `main` branch on GitHub and require an internet connection.
+
+## GitHub Pages deployment
+
+This repository is `rajeshrt-r/Portfolio-Website`, so its project-site URL is `https://rajeshrt-r.github.io/Portfolio-Website/`. Internal page, stylesheet, and script references are relative so they also work when hosted below the domain root. Image references use the corresponding public GitHub raw URLs.
+
+The `Deploy static portfolio to GitHub Pages` workflow publishes the repository root when changes are pushed to `main`. Enable **Settings → Pages → Build and deployment → Source → GitHub Actions** once in the repository settings. The public Pages URL currently returns 404 until that configuration is enabled and a deployment succeeds.
 
 ## Project layout
 

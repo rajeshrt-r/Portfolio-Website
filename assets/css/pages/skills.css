@@ -763,7 +763,7 @@
         .cta-bg {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.75) 100%), url('../../images/backgrounds/footer-bg.png');
+            background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.75) 100%), url('https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/backgrounds/footer-bg.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

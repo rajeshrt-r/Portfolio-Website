@@ -11,12 +11,12 @@
         badgeLabel: "AI & LLM",
         badgeColor: "#0CF2FF",
         badgeIcon: "fa-robot",
-        image: "../assets/images/certifications/ai-agents-llm-jclick-solutions.jpg",
+        image: "https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/ai-agents-llm-jclick-solutions.jpg",
         description: "Completed 5-Days Value-Added course on \"AI Agents with Large Language Models (LLMs)\" organized by JClick Solutions at DMI Engineering College in association with the Department of Artificial Intelligence and Data Science.",
         technologies: ["AI Agents", "Large Language Models (LLMs)", "Prompt Engineering", "Artificial Intelligence", "Autonomous Agents"],
         verificationUrl: "https://www.jclicksolutions.in",
         rowGroup: 1,
-        svg: `<img src="../assets/images/certifications/ai-agents-llm-jclick-solutions.jpg" alt="AI Agents with Large Language Models (LLMs) Certificate - JClick Solutions" style="width: 100%; height: 100%; object-fit: cover;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/ai-agents-llm-jclick-solutions.jpg" alt="AI Agents with Large Language Models (LLMs) Certificate - JClick Solutions" style="width: 100%; height: 100%; object-fit: cover;">`
       },
       {
         id: "cybersecurity-ethical-hacking",
@@ -29,12 +29,12 @@
         badgeLabel: "Cybersecurity",
         badgeColor: "#10B981",
         badgeIcon: "fa-shield-halved",
-        image: "../assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg",
+        image: "https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg",
         description: "Completed 42 hours of advanced training in Linux, Go, Python, Wi-Fi hacking, Web/API/Mobile pentesting, Active Directory pentesting, and IoT hacking.",
         technologies: ["Cybersecurity", "Ethical Hacking", "Web/API Pentesting", "Active Directory", "Linux & Python", "IoT & Hardware Hacking"],
         verificationUrl: "https://university.cappriciosec.com/verify/8b319c5aaa096add1365",
         rowGroup: 1,
-        svg: `<img src="../assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: 100%; object-fit: cover;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/cyber-security-and-ethical-hacking-certificate.jpg" alt="Cybersecurity & Ethical Hacking Certificate - Cappriciosec University" style="width: 100%; height: 100%; object-fit: cover;">`
       },
       {
         id: "java-fundamentals",
@@ -47,12 +47,12 @@
         badgeLabel: "Programming",
         badgeColor: "#6366F1",
         badgeIcon: "fa-code",
-        image: "../assets/images/certifications/java-certificate.jpg",
+        image: "https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/java-certificate.jpg",
         description: "Learned core Java concepts including OOP, collections, exception handling and problem solving.",
         technologies: ["Java", "OOP", "Data Structures", "Collections", "Exception Handling"],
         verificationUrl: "https://www.uniqtechnologies.co.in",
         rowGroup: 1,
-        svg: `<img src="../assets/images/certifications/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: 100%; object-fit: cover;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/java-certificate.jpg" alt="Java Fundamentals Certificate - Uniq Technologies" style="width: 100%; height: 100%; object-fit: cover;">`
       },
       {
         id: "ui-ux-design-internship",
@@ -64,11 +64,11 @@
         badgeLabel: "Design",
         badgeColor: "#A855F7",
         badgeIcon: "fa-pen-ruler",
-        image: "../assets/images/certifications/img-20260808-151740.jpg",
+        image: "https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-151740.jpg",
         description: "Completed a UI & UX Design internship at JCS Infotech with an Excellent performance evaluation.",
         technologies: ["UI Design", "UX Design"],
         rowGroup: 3,
-        svg: `<img src="../assets/images/certifications/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: 100%; object-fit: cover;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-151740.jpg" alt="UI & UX Design Internship Certificate - JCS Infotech" style="width: 100%; height: 100%; object-fit: cover;">`
       },
       {
         id: "ai-ml-internship",
@@ -80,11 +80,11 @@
         badgeLabel: "Internship",
         badgeColor: "#F59E0B",
         badgeIcon: "fa-briefcase",
-        image: "../assets/images/certifications/img-20260808-144310.jpg",
+        image: "https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-144310.jpg",
         description: "Completed a practical AI & ML internship at MATT Engineering Solutions, Vadasery, covering applied machine learning, data analysis and problem solving during B.Tech II year at DMI Engineering College.",
         technologies: ["Artificial Intelligence", "Machine Learning", "Data Analysis", "Python"],
         rowGroup: 3,
-        svg: `<img src="../assets/images/certifications/img-20260808-144310.jpg" alt="AI & ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: 100%; object-fit: cover;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-144310.jpg" alt="AI & ML Internship Certificate - MATT Engineering Solutions" style="width: 100%; height: 100%; object-fit: cover;">`
       },
       {
         id: "diploma-computer-application",
@@ -97,12 +97,12 @@
         badgeLabel: "Computer Applications",
         badgeColor: "#38BDF8",
         badgeIcon: "fa-laptop-code",
-        image: "../assets/images/certifications/img-20260808-144839.jpg",
+        image: "https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-144839.jpg",
         description: "Completed Diploma in Computer Application covering MS Office, programming basics, operating systems, and computer applications with Grade 'Excellent'.",
         technologies: ["Computer Applications", "MS Office", "Programming Fundamentals", "Operating Systems", "Grade: Excellent"],
         verificationUrl: "https://metrosoftcomputers.com/verify/006312",
         rowGroup: 3,
-        svg: `<img src="../assets/images/certifications/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: 100%; object-fit: cover;">`
+        svg: `<img src="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/certifications/img-20260808-144839.jpg" alt="Diploma in Computer Application Certificate - Metro Soft Computers" style="width: 100%; height: 100%; object-fit: cover;">`
       }
     ];
 

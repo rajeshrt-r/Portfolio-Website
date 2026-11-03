@@ -1238,7 +1238,7 @@
       border-top: none;
       padding: 60px 0 30px;
       background: var(--bg-base);
-      background-image: url('../../images/backgrounds/footer-bg.png');
+      background-image: url('https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/backgrounds/footer-bg.png');
       background-position: center bottom;
       background-repeat: no-repeat;
       background-size: cover;
