@@ -1,16 +1,4 @@
-// 1. Centralized Site & Resume Config
-    const siteConfig = {
-      candidateName: "Rajesh R",
-      candidateRole: "AI & Data Science Engineer"
-    };
-
-    // 2. Download / Print Handler
-    function handleResumeDownload() {
-      // Offers clean browser print-to-PDF dialog for instant high-res output
-      window.print();
-    }
-
-    // 3. Modal Lightbox Logic
+    // Modal Lightbox Logic
     const resumeModalBackdrop = document.getElementById('resume-modal-backdrop');
     const resumeModalCloseBtn = document.getElementById('resume-modal-close-btn');
     const modalBodyContent = document.getElementById('modal-body-content');
