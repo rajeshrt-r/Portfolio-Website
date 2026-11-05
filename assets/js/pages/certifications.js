@@ -1,4 +1,4 @@
-// 1. Full Verified Dataset of 9 Certificates + 1 Verified Banner Card
+// 1. Verified certificate dataset
 const certificates = [
   {
     id: "ai-agents-llm",
@@ -181,7 +181,7 @@ function renderCertificates() {
     certsContainer.appendChild(row2Grid);
   }
 
-  // Row 3: MATT Internship, Diploma + "All Certificates Verified" Banner Card
+  // Row 3: remaining certificate cards
   const row3Certs = filtered.filter(c => c.rowGroup === 3);
   const row3Grid = document.createElement('div');
 

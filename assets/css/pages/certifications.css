@@ -727,7 +727,7 @@
       padding: 36px 0 60px;
     }
 
-    /* Grid Layout: Row 1 = 3 cols, Row 2 = 4 cols, Row 3 = 2 cols + banner */
+    /* Certificate rows use consistent three-column grids, with a four-column second row. */
     .cert-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
