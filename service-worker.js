@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rajesh-portfolio-v2';
+const CACHE_NAME = 'rajesh-portfolio-v3';
 const APP_SHELL = [
   '',
   'index.html',
@@ -18,6 +18,7 @@ const APP_SHELL = [
   'assets/css/pages/certifications.css',
   'assets/css/pages/resume.css',
   'assets/css/pages/contact.css',
+  'assets/css/footer.css',
   'assets/js/pages/home.js',
   'assets/js/pages/about.js',
   'assets/js/pages/projects.js',
@@ -86,17 +87,19 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      return fetch(request).then(async (response) => {
+    fetch(request)
+      .then(async (response) => {
         if (response.ok) {
           await caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone()));
         }
         return response;
-      });
-    })
+      })
+      .catch(async () => {
+        const cachedResponse = await caches.match(request);
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        return Response.error();
+      })
   );
 });

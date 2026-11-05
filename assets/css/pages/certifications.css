@@ -1,5 +1,5 @@
 /* ==========================================================================
-       DESIGN SYSTEM & THEME TOKENS (Identical across Pages 01â€“05)
+       DESIGN SYSTEM & THEME TOKENS (Identical across Pages 01–05)
        ========================================================================== */
     :root {
       --bg-base: #010811;
@@ -105,7 +105,7 @@
     }
 
     /* ==========================================================================
-       GLOBAL NAVBAR (Strictly Synced across Pages 01â€“08)
+       GLOBAL NAVBAR (Strictly Synced across Pages 01–08)
        ========================================================================== */
     header {
       border-bottom: 1px solid var(--border-subtle);
