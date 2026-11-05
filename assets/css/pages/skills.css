@@ -99,99 +99,7 @@
             align-items: center;
         }
 
-        /* FOOTER */
-        footer {
-            border-top: 1px solid var(--border-subtle);
-            padding: 44px 0 28px;
-            background: var(--bg-base);
-        }
-
-        .footer-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border-subtle);
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .footer-brand-title {
-            font-size: 1.15rem;
-            font-weight: 800;
-            letter-spacing: -0.01em;
-        }
-
-        .footer-brand-sub {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
-        .footer-nav {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .footer-nav a {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            transition: var(--transition);
-        }
-
-        .footer-nav a:hover {
-            color: var(--cyan);
-        }
-
-        .footer-nav a.active {
-            color: var(--cyan);
-            font-weight: 600;
-        }
-
-        .footer-bottom {
-            padding-top: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 0.84rem;
-            color: var(--text-secondary);
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-bottom-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .btn-scroll-top {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-primary);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .btn-scroll-top:hover {
-            border-color: var(--cyan);
-            color: var(--cyan);
-            transform: translateY(-2px);
-        }
-
-        /* ==========================================================================
+/* ==========================================================================
        GLOBAL NAVBAR (Synced across all pages)
        ========================================================================== */
         header {
@@ -763,7 +671,7 @@
         .cta-bg {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.75) 100%), url('https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/backgrounds/footer-bg.png');
+            background: linear-gradient(to top, var(--bg-base) 0%, rgba(1, 8, 17, 0.75) 100%);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

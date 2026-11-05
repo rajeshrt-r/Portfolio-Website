@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certifications &amp; Credentials | Rajesh R â€” AI &amp; Data Science Engineer</title>
+  <title>Certifications &amp; Credentials | Rajesh R</title>
   <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/rajeshrt-r/Portfolio-Website/main/assets/images/icons/favicon.svg">
   <link rel="manifest" href="../manifest.webmanifest">
   <meta name="theme-color" content="#010811">
@@ -43,6 +43,7 @@
 
 
   <link rel="stylesheet" href="../assets/css/pages/certifications.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 
 <body>
@@ -510,47 +511,63 @@
   <!-- ==========================================================================
        GLOBAL FOOTER (Strictly Synced across Pages 01â€“08)
        ========================================================================== -->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-brand-title">RAJESH R</div>
-          <div class="footer-brand-sub">AI &amp; Data Science Engineering Student</div>
+    <!-- ==========================================================================
+       GLOBAL FOOTER (Synced across all pages | assets/css/footer.css)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand-col">
+          <a class="footer-logo" href="../pages/home.html" aria-label="Rajesh R - Home">
+            <span class="footer-logo-mark">RR</span>
+            <span class="footer-logo-text">RAJESH <span>R</span><span class="footer-logo-sub">AI &amp; Data Science</span></span>
+          </a>
+          <p class="footer-tagline">AI &amp; Data Science Engineering Student building intelligent systems and data-driven solutions - designed for a better tomorrow.</p>
+          <div class="footer-availability"><span class="pulse-dot"></span>Open to opportunities</div>
+          <div class="footer-social-links">
+            <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rajesh-r-50ab65355" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/rajesh_the_don_r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Profile" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/Rajeshrtrj" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X (Twitter) Profile" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:rajeshrt905@gmail.com" class="social-btn" aria-label="Send Email" title="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
         </div>
 
-        <div class="footer-social-links">
-          <a href="https://github.com/rajeshrt-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/rajesh-r" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="mailto:rajeshrt.work@gmail.com" class="social-btn" aria-label="Send Email" title="Email">
-            <i class="fa-regular fa-envelope"></i>
-          </a>
+        <!-- Explore navigation -->
+        <nav class="footer-nav-col" aria-label="Footer navigation">
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-nav-grid">
+            <li><a href="../pages/home.html"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+            <li><a href="../pages/about.html"><i class="fa-solid fa-chevron-right"></i>About</a></li>
+            <li><a href="../pages/projects.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
+            <li><a href="../pages/skills.html"><i class="fa-solid fa-chevron-right"></i>Skills</a></li>
+            <li><a href="../pages/experience.html"><i class="fa-solid fa-chevron-right"></i>Experience</a></li>
+            <li><a href="../pages/certifications.html" class="active" aria-current="page"><i class="fa-solid fa-chevron-right"></i>Certifications</a></li>
+            <li><a href="../pages/resume.html"><i class="fa-solid fa-chevron-right"></i>Resume</a></li>
+            <li><a href="../pages/contact.html"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <div class="footer-contact-col">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <div class="footer-contact-list">
+            <a class="footer-contact-item" href="mailto:rajeshrt905@gmail.com"><span class="footer-contact-icon"><i class="fa-regular fa-envelope"></i></span>rajeshrt905@gmail.com</a>
+            <div class="footer-contact-item"><span class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></span>Tamil Nadu, India</div>
+            <div class="footer-contact-item"><span class="footer-contact-icon"><i class="fa-regular fa-clock"></i></span>Usually replies within 24 hours</div>
+          </div>
+          <a class="footer-cta" href="mailto:rajeshrt905@gmail.com"><i class="fa-regular fa-paper-plane"></i>Say Hello<i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
-      <nav class="footer-nav" aria-label="Footer Navigation">
-        <a href="../pages/home.html">Home</a>
-        <a href="../pages/about.html">About</a>
-        <a href="../pages/projects.html">Projects</a>
-        <a href="../pages/skills.html">Skills</a>
-        <a href="../pages/experience.html">Experience</a>
-        <a href="../pages/certifications.html" class="active" aria-current="page">Certifications</a>
-        <a href="../pages/resume.html">Resume</a>
-        <a href="../pages/contact.html">Contact</a>
-      </nav>
-
+      <!-- Bottom bar -->
       <div class="footer-bottom">
-        <div class="copyright">
-          &copy; 2026 Rajesh R. All rights reserved.
-        </div>
+        <p class="copyright">&copy; 2026 <strong>Rajesh R</strong>. All rights reserved.</p>
         <div class="footer-bottom-right">
-          <span>Made with &#10084;&#65039; | Designed for a better tomorrow</span>
-          <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
-            <i class="fa-solid fa-arrow-up"></i>
-          </button>
+          <span class="footer-made">Crafted with <i class="fa-solid fa-heart"></i> | Designed for a better tomorrow</span>
+          <button class="btn-scroll-top" id="scroll-top-btn" aria-label="Scroll back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
         </div>
       </div>
     </div>
