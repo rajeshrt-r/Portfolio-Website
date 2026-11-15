@@ -860,7 +860,6 @@
             margin-top: 10px;
             flex-direction: column;
             gap: 12px;
-            animation: fadeIn 0.3s ease;
         }
 
         .form-feedback-card.visible {
@@ -1361,15 +1360,7 @@
             }
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(6px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .footer-availability .pulse-dot {
+            animation: none;
+            box-shadow: none;
         }

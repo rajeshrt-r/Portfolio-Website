@@ -80,20 +80,7 @@
     let tiltFrame = null;
     let pointerPosition = null;
 
-    const revealPortrait = () => {
-      requestAnimationFrame(() => {
-        portrait?.classList.add('is-revealing');
-        heroScene?.classList.add('is-arriving');
-      });
-    };
-
     if (portrait && portraitImage) {
-      if (portraitImage.complete && portraitImage.naturalWidth > 0) {
-        revealPortrait();
-      } else {
-        portraitImage.addEventListener('load', revealPortrait, { once: true });
-      }
-
       const resetTilt = () => {
         portrait.style.removeProperty('--portrait-tilt-x');
         portrait.style.removeProperty('--portrait-tilt-y');

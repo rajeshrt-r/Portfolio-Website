@@ -465,24 +465,6 @@
       will-change: transform;
     }
 
-    .hero-scene.is-arriving {
-      animation: hero-camera-push-in 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-
-    @keyframes hero-camera-push-in {
-      from {
-        opacity: 0.55;
-        translate: 0 0 -54px;
-        scale: 0.95;
-      }
-
-      to {
-        opacity: 1;
-        translate: 0 0 0;
-        scale: 1;
-      }
-    }
-
     .hero-right {
       display: flex;
       flex-direction: column;
@@ -514,14 +496,6 @@
       will-change: transform, translate, scale;
     }
 
-    .hero-portrait.is-revealing {
-      animation: portrait-mask-reveal 1.7s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-
-    .hero-portrait.is-revealing .hero-image {
-      animation: portrait-image-reveal 1.7s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-
     .hero-portrait::after {
       position: absolute;
       inset: 4% 12% 2%;
@@ -543,73 +517,14 @@
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 78%, transparent 100%);
     }
 
-    .hero-portrait.is-revealing::after {
-      animation: portrait-light-sweep 1.35s 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-
-    @keyframes portrait-light-sweep {
-      0% {
-        opacity: 0;
-        transform: translateX(-115%);
-      }
-
-      22% {
-        opacity: 0.65;
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateX(115%);
-      }
-    }
-
-    @keyframes portrait-mask-reveal {
-      from {
-        clip-path: inset(0 0 100% 0);
-      }
-
-      to {
-        clip-path: inset(0);
-      }
-    }
-
-    @keyframes portrait-image-reveal {
-      from {
-        filter: blur(14px) drop-shadow(0 0 0 rgba(12, 242, 255, 0));
-        transform: translate3d(0, 28px, 0) scale(1.08);
-      }
-
-      to {
-        filter: blur(0) drop-shadow(0 0 12px rgba(12, 210, 255, 0.2));
-        transform: translate3d(0, 0, 0) scale(1);
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       .hero-bg,
       .hero-nebula,
-      .hero-scene.is-arriving,
-      .hero-portrait.is-revealing,
-      .hero-portrait.is-revealing .hero-image,
-      .hero-portrait.is-revealing::after {
-        animation: none;
-      }
-
-      .hero-scene {
-        transform: none;
-        translate: none;
-        scale: 1;
-        transition: none;
-      }
-
-      .hero-portrait {
-        transform: none;
-        translate: none;
-        scale: 1;
-        transition: none;
-      }
-
+      .hero-scene,
+      .hero-portrait,
       .hero-right {
+        animation: none;
+        transition: none;
         transform: none;
         opacity: 1;
       }

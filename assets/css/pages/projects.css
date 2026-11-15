@@ -496,69 +496,6 @@
       border-radius: 0 0 4px 4px;
     }
 
-    /* Floating Tech Icons */
-    .floating-tech-badge {
-      position: absolute;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--bg-surface);
-      border: 1px solid var(--cyan-border);
-      box-shadow: 0 0 16px rgba(12, 242, 255, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      color: var(--cyan);
-      z-index: 3;
-      transition: var(--transition);
-      animation: floatBadge 4s ease-in-out infinite alternate;
-    }
-
-    .floating-tech-badge:hover {
-      transform: scale(1.15);
-      border-color: var(--cyan);
-      background: var(--cyan-dim);
-    }
-
-    .badge-python {
-      top: 10px;
-      left: 10px;
-      animation-delay: 0s;
-    }
-
-    .badge-mongo {
-      top: 5px;
-      right: 50px;
-      animation-delay: 0.8s;
-      color: #47a248;
-    }
-
-    .badge-react {
-      bottom: 25px;
-      left: -15px;
-      animation-delay: 1.6s;
-      color: #61dafb;
-    }
-
-    .badge-ai {
-      bottom: 15px;
-      right: 15px;
-      animation-delay: 2.2s;
-      font-family: var(--font-mono);
-      font-weight: 800;
-      font-size: 0.82rem;
-    }
-
-    @keyframes floatBadge {
-      0% {
-        transform: translateY(0px);
-      }
-      100% {
-        transform: translateY(-8px);
-      }
-    }
-
     /* Handwriting Script Callout */
     .script-impact-tag {
       position: absolute;

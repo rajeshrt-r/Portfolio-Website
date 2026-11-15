@@ -1411,3 +1411,8 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .footer-availability .pulse-dot {
+      animation: none;
+      box-shadow: none;
+    }

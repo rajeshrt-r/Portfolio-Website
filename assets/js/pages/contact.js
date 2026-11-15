@@ -265,12 +265,14 @@
                 openMailtoBtn.href = mailtoUrl;
             }
 
-            // Try Formspree submission
+            // Try FormSubmit.co AJAX submission (delivers directly to siteConfig.email)
             const formData = new FormData();
             formData.append('name', name);
             formData.append('email', email);
             formData.append('subject', subject);
             formData.append('message', message);
+            formData.append('_subject', `Portfolio Contact: ${subject}`);
+            formData.append('_template', 'table');
 
             try {
                 const response = await fetch(contactForm.action, {
@@ -279,7 +281,9 @@
                     headers: { 'Accept': 'application/json' }
                 });
 
-                if (response.ok) {
+                const result = await response.json().catch(() => ({}));
+
+                if (response.ok && String(result.success) === 'true') {
                     showToast("Message sent successfully!");
                     // Reveal feedback card with success message
                     document.getElementById('feedback-text').innerHTML =
@@ -287,7 +291,7 @@
                     feedbackCard.querySelector('.feedback-header i').className = 'fa-solid fa-circle-check';
                     feedbackCard.querySelector('.feedback-header span').textContent = 'Message Sent Successfully';
                 } else {
-                    throw new Error('Formspree submission failed');
+                    throw new Error('Form backend rejected the submission');
                 }
             } catch (err) {
                 console.warn('Formspree submission failed, falling back to mailto:', err);
