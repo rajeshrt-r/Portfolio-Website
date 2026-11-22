@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rajesh-portfolio-v3';
+const CACHE_NAME = 'rajesh-portfolio-v4';
 const APP_SHELL = [
   '',
   'index.html',
@@ -19,7 +19,7 @@ const APP_SHELL = [
   'assets/css/pages/resume.css',
   'assets/css/pages/contact.css',
   'assets/css/footer.css',
-  'assets/js/pages/home.js',
+  'assets/js/pages/home.js?v=nebula-mobile-precision',
   'assets/js/pages/about.js',
   'assets/js/pages/projects.js',
   'assets/js/pages/skills.js',

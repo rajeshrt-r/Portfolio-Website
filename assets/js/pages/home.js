@@ -206,7 +206,7 @@
           }
         `;
         const fragmentSource = `
-          precision mediump float;
+          precision highp float;
           varying vec2 vUv;
           uniform vec2 uResolution;
           uniform float uTime;
@@ -214,7 +214,9 @@
           uniform float uOctaves;
 
           float hash(vec2 p) {
-            return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+            vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+            p3 += dot(p3, p3.yxz + 33.33);
+            return fract((p3.x + p3.y) * p3.z);
           }
 
           float noise(vec2 p) {
@@ -242,7 +244,7 @@
           }
 
           void main() {
-            float aspect = uResolution.x / max(uResolution.y, 1.0);
+            float aspect = max(uResolution.x / max(uResolution.y, 1.0), 0.62);
             vec2 space = vec2((vUv.x - 0.5) * aspect, vUv.y - 0.5);
             float time = uTime * 0.14;
             vec2 warp = vec2(
