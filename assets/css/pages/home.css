@@ -908,6 +908,14 @@
     }
 
     @media (max-width: 768px) {
+      .hero-nebula.is-webgl {
+        background:
+          radial-gradient(ellipse at 68% 30%, rgba(4, 115, 177, 0.34), transparent 52%),
+          radial-gradient(ellipse at 82% 55%, rgba(15, 69, 160, 0.36), transparent 54%),
+          radial-gradient(ellipse at 42% 72%, rgba(0, 161, 190, 0.24), transparent 48%);
+        background-size: 180% 180%;
+      }
+
       .hero .container {
         flex-direction: column;
         text-align: left;

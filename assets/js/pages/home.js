@@ -405,7 +405,7 @@
 
               const resizeNebula = () => {
                 const bounds = nebulaHero.getBoundingClientRect();
-                const renderScale = bounds.width <= 768 ? 0.36 : bounds.width <= 1200 ? 0.45 : 0.5;
+                const renderScale = bounds.width <= 768 ? 0.5 : bounds.width <= 1200 ? 0.45 : 0.5;
                 const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.15) * renderScale;
                 const width = Math.max(1, Math.round(bounds.width * pixelRatio));
                 const height = Math.max(1, Math.round(bounds.height * pixelRatio));
