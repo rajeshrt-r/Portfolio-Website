@@ -384,6 +384,61 @@
       pointer-events: none;
     }
 
+    .floating-tech-badge {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--cyan-border);
+      border-radius: 12px;
+      background: rgba(3, 17, 34, 0.92);
+      color: var(--cyan);
+      box-shadow: 0 0 20px rgba(12, 242, 255, 0.18);
+      font-size: 1.25rem;
+      animation: project-badge-float 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .badge-python {
+      top: 22%;
+      left: 2%;
+    }
+
+    .badge-mongo {
+      bottom: 18%;
+      left: 8%;
+      animation-delay: -1s;
+    }
+
+    .badge-react {
+      top: 34%;
+      right: 4%;
+      animation-delay: -2s;
+    }
+
+    .badge-ai {
+      right: 10%;
+      bottom: 14%;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      animation-delay: -3s;
+    }
+
+    @keyframes project-badge-float {
+      0%,
+      100% {
+        translate: 0 0;
+      }
+
+      50% {
+        translate: 0 -8px;
+      }
+    }
+
     /* Laptop Device Mockup */
     .laptop-device {
       position: relative;
@@ -440,6 +495,9 @@
       font-size: 0.7rem;
       color: var(--text-secondary);
       margin-left: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .screen-editor {
@@ -499,8 +557,9 @@
     /* Handwriting Script Callout */
     .script-impact-tag {
       position: absolute;
-      top: 25px;
-      right: -25px;
+      top: 12px;
+      right: 8px;
+      width: 132px;
       font-family: var(--font-script);
       font-size: 2.1rem;
       font-weight: 700;
@@ -1283,11 +1342,63 @@
       .modal-grid-2col {
         grid-template-columns: 1fr;
       }
+
+      .laptop-device {
+        width: calc(100% - 140px);
+        margin-right: auto;
+      }
+
+      .script-impact-tag {
+        top: 24px;
+        right: 0;
+        width: 124px;
+      }
+
+      .badge-react,
+      .badge-ai {
+        right: 26%;
+      }
     }
 
     @media (max-width: 680px) {
       .container {
         padding: 0 20px;
+      }
+
+      .laptop-art-wrapper {
+        min-height: 250px;
+      }
+
+      .floating-tech-badge {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 1.05rem;
+      }
+
+      .badge-python {
+        left: 0;
+      }
+
+      .badge-mongo {
+        left: 3%;
+      }
+
+      .badge-react {
+        right: 0;
+      }
+
+      .badge-ai {
+        right: 4%;
+        font-size: 0.8rem;
+      }
+
+      .script-impact-tag {
+        display: none;
+      }
+
+      .laptop-base {
+        width: 106%;
       }
 
       .hero-title {
